@@ -1,0 +1,8 @@
+/* main.css — 自訂樣式（補充 DaisyUI 不足之處）*/
+
+/* 假名標註 */
+ruby rt {
+  font-size: 0.55em;
+  line-height: 1.2;
+  color: oklch(var(--bc) / 0.6);
+}

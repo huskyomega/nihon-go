@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-theme="cupcake">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>單字閃卡 — NihonGo</title>
+  <link href="assets/vendor/daisyui.min.css" rel="stylesheet">
+  <script src="assets/vendor/tailwind.js"></script>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <style>
+    .flashcard-scene {
+      perspective: 1000px;
+    }
+    .flashcard-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.5s;
+      transform-style: preserve-3d;
+    }
+    .flashcard-inner.is-flipped {
+      transform: rotateY(180deg);
+    }
+    .flashcard-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+    .flashcard-face--back {
+      transform: rotateY(180deg);
+    }
+    .speak-btn {
+      width: 2.5rem;
+      height: 2.5rem;
+      min-height: unset;
+      padding: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-base-200">
+
+  <header class="navbar bg-base-100 shadow-sm">
+    <div class="navbar-start">
+      <a href="index.html" class="btn btn-ghost text-base">← 返回</a>
+    </div>
+    <div class="navbar-center">
+      <span class="text-lg font-bold">單字閃卡</span>
+    </div>
+    <div class="navbar-end px-4">
+      <label class="swap swap-rotate">
+        <input type="checkbox" id="theme-toggle">
+        <span class="swap-on text-xl">🌙</span>
+        <span class="swap-off text-xl">☀️</span>
+      </label>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-6 max-w-lg">
+
+    <!-- 單元選擇 -->
+    <div class="mb-3">
+      <div class="flex gap-2 overflow-x-auto pb-1 scrollbar-hide" id="unit-bar">
+        <button class="btn btn-xs btn-accent shrink-0 unit-btn" data-unit="">全部</button>
+      </div>
+    </div>
+
+    <!-- 模式切換 & 順序 & 進度 -->
+    <div class="flex items-center justify-between mb-4">
+      <div class="flex gap-2">
+        <div class="join">
+          <button class="join-item btn btn-sm" id="mode-jp" data-mode="jp">日→中</button>
+          <button class="join-item btn btn-sm btn-active" id="mode-zh" data-mode="zh">中→日</button>
+        </div>
+        <div class="join">
+          <button class="join-item btn btn-sm" id="order-seq">固定</button>
+          <button class="join-item btn btn-sm btn-active" id="order-rnd">隨機</button>
+        </div>
+      </div>
+      <span class="text-sm text-base-content/60" id="progress-label">— / —</span>
+    </div>
+
+    <!-- 進度條 -->
+    <progress class="progress progress-primary w-full mb-6" id="progress-bar" value="0" max="100"></progress>
+
+    <!-- 閃卡區 -->
+    <div class="flashcard-scene w-full mb-6" style="height: 280px;" id="card-scene">
+      <div class="flashcard-inner" id="card-inner">
+
+        <!-- 正面 -->
+        <div class="flashcard-face card bg-base-100 shadow-xl cursor-pointer select-none" id="card-front">
+          <div class="card-body items-center justify-center text-center h-full">
+            <div class="text-xs badge badge-ghost mb-2" id="front-pos"></div>
+            <div class="text-5xl font-bold mb-2" id="front-main"></div>
+            <div class="text-lg text-base-content/60" id="front-sub"></div>
+            <div class="mt-4 text-sm text-base-content/40">點擊翻面</div>
+          </div>
+        </div>
+
+        <!-- 背面 -->
+        <div class="flashcard-face flashcard-face--back card bg-primary text-primary-content shadow-xl cursor-pointer select-none" id="card-back">
+          <div class="card-body items-center justify-center text-center h-full">
+            <div class="text-xs badge badge-outline mb-2" id="back-pos"></div>
+            <div class="text-4xl font-bold mb-1" id="back-word"></div>
+            <div class="text-xl mb-1" id="back-reading"></div>
+            <div class="text-base opacity-80 mb-3" id="back-meaning"></div>
+            <button class="speak-btn btn btn-circle btn-sm btn-ghost border border-primary-content/30" id="speak-btn" title="發音">▶</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 操作按鈕（翻面後才顯示）-->
+    <div class="flex gap-4 justify-center" id="action-btns" style="display:none!important">
+      <button class="btn btn-error btn-lg flex-1" id="btn-unknown">✗ 不熟</button>
+      <button class="btn btn-success btn-lg flex-1" id="btn-known">✓ 知道了</button>
+    </div>
+
+    <!-- 完成畫面 -->
+    <div class="hidden card bg-base-100 shadow-xl" id="done-screen">
+      <div class="card-body items-center text-center py-10">
+        <div class="text-5xl mb-4">🎉</div>
+        <h2 class="card-title text-2xl mb-2">本輪完成！</h2>
+        <p class="text-base-content/60 mb-6" id="done-summary"></p>
+        <div class="flex gap-3">
+          <button class="btn btn-primary" id="btn-restart">重新開始</button>
+          <a href="index.html" class="btn btn-ghost">回首頁</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/tts.js"></script>
+  <script src="assets/js/flashcard.js"></script>
+</body>
+</html>

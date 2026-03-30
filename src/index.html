@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-theme="cupcake">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NihonGo 霓虹狗 — JLPT N5 日文學習</title>
+  <link href="assets/vendor/daisyui.min.css" rel="stylesheet">
+  <script src="assets/vendor/tailwind.js"></script>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="min-h-screen bg-base-200">
+
+  <header class="navbar bg-base-100 shadow-sm">
+    <div class="navbar-start">
+      <span class="text-2xl font-bold text-primary px-4">🇯🇵 NihonGo</span>
+    </div>
+    <div class="navbar-end px-4">
+      <label class="swap swap-rotate">
+        <input type="checkbox" id="theme-toggle">
+        <span class="swap-on text-xl">🌙</span>
+        <span class="swap-off text-xl">☀️</span>
+      </label>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-10 max-w-3xl">
+    <div class="text-center mb-10">
+      <h1 class="text-4xl font-bold mb-2">霓虹狗日文學習</h1>
+      <p class="text-base-content/60">JLPT N5 單字・文法・模擬考，一站搞定</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+
+      <a href="flashcard.html" class="card bg-base-100 shadow hover:shadow-lg transition-shadow cursor-pointer">
+        <div class="card-body items-center text-center">
+          <div class="text-5xl mb-2">📇</div>
+          <h2 class="card-title">單字閃卡</h2>
+          <p class="text-sm text-base-content/60">N5 必考單字，翻牌練習</p>
+          <div class="mt-2 w-full">
+            <div class="text-xs text-base-content/40 mb-1" id="vocab-progress-label">尚未開始</div>
+            <progress class="progress progress-primary w-full" id="vocab-progress" value="0" max="100"></progress>
+          </div>
+        </div>
+      </a>
+
+      <a href="grammar.html" class="card bg-base-100 shadow hover:shadow-lg transition-shadow cursor-pointer">
+        <div class="card-body items-center text-center">
+          <div class="text-5xl mb-2">📖</div>
+          <h2 class="card-title">文法閃卡</h2>
+          <p class="text-sm text-base-content/60">N5 句型解說與例句</p>
+          <div class="mt-2 w-full">
+            <div class="text-xs text-base-content/40 mb-1" id="grammar-progress-label">尚未開始</div>
+            <progress class="progress progress-secondary w-full" id="grammar-progress" value="0" max="100"></progress>
+          </div>
+        </div>
+      </a>
+
+      <a href="quiz.html" class="card bg-base-100 shadow hover:shadow-lg transition-shadow cursor-pointer">
+        <div class="card-body items-center text-center">
+          <div class="text-5xl mb-2">📝</div>
+          <h2 class="card-title">模擬考</h2>
+          <p class="text-sm text-base-content/60">JLPT N5 題型練習</p>
+          <div class="mt-2 w-full">
+            <div class="text-xs text-base-content/40 mb-1" id="quiz-progress-label">尚未作答</div>
+            <progress class="progress progress-accent w-full" id="quiz-progress" value="0" max="100"></progress>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </main>
+
+  <script src="assets/js/utils.js"></script>
+  <script>
+    // Theme toggle
+    const toggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+    const saved = localStorage.getItem('nihongo_theme');
+    if (saved === 'dark') { html.dataset.theme = 'dark'; toggle.checked = true; }
+    toggle.addEventListener('change', () => {
+      const theme = toggle.checked ? 'dark' : 'cupcake';
+      html.dataset.theme = theme;
+      localStorage.setItem('nihongo_theme', theme);
+    });
+
+    // Load progress
+    const vocabProgress = loadProgress('nihongo_vocab_progress');
+    const grammarProgress = loadProgress('nihongo_grammar_progress');
+    const quizHistory = loadProgress('nihongo_quiz_history');
+
+    if (vocabProgress && vocabProgress.total > 0) {
+      const pct = Math.round((vocabProgress.known / vocabProgress.total) * 100);
+      document.getElementById('vocab-progress').value = pct;
+      document.getElementById('vocab-progress-label').textContent = `已學 ${vocabProgress.known} / ${vocabProgress.total} 字`;
+    }
+    if (grammarProgress && grammarProgress.total > 0) {
+      const pct = Math.round((grammarProgress.known / grammarProgress.total) * 100);
+      document.getElementById('grammar-progress').value = pct;
+      document.getElementById('grammar-progress-label').textContent = `已學 ${grammarProgress.known} / ${grammarProgress.total} 句型`;
+    }
+    if (quizHistory && quizHistory.lastScore !== undefined) {
+      document.getElementById('quiz-progress').value = quizHistory.lastScore;
+      document.getElementById('quiz-progress-label').textContent = `上次得分 ${quizHistory.lastScore}%`;
+    }
+  </script>
+</body>
+</html>

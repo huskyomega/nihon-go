@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="cupcake">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>模擬考 — NihonGo</title>
+  <link href="assets/vendor/daisyui.min.css" rel="stylesheet">
+  <script src="assets/vendor/tailwind.js"></script>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <style>
+    .option-btn { transition: background-color 0.2s, border-color 0.2s; }
+    .option-btn.correct {
+      background-color: oklch(var(--su)) !important;
+      border-color: oklch(var(--su)) !important;
+      color: oklch(var(--suc)) !important;
+    }
+    .option-btn.wrong {
+      background-color: oklch(var(--er)) !important;
+      border-color: oklch(var(--er)) !important;
+      color: oklch(var(--erc)) !important;
+    }
+    .star-blank {
+      display: inline-block;
+      border-bottom: 2px solid currentColor;
+      min-width: 3rem;
+      text-align: center;
+      font-weight: bold;
+      color: oklch(var(--p));
+      margin: 0 2px;
+    }
+    .normal-blank {
+      display: inline-block;
+      border-bottom: 2px solid currentColor;
+      min-width: 3rem;
+      text-align: center;
+      margin: 0 2px;
+    }
+    .passage-box {
+      background: oklch(var(--b2));
+      border-left: 3px solid oklch(var(--a));
+      padding: 1rem;
+      border-radius: 0.5rem;
+      line-height: 2;
+      font-size: 0.95rem;
+      white-space: pre-wrap;
+    }
+    .blank-num {
+      display: inline-block;
+      width: 1.4rem; height: 1.4rem;
+      line-height: 1.4rem;
+      text-align: center;
+      border: 1.5px solid currentColor;
+      border-radius: 50%;
+      font-size: 0.75rem;
+      font-weight: bold;
+      color: oklch(var(--a));
+    }
+    .svg-scene { max-width: 220px; margin: 0 auto; }
+  </style>
+</head>
+<body class="min-h-screen bg-base-200">
+
+  <header class="navbar bg-base-100 shadow-sm">
+    <div class="navbar-start">
+      <a href="index.html" class="btn btn-ghost text-base">← 返回</a>
+    </div>
+    <div class="navbar-center">
+      <span class="text-lg font-bold">JLPT N5 模擬考</span>
+    </div>
+    <div class="navbar-end px-4">
+      <label class="swap swap-rotate">
+        <input type="checkbox" id="theme-toggle">
+        <span class="swap-on text-xl">🌙</span>
+        <span class="swap-off text-xl">☀️</span>
+      </label>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-6 max-w-lg">
+
+    <!-- ▼ 開始画面 -->
+    <div id="start-screen" class="card bg-base-100 shadow-xl">
+      <div class="card-body items-center text-center py-8 gap-3">
+        <div class="text-5xl mb-2">📝</div>
+        <h2 class="card-title text-2xl">JLPT N5 模擬考</h2>
+        <div class="w-full text-left mt-2 space-y-1 text-sm text-base-content/70">
+          <p class="font-semibold text-base-content mb-2">試験の構成</p>
+          <div class="flex justify-between border-b border-base-200 pb-1">
+            <span>言語知識（文字・語彙）</span><span class="font-mono" id="count-vocab">— 問</span>
+          </div>
+          <div class="flex justify-between border-b border-base-200 pb-1">
+            <span>言語知識（文法）・読解</span><span class="font-mono" id="count-grammar">— 問</span>
+          </div>
+          <div class="flex justify-between pb-1">
+            <span>聴解</span><span class="font-mono" id="count-listening">— 問</span>
+          </div>
+        </div>
+        <div id="last-score-area" class="hidden alert alert-info text-sm w-full mt-1">
+          <span id="last-score-text"></span>
+        </div>
+        <button class="btn btn-accent btn-lg w-full max-w-xs mt-2" id="btn-start">試験開始</button>
+      </div>
+    </div>
+
+    <!-- ▼ セクション開始画面 -->
+    <div id="section-screen" class="hidden card bg-base-100 shadow-xl">
+      <div class="card-body items-center text-center py-10">
+        <div class="text-4xl mb-3" id="section-icon"></div>
+        <h2 class="card-title text-xl mb-1" id="section-title"></h2>
+        <p class="text-base-content/60 text-sm" id="section-desc"></p>
+        <button class="btn btn-accent mt-6" id="btn-section-next">はじめる →</button>
+      </div>
+    </div>
+
+    <!-- ▼ 問題開始画面 -->
+    <div id="problem-screen" class="hidden card bg-base-100 shadow-xl">
+      <div class="card-body py-8">
+        <p class="text-sm text-accent font-bold mb-1" id="problem-label"></p>
+        <p class="text-sm leading-relaxed text-base-content/80" id="problem-instruction"></p>
+        <div class="flex justify-end mt-4">
+          <button class="btn btn-accent btn-sm" id="btn-problem-next">次へ →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ▼ 問題画面 -->
+    <div id="quiz-screen" class="hidden">
+
+      <!-- 進捗 -->
+      <div class="flex items-center justify-between mb-2">
+        <span class="text-xs text-base-content/50" id="breadcrumb"></span>
+        <span class="text-sm text-base-content/60" id="progress-label">— / —</span>
+      </div>
+      <progress class="progress progress-accent w-full mb-4" id="progress-bar" value="0" max="100"></progress>
+
+      <!-- 聴解：音声再生 -->
+      <div id="listening-area" class="hidden card bg-base-200 shadow-sm mb-3 p-4">
+        <div id="svg-container" class="hidden svg-scene mb-3"></div>
+        <div class="flex flex-col items-center gap-2">
+          <p class="text-xs text-base-content/60">音声を聞いてから答えてください</p>
+          <button class="btn btn-accent gap-2" id="btn-play-script">▶ 音声を再生</button>
+        </div>
+      </div>
+
+      <!-- 題目カード -->
+      <div class="card bg-base-100 shadow-xl mb-3">
+        <div class="card-body gap-3">
+
+          <!-- 文章 / パッセージ -->
+          <div id="passage-area" class="hidden">
+            <div class="passage-box text-sm" id="passage-box"></div>
+          </div>
+
+          <!-- 問題文 -->
+          <div id="question-text" class="text-base font-medium leading-relaxed"></div>
+
+          <!-- 選択肢 -->
+          <div class="flex flex-col gap-2 mt-1" id="options-container"></div>
+
+        </div>
+      </div>
+
+      <!-- 解説（回答後） -->
+      <div id="explanation-area" class="hidden alert mb-3">
+        <div class="w-full">
+          <p class="font-bold mb-1" id="result-label"></p>
+          <p class="text-sm leading-relaxed" id="explanation-text"></p>
+        </div>
+      </div>
+
+      <!-- ナビゲーション -->
+      <div class="flex justify-end gap-2">
+        <button class="btn btn-accent hidden" id="btn-next">次の問題 →</button>
+        <button class="btn btn-accent hidden" id="btn-to-section">次のセクションへ →</button>
+        <button class="btn btn-accent hidden" id="btn-finish">結果を見る →</button>
+      </div>
+
+    </div>
+
+    <!-- ▼ 結果画面 -->
+    <div id="result-screen" class="hidden">
+
+      <div class="card bg-base-100 shadow-xl mb-5">
+        <div class="card-body items-center text-center py-8">
+          <div class="text-5xl mb-3" id="result-emoji"></div>
+          <h2 class="card-title text-2xl mb-1">考試結束</h2>
+          <p class="text-base-content/60 text-sm mb-4" id="score-text"></p>
+          <div class="radial-progress text-accent text-xl font-bold mb-5"
+               id="score-circle" style="--value:0; --size:7rem;">
+            <span id="score-pct">0%</span>
+          </div>
+          <!-- セクション別スコア -->
+          <div class="w-full text-sm space-y-1" id="section-scores"></div>
+        </div>
+      </div>
+
+      <!-- 間違えた問題 -->
+      <div id="wrong-review" class="hidden mb-5">
+        <h3 class="text-base font-bold mb-3 text-error">答錯的題目</h3>
+        <div id="wrong-list" class="flex flex-col gap-3"></div>
+      </div>
+
+      <div class="flex gap-3 justify-center">
+        <button class="btn btn-accent" id="btn-retry">再測一次</button>
+        <a href="index.html" class="btn btn-ghost">返回首頁</a>
+      </div>
+
+    </div>
+
+  </main>
+
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/tts.js"></script>
+  <script src="assets/js/quiz.js"></script>
+</body>
+</html>
