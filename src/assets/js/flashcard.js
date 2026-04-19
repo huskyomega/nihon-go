@@ -7,6 +7,7 @@
   const SEEN_KEY = 'nihongo_vocab_seen';
   const MODE_KEY = 'nihongo_vocab_mode';
   const ORDER_KEY = 'nihongo_vocab_order';
+  const STATE_KEY = 'nihongo_vocab_flashcard_state';
 
   // 模式：'jp'（日→中）或 'zh'（中→日）
   let mode = localStorage.getItem(MODE_KEY) || 'zh';
@@ -55,7 +56,7 @@
     if (saved && Array.isArray(saved)) seenIds = new Set(saved);
 
     buildUnitBar();
-    startDeck();
+    restoreState();
   }
 
   function showFetchError() {
@@ -148,6 +149,28 @@ python3 -m http.server 8080</code></pre>
       frontPos.textContent = card.pos;
       frontMain.textContent = card.meaning;
       frontSub.textContent = '';
+    }
+    saveState();
+  }
+
+  function saveState() {
+    const card = deck[currentIndex];
+    if (card) saveProgress(STATE_KEY, { unit: selectedUnit, cardId: card.id });
+  }
+
+  function restoreState() {
+    const saved = loadProgress(STATE_KEY);
+    if (saved && saved.unit) {
+      selectedUnit = saved.unit;
+      document.querySelectorAll('.unit-btn').forEach(function (btn) {
+        btn.classList.toggle('btn-accent', btn.dataset.unit === saved.unit);
+        btn.classList.toggle('btn-outline', btn.dataset.unit !== saved.unit);
+      });
+    }
+    startDeck();
+    if (saved && saved.cardId) {
+      const idx = deck.findIndex(function (c) { return c.id === saved.cardId; });
+      if (idx !== -1) { currentIndex = idx; renderCard(); updateProgress(); }
     }
   }
 

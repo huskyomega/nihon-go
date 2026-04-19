@@ -3,6 +3,8 @@
  */
 
 (function () {
+  const STATE_KEY = 'nihongo_grammar_study_state';
+
   const UNIT_ORDER = [
     "基本文型", "い形容詞", "な形容詞", "動詞活用", "助詞",
     "て形的用法", "時間・順序", "意向・勧誘・願望", "疑問・限定",
@@ -40,7 +42,7 @@
     }
 
     buildUnitBar();
-    buildDeck();
+    restoreState();
     bindEvents();
   }
 
@@ -108,6 +110,28 @@
 
     btnPrev.disabled = currentIndex === 0;
     btnNext.disabled = currentIndex === deck.length - 1;
+    saveState();
+  }
+
+  function saveState() {
+    const card = deck[currentIndex];
+    if (card) saveProgress(STATE_KEY, { unit: selectedUnit, cardId: card.id });
+  }
+
+  function restoreState() {
+    const saved = loadProgress(STATE_KEY);
+    if (saved && saved.unit) {
+      selectedUnit = saved.unit;
+      document.querySelectorAll('.unit-btn').forEach(function (btn) {
+        btn.classList.toggle('btn-secondary', btn.dataset.unit === saved.unit);
+        btn.classList.toggle('btn-outline', btn.dataset.unit !== saved.unit);
+      });
+    }
+    buildDeck();
+    if (saved && saved.cardId) {
+      const idx = deck.findIndex(function (c) { return c.id === saved.cardId; });
+      if (idx !== -1) { currentIndex = idx; renderCard(); updateProgress(); }
+    }
   }
 
   function updateProgress() {

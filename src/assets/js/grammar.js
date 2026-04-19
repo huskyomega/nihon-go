@@ -6,6 +6,7 @@
   const PROGRESS_KEY = 'nihongo_grammar_progress';
   const SEEN_KEY = 'nihongo_grammar_seen';
   const ORDER_KEY = 'nihongo_grammar_order';
+  const STATE_KEY = 'nihongo_grammar_flashcard_state';
 
   let deck = [];
   let currentIndex = 0;
@@ -48,7 +49,7 @@
     if (saved && Array.isArray(saved)) seenIds = new Set(saved);
 
     buildUnitBar();
-    startDeck();
+    restoreState();
   }
 
   const UNIT_ORDER = [
@@ -116,6 +117,28 @@
     if (!card) return;
     frontLevel.textContent = card.level || 'N5';
     frontPattern.textContent = card.pattern;
+    saveState();
+  }
+
+  function saveState() {
+    const card = deck[currentIndex];
+    if (card) saveProgress(STATE_KEY, { unit: selectedUnit, cardId: card.id });
+  }
+
+  function restoreState() {
+    const saved = loadProgress(STATE_KEY);
+    if (saved && saved.unit) {
+      selectedUnit = saved.unit;
+      document.querySelectorAll('.unit-btn').forEach(function (btn) {
+        btn.classList.toggle('btn-secondary', btn.dataset.unit === saved.unit);
+        btn.classList.toggle('btn-outline', btn.dataset.unit !== saved.unit);
+      });
+    }
+    startDeck();
+    if (saved && saved.cardId) {
+      const idx = deck.findIndex(function (c) { return c.id === saved.cardId; });
+      if (idx !== -1) { currentIndex = idx; renderCard(); updateProgress(); }
+    }
   }
 
   function renderBack() {

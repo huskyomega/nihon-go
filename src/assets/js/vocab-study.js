@@ -3,6 +3,8 @@
  */
 
 (function () {
+  const STATE_KEY = 'nihongo_vocab_study_state';
+
   const UNIT_ORDER = [
     "數字・量詞", "家族", "身體部位", "職業・人物", "場所・建築",
     "方位・位置", "飲食", "自然・天氣", "交通", "衣物・配件",
@@ -42,7 +44,7 @@
     }
 
     buildUnitBar();
-    buildDeck();
+    restoreState();
     bindEvents();
   }
 
@@ -91,6 +93,28 @@
 
     btnPrev.disabled = currentIndex === 0;
     btnNext.disabled = currentIndex === deck.length - 1;
+    saveState();
+  }
+
+  function saveState() {
+    const card = deck[currentIndex];
+    if (card) saveProgress(STATE_KEY, { unit: selectedUnit, cardId: card.id });
+  }
+
+  function restoreState() {
+    const saved = loadProgress(STATE_KEY);
+    if (saved && saved.unit) {
+      selectedUnit = saved.unit;
+      document.querySelectorAll('.unit-btn').forEach(function (btn) {
+        btn.classList.toggle('btn-accent', btn.dataset.unit === saved.unit);
+        btn.classList.toggle('btn-outline', btn.dataset.unit !== saved.unit);
+      });
+    }
+    buildDeck();
+    if (saved && saved.cardId) {
+      const idx = deck.findIndex(function (c) { return c.id === saved.cardId; });
+      if (idx !== -1) { currentIndex = idx; renderCard(); updateProgress(); }
+    }
   }
 
   function updateProgress() {

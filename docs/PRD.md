@@ -10,6 +10,7 @@
 - 單元篩選列：可按主題單元練習，或選「全部」
 - 可拖拉進度條（`<input type="range">`）快速跳至指定卡片
 - 上一個 / 下一個導覽按鈕；鍵盤 ← → / j k 切換，p 發音
+- 自動記住最後瀏覽的單元與卡片位置，重開頁面自動恢復
 
 ### 2. 單字閃卡（flashcard.html）
 - 顯示單字（日文 → 中文，或中文 → 日文，可切換模式）
@@ -21,6 +22,7 @@
 - 進度：顯示當前位置（第 X 張 / 共 Y 張）
 - 首頁累積進度：記錄跨 session 已學過的單字數（已學 X / 480 字）
 - 方向模式與順序偏好自動存入 localStorage，重開頁面套用
+- 自動記住最後瀏覽的單元與卡片位置，重開頁面自動恢復
 
 #### 單字單元（共 21 個）
 數字・量詞、代名詞・指示詞、家族、身體部位、職業・人物、場所・建築、
@@ -34,6 +36,7 @@
 - 單元篩選列：可按主題單元練習，或選「全部」
 - 可拖拉進度條快速跳至指定卡片
 - 上一個 / 下一個導覽按鈕；鍵盤 ← → / j k 切換，p 發第一個例句音
+- 自動記住最後瀏覽的單元與卡片位置，重開頁面自動恢復
 
 ### 4. 文法閃卡（grammar.html）
 - 顯示文法句型（例：〜は〜です）
@@ -44,6 +47,7 @@
 - 單元篩選列：可按主題單元練習，或選「全部」混合練習
 - 順序切換：固定順序（照 JSON id）／隨機順序；偏好存入 localStorage
 - 首頁累積進度：記錄跨 session 已學過的句型數（已學 X / 100 句型）
+- 自動記住最後瀏覽的單元與卡片位置，重開頁面自動恢復
 
 #### 文法單元（共 12 個）
 基本文型、い形容詞、な形容詞、動詞活用、助詞、て形的用法、
@@ -80,7 +84,8 @@
 - 作答後自動停止 TTS
 
 ### 6. 首頁（index.html）
-- 五個功能入口卡片，排列順序：單字學習、單字閃卡、文法學習、文法閃卡、模擬考（佔兩格）
+- 五個功能入口卡片，兩欄網格（所有尺寸，含手機）
+- 排列：單字學習、單字閃卡 / 文法學習、文法閃卡 / 模擬考（col-span-2，佔整行）
 - 顯示各模組累積學習進度（localStorage）
 
 ## 資料格式
@@ -160,9 +165,13 @@
 | `nihongo_vocab_seen` | 已學單字 id 陣列（跨 session 累積） |
 | `nihongo_vocab_mode` | `'jp'`（日→中）\| `'zh'`（中→日） |
 | `nihongo_vocab_order` | `'seq'`（固定）\| `'rnd'`（隨機） |
+| `nihongo_vocab_study_state` | `{ unit, cardId }` — 單字學習最後位置 |
+| `nihongo_vocab_flashcard_state` | `{ unit, cardId }` — 單字閃卡最後位置 |
 | `nihongo_grammar_progress` | `{ known: seenIds.size, total: 100 }` |
 | `nihongo_grammar_seen` | 已學句型 id 陣列（跨 session 累積） |
 | `nihongo_grammar_order` | `'seq'`（固定）\| `'rnd'`（隨機） |
+| `nihongo_grammar_study_state` | `{ unit, cardId }` — 文法學習最後位置 |
+| `nihongo_grammar_flashcard_state` | `{ unit, cardId }` — 文法閃卡最後位置 |
 | `nihongo_quiz_history` | `{ lastScore: %, lastTotal: N }` |
 | `nihongo_theme` | `'cupcake'` \| `'dark'` |
 
