@@ -137,7 +137,7 @@
   function updateProgress() {
     const total = deck.length;
     const pos = total > 0 ? currentIndex + 1 : 0;
-    progressLabel.textContent = `第 ${pos} 個 / 共 ${total} 個`;
+    progressLabel.textContent = `${pos} / ${total}`;
     progressBar.max = Math.max(total - 1, 1);
     progressBar.value = currentIndex;
   }

@@ -207,7 +207,7 @@
   function updateProgress() {
     const total = deck.length;
     const position = Math.min(currentIndex + 1, total);
-    progressLabel.textContent = `第 ${position} 張 / 共 ${total} 張`;
+    progressLabel.textContent = `${position} / ${total}`;
     const pct = total > 0 ? Math.round((currentIndex / total) * 100) : 0;
     progressBar.value = pct;
     saveProgress(PROGRESS_KEY, { known: seenIds.size, total: allCards.length });
