@@ -29,7 +29,19 @@
       <p class="text-base-content/60">JLPT N5 單字・文法・模擬考，一站搞定</p>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+      <a href="vocab-study.html" class="card bg-base-100 shadow hover:shadow-lg transition-shadow cursor-pointer">
+        <div class="card-body items-center text-center">
+          <div class="text-5xl mb-2">📚</div>
+          <h2 class="card-title">單字學習</h2>
+          <p class="text-sm text-base-content/60">N5 單字詳解，逐字瀏覽</p>
+          <div class="mt-2 w-full">
+            <div class="text-xs text-base-content/40 mb-1">&nbsp;</div>
+            <progress class="progress progress-primary w-full" value="0" max="100"></progress>
+          </div>
+        </div>
+      </a>
 
       <a href="flashcard.html" class="card bg-base-100 shadow hover:shadow-lg transition-shadow cursor-pointer">
         <div class="card-body items-center text-center">
@@ -39,6 +51,18 @@
           <div class="mt-2 w-full">
             <div class="text-xs text-base-content/40 mb-1" id="vocab-progress-label">尚未開始</div>
             <progress class="progress progress-primary w-full" id="vocab-progress" value="0" max="100"></progress>
+          </div>
+        </div>
+      </a>
+
+      <a href="grammar-study.html" class="card bg-base-100 shadow hover:shadow-lg transition-shadow cursor-pointer">
+        <div class="card-body items-center text-center">
+          <div class="text-5xl mb-2">📝</div>
+          <h2 class="card-title">文法學習</h2>
+          <p class="text-sm text-base-content/60">N5 句型詳解，逐句瀏覽</p>
+          <div class="mt-2 w-full">
+            <div class="text-xs text-base-content/40 mb-1">&nbsp;</div>
+            <progress class="progress progress-secondary w-full" value="0" max="100"></progress>
           </div>
         </div>
       </a>
@@ -55,12 +79,12 @@
         </div>
       </a>
 
-      <a href="quiz.html" class="card bg-base-100 shadow hover:shadow-lg transition-shadow cursor-pointer">
+      <a href="quiz.html" class="card bg-base-100 shadow hover:shadow-lg transition-shadow cursor-pointer sm:col-span-2">
         <div class="card-body items-center text-center">
-          <div class="text-5xl mb-2">📝</div>
+          <div class="text-5xl mb-2">🎯</div>
           <h2 class="card-title">模擬考</h2>
           <p class="text-sm text-base-content/60">JLPT N5 題型練習</p>
-          <div class="mt-2 w-full">
+          <div class="mt-2 w-full max-w-xs mx-auto">
             <div class="text-xs text-base-content/40 mb-1" id="quiz-progress-label">尚未作答</div>
             <progress class="progress progress-accent w-full" id="quiz-progress" value="0" max="100"></progress>
           </div>

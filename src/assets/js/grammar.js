@@ -5,6 +5,7 @@
 (function () {
   const PROGRESS_KEY = 'nihongo_grammar_progress';
   const SEEN_KEY = 'nihongo_grammar_seen';
+  const ORDER_KEY = 'nihongo_grammar_order';
 
   let deck = [];
   let currentIndex = 0;
@@ -12,7 +13,7 @@
   let isFlipped = false;
   let allCards = [];
   let selectedUnit = '';
-  let orderMode = 'rnd';
+  let orderMode = localStorage.getItem(ORDER_KEY) || 'rnd';
   let seenIds = new Set();
 
   // DOM refs
@@ -23,10 +24,8 @@
   const backLevel       = document.getElementById('back-level');
   const backPattern     = document.getElementById('back-pattern');
   const backMeaning     = document.getElementById('back-meaning');
-  const backExplanation = document.getElementById('back-explanation');
-  const backExample     = document.getElementById('back-example');
-  const backExMeaning   = document.getElementById('back-example-meaning');
-  const speakBtn        = document.getElementById('speak-btn');
+  const backExplanation      = document.getElementById('back-explanation');
+  const backExamplesContainer = document.getElementById('back-examples-container');
   const actionBtns      = document.getElementById('action-btns');
   const doneScreen      = document.getElementById('done-screen');
   const doneSummary     = document.getElementById('done-summary');
@@ -126,8 +125,25 @@
     backPattern.textContent = card.pattern;
     backMeaning.textContent = card.meaning;
     backExplanation.textContent = card.explanation;
-    backExample.innerHTML = card.example_ruby || card.example;
-    backExMeaning.textContent = card.example_meaning;
+    if (card.examples && card.examples.length > 1) {
+      backExamplesContainer.innerHTML = card.examples.map(function (ex) {
+        return '<div class="flex items-start gap-2 text-left w-full mt-1">' +
+          '<div class="flex-1">' +
+          '<span class="text-xs font-bold opacity-80">' + ex.label + '：</span>' +
+          '<span class="text-xs italic">' + (ex.ruby || ex.sentence) + '</span>' +
+          '<div class="text-xs opacity-60">' + ex.meaning + '</div>' +
+          '</div>' +
+          '<button class="speak-btn btn btn-circle btn-xs btn-ghost border border-secondary-content/30 shrink-0 speak-ex-btn" data-sentence="' + ex.sentence.replace(/"/g, '&quot;') + '" title="發音">▶</button>' +
+          '</div>';
+      }).join('');
+    } else {
+      backExamplesContainer.innerHTML =
+        '<div class="flex items-center gap-2 mt-1">' +
+        '<span class="text-sm italic flex-1">' + (card.example_ruby || card.example) + '</span>' +
+        '<button class="speak-btn btn btn-circle btn-sm btn-ghost border border-secondary-content/30 speak-ex-btn" data-sentence="' + card.example.replace(/"/g, '&quot;') + '" title="發音">▶</button>' +
+        '</div>' +
+        '<div class="text-xs opacity-70">' + card.example_meaning + '</div>';
+    }
   }
 
   function flipCard() {
@@ -187,10 +203,9 @@
   function bindEvents() {
     document.getElementById('card-front').addEventListener('click', flipCard);
 
-    speakBtn.addEventListener('click', function (e) {
-      e.stopPropagation();
-      const card = deck[currentIndex];
-      if (card) speak(card.example);
+    backExamplesContainer.addEventListener('click', function (e) {
+      const btn = e.target.closest('.speak-ex-btn');
+      if (btn) { e.stopPropagation(); speak(btn.dataset.sentence); }
     });
 
     document.getElementById('btn-known').addEventListener('click', handleKnown);
@@ -198,6 +213,10 @@
     document.getElementById('btn-restart').addEventListener('click', startDeck);
     document.getElementById('order-seq').addEventListener('click', function () { setOrder('seq'); });
     document.getElementById('order-rnd').addEventListener('click', function () { setOrder('rnd'); });
+
+    // 套用已儲存的初始狀態
+    document.getElementById('order-seq').classList.toggle('btn-active', orderMode === 'seq');
+    document.getElementById('order-rnd').classList.toggle('btn-active', orderMode === 'rnd');
 
     document.addEventListener('keydown', function (e) {
       if (doneScreen && !doneScreen.classList.contains('hidden')) return;
@@ -218,7 +237,7 @@
         case 'p':
           if (isFlipped) {
             const card = deck[currentIndex];
-            if (card) speak(card.example);
+            if (card) speak(card.examples ? card.examples[0].sentence : card.example);
           }
           break;
       }
@@ -227,6 +246,7 @@
 
   function setOrder(newOrder) {
     orderMode = newOrder;
+    localStorage.setItem(ORDER_KEY, orderMode);
     document.getElementById('order-seq').classList.toggle('btn-active', orderMode === 'seq');
     document.getElementById('order-rnd').classList.toggle('btn-active', orderMode === 'rnd');
     startDeck();

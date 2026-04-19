@@ -5,11 +5,13 @@
 (function () {
   const PROGRESS_KEY = 'nihongo_vocab_progress';
   const SEEN_KEY = 'nihongo_vocab_seen';
+  const MODE_KEY = 'nihongo_vocab_mode';
+  const ORDER_KEY = 'nihongo_vocab_order';
 
   // 模式：'jp'（日→中）或 'zh'（中→日）
-  let mode = 'zh';
+  let mode = localStorage.getItem(MODE_KEY) || 'zh';
   let selectedUnit = '';  // '' = 全部
-  let orderMode = 'rnd';  // 'rnd' 隨機 | 'seq' 固定
+  let orderMode = localStorage.getItem(ORDER_KEY) || 'rnd';  // 'rnd' 隨機 | 'seq' 固定
   let deck = [];       // 當前牌堆
   let currentIndex = 0;
   let totalCount = 0;
@@ -264,22 +266,21 @@ python3 -m http.server 8080</code></pre>
   }
 
   function setupModeButtons() {
-    document.getElementById('mode-jp').addEventListener('click', function () {
-      setMode('jp');
-    });
-    document.getElementById('mode-zh').addEventListener('click', function () {
-      setMode('zh');
-    });
-    document.getElementById('order-seq').addEventListener('click', function () {
-      setOrder('seq');
-    });
-    document.getElementById('order-rnd').addEventListener('click', function () {
-      setOrder('rnd');
-    });
+    document.getElementById('mode-jp').addEventListener('click', function () { setMode('jp'); });
+    document.getElementById('mode-zh').addEventListener('click', function () { setMode('zh'); });
+    document.getElementById('order-seq').addEventListener('click', function () { setOrder('seq'); });
+    document.getElementById('order-rnd').addEventListener('click', function () { setOrder('rnd'); });
+
+    // 套用已儲存的初始狀態
+    document.getElementById('mode-jp').classList.toggle('btn-active', mode === 'jp');
+    document.getElementById('mode-zh').classList.toggle('btn-active', mode === 'zh');
+    document.getElementById('order-seq').classList.toggle('btn-active', orderMode === 'seq');
+    document.getElementById('order-rnd').classList.toggle('btn-active', orderMode === 'rnd');
   }
 
   function setOrder(newOrder) {
     orderMode = newOrder;
+    localStorage.setItem(ORDER_KEY, orderMode);
     document.getElementById('order-seq').classList.toggle('btn-active', orderMode === 'seq');
     document.getElementById('order-rnd').classList.toggle('btn-active', orderMode === 'rnd');
     startDeck();
@@ -287,6 +288,7 @@ python3 -m http.server 8080</code></pre>
 
   function setMode(newMode) {
     mode = newMode;
+    localStorage.setItem(MODE_KEY, mode);
     document.getElementById('mode-jp').classList.toggle('btn-active', mode === 'jp');
     document.getElementById('mode-zh').classList.toggle('btn-active', mode === 'zh');
     // 重新渲染當前卡片

@@ -1,8 +1,13 @@
 /* main.css — 自訂樣式（補充 DaisyUI 不足之處）*/
 
+/* 統一兩個主題的按鈕圓角（仿 cupcake 風格） */
+[data-theme] {
+  --rounded-btn: 1.9rem;
+}
+
 /* 假名標註 */
 ruby rt {
   font-size: 0.55em;
   line-height: 1.2;
-  color: oklch(var(--bc) / 0.6);
+  opacity: 0.65;
 }

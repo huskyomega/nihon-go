@@ -82,7 +82,7 @@
     <progress class="progress progress-secondary w-full mb-6" id="progress-bar" value="0" max="100"></progress>
 
     <!-- 閃卡區 -->
-    <div class="flashcard-scene w-full mb-6" style="height: 340px;" id="card-scene">
+    <div class="flashcard-scene w-full mb-6" style="height: 420px;" id="card-scene">
       <div class="flashcard-inner" id="card-inner">
 
         <!-- 正面 -->
@@ -102,11 +102,7 @@
             <div class="text-base font-semibold opacity-90" id="back-meaning"></div>
             <div class="divider my-0 opacity-30"></div>
             <div class="text-xs opacity-70 leading-relaxed px-2" id="back-explanation"></div>
-            <div class="flex items-center gap-2 mt-1">
-              <span class="text-sm italic" id="back-example"></span>
-              <button class="speak-btn btn btn-circle btn-sm btn-ghost border border-secondary-content/30" id="speak-btn" title="發音">▶</button>
-            </div>
-            <div class="text-xs opacity-70" id="back-example-meaning"></div>
+            <div id="back-examples-container" class="w-full"></div>
           </div>
         </div>
 
