@@ -1,3 +1,4 @@
 docs/references/
+docs/src_design/
 src/data/*-full.json
 .DS_Store

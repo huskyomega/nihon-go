@@ -2,6 +2,7 @@
 <html lang="zh-Hant" data-theme="cupcake">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" href="assets/icons/nihongo_icon_mono.svg" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>文法閃卡 — NihonGo</title>
   <link href="assets/vendor/daisyui.min.css" rel="stylesheet">
@@ -54,8 +55,8 @@
     <div class="navbar-end px-4">
       <label class="swap swap-rotate">
         <input type="checkbox" id="theme-toggle">
-        <span class="swap-on text-xl">🌙</span>
-        <span class="swap-off text-xl">☀️</span>
+        <span class="swap-on"><img src="assets/icons/dark_mode.svg" class="theme-icon w-6 h-6" alt=""></span>
+        <span class="swap-off"><img src="assets/icons/light_mode.svg" class="theme-icon w-6 h-6" alt=""></span>
       </label>
     </div>
   </header>
@@ -70,16 +71,16 @@
     </div>
 
     <!-- 順序切換 & 進度 -->
-    <div class="flex items-center justify-between mb-4">
-      <div class="join">
+    <div class="flex items-center gap-4 mb-6">
+      <div class="join shrink-0">
         <button class="join-item btn btn-sm" id="order-seq">固定</button>
         <button class="join-item btn btn-sm btn-active" id="order-rnd">隨機</button>
       </div>
-      <span class="text-sm text-base-content/60" id="progress-label">— / —</span>
+      <div class="flex flex-col items-end flex-1 gap-1">
+        <span class="text-sm text-base-content/60" id="progress-label">— / —</span>
+        <progress class="progress progress-secondary w-full" id="progress-bar" value="0" max="100"></progress>
+      </div>
     </div>
-
-    <!-- 進度條 -->
-    <progress class="progress progress-secondary w-full mb-6" id="progress-bar" value="0" max="100"></progress>
 
     <!-- 閃卡區 -->
     <div class="flashcard-scene w-full mb-6" style="height: 420px;" id="card-scene">
@@ -118,7 +119,7 @@
     <!-- 完成畫面 -->
     <div class="hidden card bg-base-100 shadow-xl" id="done-screen">
       <div class="card-body items-center text-center py-10">
-        <div class="text-5xl mb-4">🎉</div>
+        <img src="assets/icons/finish.svg" class="ui-icon w-16 h-16 mb-4" alt="">
         <h2 class="card-title text-2xl mb-2">本輪完成！</h2>
         <p class="text-base-content/60 mb-6" id="done-summary"></p>
         <div class="flex gap-3">

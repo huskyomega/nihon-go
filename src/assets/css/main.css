@@ -1,8 +1,53 @@
 /* main.css — 自訂樣式（補充 DaisyUI 不足之處）*/
 
+/* Dark mode 下將黑色 SVG icon 反色為白色 */
+[data-theme="dark"] .theme-icon {
+  filter: invert(1);
+}
+
 /* 統一兩個主題的按鈕圓角（仿 cupcake 風格） */
 [data-theme] {
   --rounded-btn: 1.9rem;
+}
+
+/* 頁面裝飾用大圖示（完成、結果等） */
+.ui-icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+[data-theme="dark"] .ui-icon {
+  filter: invert(1);
+}
+
+/* 首頁卡片背景圖示 */
+.card-bg-icon {
+  position: absolute;
+  pointer-events: none;
+  width: 200px;
+  min-width: 200px;
+  opacity: 0.05;
+  transform: rotate(-15deg);
+  top: -40px;
+  right: -20px;
+}
+
+[data-theme="dark"] .card-bg-icon {
+  filter: invert(1);
+}
+
+/* 首頁 logo 圖示：以 mask 方式套用 currentColor */
+.nihongo-icon {
+  display: inline-block;
+  background-color: currentColor;
+  -webkit-mask-image: url('../icons/nihongo_icon_mono.svg');
+  mask-image: url('../icons/nihongo_icon_mono.svg');
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
 }
 
 /* 假名標註 */

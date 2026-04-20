@@ -2,6 +2,7 @@
 <html lang="ja" data-theme="cupcake">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" href="assets/icons/nihongo_icon_mono.svg" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>模擬考 — NihonGo</title>
   <link href="assets/vendor/daisyui.min.css" rel="stylesheet">
@@ -70,8 +71,8 @@
     <div class="navbar-end px-4">
       <label class="swap swap-rotate">
         <input type="checkbox" id="theme-toggle">
-        <span class="swap-on text-xl">🌙</span>
-        <span class="swap-off text-xl">☀️</span>
+        <span class="swap-on"><img src="assets/icons/dark_mode.svg" class="theme-icon w-6 h-6" alt=""></span>
+        <span class="swap-off"><img src="assets/icons/light_mode.svg" class="theme-icon w-6 h-6" alt=""></span>
       </label>
     </div>
   </header>
@@ -81,7 +82,7 @@
     <!-- ▼ 開始画面 -->
     <div id="start-screen" class="card bg-base-100 shadow-xl">
       <div class="card-body items-center text-center py-8 gap-3">
-        <div class="text-5xl mb-2">📝</div>
+        <img src="assets/icons/quiz.svg" class="ui-icon w-16 h-16 mb-2" alt="">
         <h2 class="card-title text-2xl">JLPT N5 模擬考</h2>
         <div class="w-full text-left mt-2 space-y-1 text-sm text-base-content/70">
           <p class="font-semibold text-base-content mb-2">試験の構成</p>

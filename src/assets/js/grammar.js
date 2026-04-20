@@ -121,8 +121,7 @@
   }
 
   function saveState() {
-    const card = deck[currentIndex];
-    if (card) saveProgress(STATE_KEY, { unit: selectedUnit, cardId: card.id });
+    saveProgress(STATE_KEY, { unit: selectedUnit });
   }
 
   function restoreState() {
@@ -135,10 +134,6 @@
       });
     }
     startDeck();
-    if (saved && saved.cardId) {
-      const idx = deck.findIndex(function (c) { return c.id === saved.cardId; });
-      if (idx !== -1) { currentIndex = idx; renderCard(); updateProgress(); }
-    }
   }
 
   function renderBack() {

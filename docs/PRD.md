@@ -86,7 +86,40 @@
 ### 6. 首頁（index.html）
 - 五個功能入口卡片，兩欄網格（所有尺寸，含手機）
 - 排列：單字學習、單字閃卡 / 文法學習、文法閃卡 / 模擬考（col-span-2，佔整行）
-- 單字閃卡、文法閃卡顯示累積學習進度條（localStorage）；其餘卡片不顯示進度條
+- 標題：「**霓虹狗**學日語」（霓虹狗粗體、學日語細體）
+- 所有卡片無 emoji；各卡有專屬背景裝飾 SVG icon（`.card-bg-icon`，透明度 0.05）
+- 單字閃卡、文法閃卡：顯示累積學習文字（已學 X / Y 字／句型），不顯示進度條
+- 單字學習、文法學習：動態顯示總數（共 X 字／句型），由 fetchJSON 取得
+- 模擬考：無進度資訊
+
+## UI 圖示規範
+
+### 圖示檔案（src/assets/icons/）
+| 檔案 | 用途 |
+|------|------|
+| `nihongo_icon_mono.svg` | 首頁 logo（CSS mask，繼承 currentColor）；各頁 favicon |
+| `light_mode.svg` | 主題切換按鈕（亮色模式圖示） |
+| `dark_mode.svg` | 主題切換按鈕（暗色模式圖示） |
+| `vocab-study.svg` | 單字學習卡背景 icon；模擬考文字語彙 section icon |
+| `vocab.svg` | 單字閃卡背景 icon |
+| `grammar-study.svg` | 文法學習卡背景 icon；模擬考文法・読解 section icon |
+| `grammar.svg` | 文法閃卡背景 icon |
+| `quiz.svg` | 模擬考卡背景 icon；模擬考開始畫面 icon |
+| `finish.svg` | 閃卡完成畫面；模擬考高分結果（≥80%） |
+| `happy.svg` | 模擬考中分結果（60–79%） |
+| `thumbup.svg` | 模擬考低分結果（<60%） |
+| `listening.svg` | 模擬考聴解 section icon |
+
+### CSS Class
+| Class | 說明 |
+|-------|------|
+| `.nihongo-icon` | Logo：`mask-image` 套用 SVG，`background-color: currentColor` |
+| `.theme-icon` | 主題切換 SVG；dark mode 套用 `filter: invert(1)` |
+| `.card-bg-icon` | 首頁卡片背景裝飾圖示（絕對定位、200px、opacity 0.05、rotate -15deg）；dark mode `filter: invert(1)` |
+| `.ui-icon` | 頁面裝飾大圖示（完成畫面、section 切換等）；dark mode `filter: invert(1)` |
+
+### 進度列布局
+- **單字閃卡 / 文法閃卡**：進度 label + progress bar 整合至模式切換列右側（`flex-1`），節省垂直空間
 
 ## 資料格式
 

@@ -2,6 +2,7 @@
 <html lang="zh-Hant" data-theme="cupcake">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" href="assets/icons/nihongo_icon_mono.svg" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NihonGo 霓虹狗 — JLPT N5 日文學習</title>
   <link href="assets/vendor/daisyui.min.css" rel="stylesheet">
@@ -12,68 +13,72 @@
 
   <header class="navbar bg-base-100 shadow-sm">
     <div class="navbar-start">
-      <span class="text-2xl font-bold text-primary px-4">🇯🇵 NihonGo</span>
+      <span class="text-2xl font-bold text-primary px-4 flex items-center gap-2"><span class="nihongo-icon w-7 h-7 shrink-0" aria-hidden="true"></span>NihonGo</span>
     </div>
     <div class="navbar-end px-4">
       <label class="swap swap-rotate">
         <input type="checkbox" id="theme-toggle">
-        <span class="swap-on text-xl">🌙</span>
-        <span class="swap-off text-xl">☀️</span>
+        <span class="swap-on"><img src="assets/icons/dark_mode.svg" class="theme-icon w-6 h-6" alt=""></span>
+        <span class="swap-off"><img src="assets/icons/light_mode.svg" class="theme-icon w-6 h-6" alt=""></span>
       </label>
     </div>
   </header>
 
   <main class="container mx-auto px-4 py-10 max-w-3xl">
     <div class="text-center mb-10">
-      <h1 class="text-4xl font-bold mb-2">霓虹狗日文學習</h1>
+      <h1 class="text-4xl mb-2"><span class="font-bold">霓虹狗</span><span class="font-light">學日語</span></h1>
       <p class="text-base-content/60">JLPT N5 單字・文法・模擬考，一站搞定</p>
     </div>
 
     <div class="grid grid-cols-2 gap-6">
 
-      <a href="vocab-study.html" class="card bg-base-100 shadow hover:shadow-lg transition-shadow cursor-pointer">
-        <div class="card-body items-center text-center">
-          <div class="text-5xl mb-2">📚</div>
+      <a href="vocab-study.html" class="card bg-base-100 shadow hover:shadow-lg transition-shadow cursor-pointer relative overflow-hidden">
+        <img src="assets/icons/vocab-study.svg" alt="" aria-hidden="true" class="card-bg-icon">
+        <div class="card-body items-center text-center relative">
           <h2 class="card-title">單字學習</h2>
           <p class="text-sm text-base-content/60">N5 單字詳解，逐字瀏覽</p>
+          <div class="mt-2 w-full">
+            <div class="text-xs text-base-content/40" id="vocab-study-total"></div>
+          </div>
         </div>
       </a>
 
-      <a href="flashcard.html" class="card bg-base-100 shadow hover:shadow-lg transition-shadow cursor-pointer">
-        <div class="card-body items-center text-center">
-          <div class="text-5xl mb-2">📇</div>
+      <a href="flashcard.html" class="card bg-base-100 shadow hover:shadow-lg transition-shadow cursor-pointer relative overflow-hidden">
+        <img src="assets/icons/vocab.svg" alt="" aria-hidden="true" class="card-bg-icon">
+        <div class="card-body items-center text-center relative">
           <h2 class="card-title">單字閃卡</h2>
           <p class="text-sm text-base-content/60">N5 必考單字，翻牌練習</p>
           <div class="mt-2 w-full">
-            <div class="text-xs text-base-content/40 mb-1" id="vocab-progress-label">尚未開始</div>
-            <progress class="progress progress-primary w-full" id="vocab-progress" value="0" max="100"></progress>
+            <div class="text-xs text-base-content/40" id="vocab-progress-label">尚未開始</div>
           </div>
         </div>
       </a>
 
-      <a href="grammar-study.html" class="card bg-base-100 shadow hover:shadow-lg transition-shadow cursor-pointer">
-        <div class="card-body items-center text-center">
-          <div class="text-5xl mb-2">📝</div>
+      <a href="grammar-study.html" class="card bg-base-100 shadow hover:shadow-lg transition-shadow cursor-pointer relative overflow-hidden">
+        <img src="assets/icons/grammar-study.svg" alt="" aria-hidden="true" class="card-bg-icon">
+        <div class="card-body items-center text-center relative">
           <h2 class="card-title">文法學習</h2>
           <p class="text-sm text-base-content/60">N5 句型詳解，逐句瀏覽</p>
+          <div class="mt-2 w-full">
+            <div class="text-xs text-base-content/40" id="grammar-study-total"></div>
+          </div>
         </div>
       </a>
 
-      <a href="grammar.html" class="card bg-base-100 shadow hover:shadow-lg transition-shadow cursor-pointer">
-        <div class="card-body items-center text-center">
-          <div class="text-5xl mb-2">📖</div>
+      <a href="grammar.html" class="card bg-base-100 shadow hover:shadow-lg transition-shadow cursor-pointer relative overflow-hidden">
+        <img src="assets/icons/grammar.svg" alt="" aria-hidden="true" class="card-bg-icon">
+        <div class="card-body items-center text-center relative">
           <h2 class="card-title">文法閃卡</h2>
           <p class="text-sm text-base-content/60">N5 句型解說與例句</p>
           <div class="mt-2 w-full">
-            <div class="text-xs text-base-content/40 mb-1" id="grammar-progress-label">尚未開始</div>
-            <progress class="progress progress-secondary w-full" id="grammar-progress" value="0" max="100"></progress>
+            <div class="text-xs text-base-content/40" id="grammar-progress-label">尚未開始</div>
           </div>
         </div>
       </a>
 
-      <a href="quiz.html" class="card bg-base-100 shadow hover:shadow-lg transition-shadow cursor-pointer col-span-2">
-        <div class="card-body items-center text-center">
-          <div class="text-5xl mb-2">🎯</div>
+      <a href="quiz.html" class="card bg-base-100 shadow hover:shadow-lg transition-shadow cursor-pointer col-span-2 relative overflow-hidden">
+        <img src="assets/icons/quiz.svg" alt="" aria-hidden="true" class="card-bg-icon">
+        <div class="card-body items-center text-center relative">
           <h2 class="card-title">模擬考</h2>
           <p class="text-sm text-base-content/60">JLPT N5 題型練習</p>
         </div>
@@ -95,21 +100,27 @@
       localStorage.setItem('nihongo_theme', theme);
     });
 
-    // Load progress
+    // Load progress + total counts
     const vocabProgress = loadProgress('nihongo_vocab_progress');
     const grammarProgress = loadProgress('nihongo_grammar_progress');
-    const quizHistory = loadProgress('nihongo_quiz_history');
 
-    if (vocabProgress && vocabProgress.total > 0) {
-      const pct = Math.round((vocabProgress.known / vocabProgress.total) * 100);
-      document.getElementById('vocab-progress').value = pct;
-      document.getElementById('vocab-progress-label').textContent = `已學 ${vocabProgress.known} / ${vocabProgress.total} 字`;
-    }
-    if (grammarProgress && grammarProgress.total > 0) {
-      const pct = Math.round((grammarProgress.known / grammarProgress.total) * 100);
-      document.getElementById('grammar-progress').value = pct;
-      document.getElementById('grammar-progress-label').textContent = `已學 ${grammarProgress.known} / ${grammarProgress.total} 句型`;
-    }
+    Promise.all([
+      fetchJSON('data/n5-vocab.json'),
+      fetchJSON('data/n5-grammar.json')
+    ]).then(([vocab, grammar]) => {
+      const vocabTotal = vocab.length;
+      const grammarTotal = grammar.length;
+
+      document.getElementById('vocab-study-total').textContent = `共 ${vocabTotal} 字`;
+      document.getElementById('grammar-study-total').textContent = `共 ${grammarTotal} 句型`;
+
+      if (vocabProgress && vocabProgress.total > 0) {
+        document.getElementById('vocab-progress-label').textContent = `已學 ${vocabProgress.known} / ${vocabTotal} 字`;
+      }
+      if (grammarProgress && grammarProgress.total > 0) {
+        document.getElementById('grammar-progress-label').textContent = `已學 ${grammarProgress.known} / ${grammarTotal} 句型`;
+      }
+    });
   </script>
 </body>
 </html>

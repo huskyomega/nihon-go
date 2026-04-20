@@ -42,10 +42,14 @@
     '聴解':       ['listening_task', 'listening_point', 'verbal_expression', 'immediate_response'],
   };
 
+  function iconImg(name) {
+    return '<img src="assets/icons/' + name + '" class="ui-icon w-16 h-16" alt="">';
+  }
+
   const SECTION_META = {
-    '文字・語彙': { icon: '📖', desc: '言語知識（文字・語彙）のテストです。' },
-    '文法・読解': { icon: '✏️', desc: '言語知識（文法）・読解のテストです。' },
-    '聴解':       { icon: '🎧', desc: '聴解のテストです。音声を聞いてから答えてください。' },
+    '文字・語彙': { icon: iconImg('vocab-study.svg'),    desc: '言語知識（文字・語彙）のテストです。' },
+    '文法・読解': { icon: iconImg('grammar-study.svg'),  desc: '言語知識（文法）・読解のテストです。' },
+    '聴解':       { icon: iconImg('listening.svg'),       desc: '聴解のテストです。音声を聞いてから答えてください。' },
   };
 
   const OPTION_NUMS = ['１', '２', '３', '４'];
@@ -167,7 +171,7 @@
     problemScreen.classList.add('hidden');
 
     const meta = SECTION_META[section];
-    document.getElementById('section-icon').textContent = meta.icon;
+    document.getElementById('section-icon').innerHTML = meta.icon;
     document.getElementById('section-title').textContent = section;
     document.getElementById('section-desc').textContent = meta.desc;
   }
@@ -494,7 +498,7 @@
     const totalScore = Object.values(sectionScores).reduce(function (s, v) { return s + v.score; }, 0);
     const pct = Math.round(totalScore / total * 100);
 
-    document.getElementById('result-emoji').textContent = pct >= 80 ? '🎉' : pct >= 60 ? '😊' : '💪';
+    document.getElementById('result-emoji').innerHTML = iconImg(pct >= 80 ? 'finish.svg' : pct >= 60 ? 'happy.svg' : 'thumbup.svg');
     document.getElementById('score-text').textContent = total + '問中 ' + totalScore + '問正解';
     const circle = document.getElementById('score-circle');
     circle.style.setProperty('--value', pct);
