@@ -81,6 +81,13 @@ function toRuby(word, reading) {
            (c >= 0xF900 && c <= 0xFAFF);
   }
 
+  // 片假名 → 平假名（用於 indexOf 比對，避免 "ゴム" vs "ごむ" 不匹配）
+  function toHiragana(str) {
+    return str.replace(/[ァ-ヶ]/g, function (ch) {
+      return String.fromCharCode(ch.charCodeAt(0) - 0x60);
+    });
+  }
+
   // 將單字切成「漢字段」與「假名段」交替的片段陣列
   const segs = [];
   let buf = '', bufKanji = null;
@@ -114,7 +121,7 @@ function toRuby(word, reading) {
         furigana = kana.slice(rPos);
         rPos = kana.length;
       } else {
-        const idx = kana.indexOf(nextKana.text, rPos);
+        const idx = kana.indexOf(toHiragana(nextKana.text), rPos + 1);
         if (idx < 0) {
           furigana = kana.slice(rPos);
           rPos = kana.length;
