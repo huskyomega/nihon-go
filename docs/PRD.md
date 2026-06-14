@@ -53,11 +53,20 @@
 基本文型、い形容詞、な形容詞、動詞活用、助詞、て形的用法、
 時間・順序、意向・勧誘・願望、疑問・限定、副詞・接続詞、普通體・語氣、比較・能力
 
-### 5. JLPT 模擬考（quiz.html）
+### 5. JLPT 模擬考（quiz.html、quiz2.html … quiz6.html）
+- 共 6 套獨立模擬考（模擬考 1–6），各有獨立 HTML / JS / JSON
+- 對應檔案：`quiz{n}.html`、`assets/js/quiz{n}.js`（n=1 時為 `quiz.js`）、`data/n5-quiz{n}.json`
 - 完整模擬 JLPT N5 三大節：言語知識（文字・語彙）、言語知識（文法）・読解、聴解
 - 全日文題目說明（無中文說明）；解析、結果畫面部分使用繁體中文
 - 作答後立即顯示對錯與中文解析
 - 結束後顯示總分、各節分數、錯題回顧
+
+#### 各套題數（每套共 59 題）
+| 節 | 題型 | 題數 |
+|----|------|------|
+| 文字・語彙 | kanji_reading×5、orthography×5、contextual_vocab×7、paraphrase×5 | 22 |
+| 文法・読解 | grammar_form×10、sentence_order×5、passage_grammar×5、reading×4 | 24 |
+| 聴解 | listening_task×4、listening_point×3、verbal_expression×3、immediate_response×3 | 13 |
 
 #### 題型
 | 題型 | 說明 |
@@ -84,13 +93,13 @@
 - 作答後自動停止 TTS
 
 ### 6. 首頁（index.html）
-- 五個功能入口卡片，兩欄網格（所有尺寸，含手機）
-- 排列：單字學習、單字閃卡 / 文法學習、文法閃卡 / 模擬考（col-span-2，佔整行）
+- 十個功能入口卡片，兩欄網格（所有尺寸，含手機）
+- 排列：單字學習、單字閃卡 / 文法學習、文法閃卡 / 模擬考 1、模擬考 2 / 模擬考 3、模擬考 4 / 模擬考 5、模擬考 6（共五列，每列各佔半行）
 - 標題：「**霓虹狗**學日語」（霓虹狗粗體、學日語細體）
 - 所有卡片無 emoji；各卡有專屬背景裝飾 SVG icon（`.card-bg-icon`，透明度 0.05）
 - 單字閃卡、文法閃卡：顯示累積學習文字（已學 X / Y 字／句型），不顯示進度條
 - 單字學習、文法學習：動態顯示總數（共 X 字／句型），由 fetchJSON 取得
-- 模擬考：無進度資訊
+- 模擬考 1–6：無進度資訊
 
 ## UI 圖示規範
 
@@ -205,7 +214,12 @@
 | `nihongo_grammar_order` | `'seq'`（固定）\| `'rnd'`（隨機） |
 | `nihongo_grammar_study_state` | `{ unit, cardId }` — 文法學習最後位置 |
 | `nihongo_grammar_flashcard_state` | `{ unit, cardId }` — 文法閃卡最後位置 |
-| `nihongo_quiz_history` | `{ lastScore: %, lastTotal: N }` |
+| `nihongo_quiz_history` | `{ lastScore: %, lastTotal: N }` — 模擬考 1 |
+| `nihongo_quiz2_history` | 同上，模擬考 2 |
+| `nihongo_quiz3_history` | 同上，模擬考 3 |
+| `nihongo_quiz4_history` | 同上，模擬考 4 |
+| `nihongo_quiz5_history` | 同上，模擬考 5 |
+| `nihongo_quiz6_history` | 同上，模擬考 6 |
 | `nihongo_theme` | `'cupcake'` \| `'dark'` |
 
 ## 假名標注（Ruby）
@@ -214,3 +228,13 @@
 - 文法閃卡 / 文法學習：
   - 單例句卡：使用 `example_ruby` 欄位；無此欄位時退回 `example` 純文字
   - 多主題卡（有 `examples` 陣列）：每個 `examples[i].ruby` 個別渲染；無 ruby 時退回 `sentence`
+
+### toRuby 實作說明
+`toRuby` 將單字切分為「漢字段」與「假名段」交替的片段，逐段比對讀音字串以分配假名標注。
+
+已修正兩個 bug（commit `9f4f9c1`）：
+
+| Bug | 現象 | 根因 | 修法 |
+|-----|------|------|------|
+| 送り仮名起首相同 | 良い・痛い・歌う 沒有標注 | `indexOf(nextKana, rPos)` 在 `rPos=0` 時馬上命中，切出空字串 | 改為 `indexOf(..., rPos + 1)` 從下一位開始搜尋 |
+| 片假名混入 | 消しゴム 的「消」被標成整個讀音 | 假名段「しゴム」含片假名，`indexOf` 在平假名讀音中找不到（ゴ≠ご）回傳 -1 | 搜尋前先以 `toHiragana()` 將片假名轉換為平假名再比對 |
