@@ -4158,6 +4158,17 @@
     "example_meaning": "下著雨。"
   },
   {
+    "id": "v482",
+    "word": "吹く",
+    "reading": "ふく",
+    "romaji": "fuku",
+    "pos": "動詞（一類）",
+    "unit": "動詞",
+    "meaning": "（風）吹",
+    "example": "風が強く吹いています。",
+    "example_meaning": "風吹得很強。"
+  },
+  {
     "id": "v379",
     "word": "咲く",
     "reading": "さく",
@@ -4266,6 +4277,17 @@
     "meaning": "起床",
     "example": "七時に起きます。",
     "example_meaning": "七點起床。"
+  },
+  {
+    "id": "v481",
+    "word": "貸す",
+    "reading": "かす",
+    "romaji": "kasu",
+    "pos": "動詞（一類）",
+    "unit": "動詞",
+    "meaning": "借出、出借",
+    "example": "友達にお金を貸しました。",
+    "example_meaning": "借錢給朋友了。"
   },
   {
     "id": "v389",
