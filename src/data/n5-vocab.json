@@ -4246,6 +4246,28 @@
     "example_meaning": "請按按鈕。"
   },
   {
+    "id": "v481",
+    "word": "貸す",
+    "reading": "かす",
+    "romaji": "kasu",
+    "pos": "動詞（一類）",
+    "unit": "動詞",
+    "meaning": "借出、出借",
+    "example": "友達にお金を貸しました。",
+    "example_meaning": "借錢給朋友了。"
+  },
+  {
+    "id": "v389",
+    "word": "借りる",
+    "reading": "かりる",
+    "romaji": "kariru",
+    "pos": "動詞（二類）",
+    "unit": "動詞",
+    "meaning": "借",
+    "example": "本を借ります。",
+    "example_meaning": "借書。"
+  },
+  {
     "id": "v386",
     "word": "着る",
     "reading": "きる",
@@ -4277,28 +4299,6 @@
     "meaning": "起床",
     "example": "七時に起きます。",
     "example_meaning": "七點起床。"
-  },
-  {
-    "id": "v481",
-    "word": "貸す",
-    "reading": "かす",
-    "romaji": "kasu",
-    "pos": "動詞（一類）",
-    "unit": "動詞",
-    "meaning": "借出、出借",
-    "example": "友達にお金を貸しました。",
-    "example_meaning": "借錢給朋友了。"
-  },
-  {
-    "id": "v389",
-    "word": "借りる",
-    "reading": "かりる",
-    "romaji": "kariru",
-    "pos": "動詞（二類）",
-    "unit": "動詞",
-    "meaning": "借",
-    "example": "本を借ります。",
-    "example_meaning": "借書。"
   },
   {
     "id": "v390",
