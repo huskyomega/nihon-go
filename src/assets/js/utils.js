@@ -78,7 +78,8 @@ function toRuby(word, reading) {
     const c = ch.charCodeAt(0);
     return (c >= 0x4E00 && c <= 0x9FFF) ||
            (c >= 0x3400 && c <= 0x4DBF) ||
-           (c >= 0xF900 && c <= 0xFAFF);
+           (c >= 0xF900 && c <= 0xFAFF) ||
+           c === 0x3005; // 々（繰り返し記号）
   }
 
   // 片假名 → 平假名（用於 indexOf 比對，避免 "ゴム" vs "ごむ" 不匹配）
