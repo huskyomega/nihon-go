@@ -1,557 +1,1246 @@
 [
   {
-    "id": "v1-1", "section": "文字・語彙", "problem": 1, "type": "kanji_reading",
+    "id": "v1-1",
+    "section": "文字・語彙",
+    "problem": 1,
+    "type": "kanji_reading",
     "sentence": "池の そばに 木が たっています。",
     "target": "木",
-    "options": ["き", "もり", "はな", "くさ"],
+    "options": [
+      "き",
+      "もり",
+      "はな",
+      "くさ"
+    ],
     "answer": 0,
     "explanation": "「木」讀作「き」（樹木）。相關詞：木曜日（もくようび）、木材（もくざい）。"
   },
   {
-    "id": "v1-2", "section": "文字・語彙", "problem": 1, "type": "kanji_reading",
+    "id": "v1-2",
+    "section": "文字・語彙",
+    "problem": 1,
+    "type": "kanji_reading",
     "sentence": "かれの 足は とても はやいです。",
     "target": "足",
-    "options": ["て", "あし", "かた", "むね"],
+    "options": [
+      "て",
+      "あし",
+      "かた",
+      "むね"
+    ],
     "answer": 1,
     "explanation": "「足」讀作「あし」（腳、腿）。相關詞：足音（あしおと＝腳步聲）、手足（てあし＝手腳）。"
   },
   {
-    "id": "v1-3", "section": "文字・語彙", "problem": 1, "type": "kanji_reading",
+    "id": "v1-3",
+    "section": "文字・語彙",
+    "problem": 1,
+    "type": "kanji_reading",
     "sentence": "あの 魚は とても おいしいですね。",
     "target": "魚",
-    "options": ["とり", "むし", "さかな", "にく"],
+    "options": [
+      "とり",
+      "むし",
+      "さかな",
+      "にく"
+    ],
     "answer": 2,
     "explanation": "「魚」讀作「さかな」（魚）。相關詞：魚屋（さかなや＝魚販）、金魚（きんぎょ）。"
   },
   {
-    "id": "v1-4", "section": "文字・語彙", "problem": 1, "type": "kanji_reading",
+    "id": "v1-4",
+    "section": "文字・語彙",
+    "problem": 1,
+    "type": "kanji_reading",
     "sentence": "今週の 木曜日に テストが あります。",
     "target": "木曜日",
-    "options": ["すいようび", "もくようび", "きんようび", "どようび"],
+    "options": [
+      "すいようび",
+      "もくようび",
+      "きんようび",
+      "どようび"
+    ],
     "answer": 1,
     "explanation": "「木曜日」讀作「もくようび」（星期四）。一週七天：月火水木金土日（げつかすいもくきんどにち）。"
   },
   {
-    "id": "v1-5", "section": "文字・語彙", "problem": 1, "type": "kanji_reading",
+    "id": "v1-5",
+    "section": "文字・語彙",
+    "problem": 1,
+    "type": "kanji_reading",
     "sentence": "北 の ほうが もっと さむいです。",
     "target": "北",
-    "options": ["みなみ", "ひがし", "にし", "きた"],
+    "options": [
+      "みなみ",
+      "ひがし",
+      "にし",
+      "きた"
+    ],
     "answer": 3,
     "explanation": "「北」讀作「きた」（北方）。四方位：東（ひがし）・西（にし）・南（みなみ）・北（きた）。"
   },
   {
-    "id": "v2-1", "section": "文字・語彙", "problem": 2, "type": "orthography",
+    "id": "v2-1",
+    "section": "文字・語彙",
+    "problem": 2,
+    "type": "orthography",
     "sentence": "ちかてつで うちへ かえりました。",
     "target": "ちかてつ",
-    "options": ["地下車", "地下鉄", "地下線", "近下鉄"],
+    "options": [
+      "地下車",
+      "地下鉄",
+      "地下線",
+      "近下鉄"
+    ],
     "answer": 1,
     "explanation": "「ちかてつ」寫作「地下鉄」（地鐵）。相關詞：地下鉄の駅（ちかてつのえき＝地鐵站）。"
   },
   {
-    "id": "v2-2", "section": "文字・語彙", "problem": 2, "type": "orthography",
+    "id": "v2-2",
+    "section": "文字・語彙",
+    "problem": 2,
+    "type": "orthography",
     "sentence": "えんぴつを かして ください。",
     "target": "えんぴつ",
-    "options": ["円筆", "鉛筆", "鉛比", "円比"],
+    "options": [
+      "円筆",
+      "鉛筆",
+      "鉛比",
+      "円比"
+    ],
     "answer": 1,
     "explanation": "「えんぴつ」寫作「鉛筆」（鉛筆）。相關詞：色鉛筆（いろえんぴつ＝彩色鉛筆）。"
   },
   {
-    "id": "v2-3", "section": "文字・語彙", "problem": 2, "type": "orthography",
+    "id": "v2-3",
+    "section": "文字・語彙",
+    "problem": 2,
+    "type": "orthography",
     "sentence": "ちずを みながら みちを さがしました。",
     "target": "ちず",
-    "options": ["地図", "地頭", "知図", "値図"],
+    "options": [
+      "地図",
+      "地頭",
+      "知図",
+      "値図"
+    ],
     "answer": 0,
     "explanation": "「ちず」寫作「地図」（地圖）。相關詞：地図アプリ（地圖應用程式）。"
   },
   {
-    "id": "v2-4", "section": "文字・語彙", "problem": 2, "type": "orthography",
+    "id": "v2-4",
+    "section": "文字・語彙",
+    "problem": 2,
+    "type": "orthography",
     "sentence": "あには ぎんこうで はたらいて います。",
     "target": "あに",
-    "options": ["父", "兄", "弟", "祖父"],
+    "options": [
+      "父",
+      "兄",
+      "弟",
+      "祖父"
+    ],
     "answer": 1,
     "explanation": "「あに」寫作「兄」（哥哥）。家族詞彙：兄（あに）・弟（おとうと）・姉（あね）・妹（いもうと）。"
   },
   {
-    "id": "v2-5", "section": "文字・語彙", "problem": 2, "type": "orthography",
+    "id": "v2-5",
+    "section": "文字・語彙",
+    "problem": 2,
+    "type": "orthography",
     "sentence": "みどりの セーターが すきです。",
     "target": "みどり",
-    "options": ["青", "緑", "黄", "紫"],
+    "options": [
+      "青",
+      "緑",
+      "黄",
+      "紫"
+    ],
     "answer": 1,
     "explanation": "「みどり」寫作「緑」（綠色）。顏色詞彙：赤（あか）・青（あお）・黄（き）・緑（みどり）。"
   },
   {
-    "id": "v3-1", "section": "文字・語彙", "problem": 3, "type": "contextual_vocab",
+    "id": "v3-1",
+    "section": "文字・語彙",
+    "problem": 3,
+    "type": "contextual_vocab",
     "sentence": "かれは かのじょに ゆびわを （　　）あげました。",
-    "options": ["おくって", "おくり", "もって", "かって"],
+    "options": [
+      "おくって",
+      "おくり",
+      "もって",
+      "かって"
+    ],
     "answer": 1,
     "explanation": "「〜て+あげる」表示為對方做某事，て形前接「贈り（おくり）」形成「贈りあげた（送給她）」。正確はてform「贈って（おくって）あげました」だが、選項にある「おくり」は「おくりあげました」の形で動詞連用形+あげる。"
   },
   {
-    "id": "v3-2", "section": "文字・語彙", "problem": 3, "type": "contextual_vocab",
+    "id": "v3-2",
+    "section": "文字・語彙",
+    "problem": 3,
+    "type": "contextual_vocab",
     "sentence": "あめが ふりそうなので、かさを （　　）きました。",
-    "options": ["もって", "かって", "みて", "はいって"],
+    "options": [
+      "もって",
+      "かって",
+      "みて",
+      "はいって"
+    ],
     "answer": 0,
     "explanation": "看起來要下雨，所以「持ってきました（帶來了）」雨傘。「〜てくる（帶來）」表示將某物帶至說話場所。"
   },
   {
-    "id": "v3-3", "section": "文字・語彙", "problem": 3, "type": "contextual_vocab",
+    "id": "v3-3",
+    "section": "文字・語彙",
+    "problem": 3,
+    "type": "contextual_vocab",
     "sentence": "かれは いつも じかんに （　　）です。",
-    "options": ["きびしい", "やさしい", "じょうず", "ふべん"],
+    "options": [
+      "きびしい",
+      "やさしい",
+      "じょうず",
+      "ふべん"
+    ],
     "answer": 0,
     "explanation": "「時間に厳しい（じかんにきびしい）」是固定說法，表示對時間很嚴格（守時）。"
   },
   {
-    "id": "v3-4", "section": "文字・語彙", "problem": 3, "type": "contextual_vocab",
+    "id": "v3-4",
+    "section": "文字・語彙",
+    "problem": 3,
+    "type": "contextual_vocab",
     "sentence": "くすりを のんだので、ねむく （　　）きました。",
-    "options": ["なって", "して", "みて", "いって"],
+    "options": [
+      "なって",
+      "して",
+      "みて",
+      "いって"
+    ],
     "answer": 0,
     "explanation": "「眠くなってきました（開始變得想睡了）」，「〜てくる」表示逐漸變化（由非睡眠狀態趨近睡眠）。"
   },
   {
-    "id": "v3-5", "section": "文字・語彙", "problem": 3, "type": "contextual_vocab",
+    "id": "v3-5",
+    "section": "文字・語彙",
+    "problem": 3,
+    "type": "contextual_vocab",
     "sentence": "この ばしょは とても （　　）が いい。",
-    "options": ["けしき", "においが", "ねだん", "ようす"],
+    "options": [
+      "けしき",
+      "においが",
+      "ねだん",
+      "ようす"
+    ],
     "answer": 0,
     "explanation": "描述某地「景色（けしき）がいい（景色很好）」是最自然的說法。「においがいい（氣味好）」也成立，但「けしき」更常和「ばしょ（場所）」搭配。"
   },
   {
-    "id": "v3-6", "section": "文字・語彙", "problem": 3, "type": "contextual_vocab",
+    "id": "v3-6",
+    "section": "文字・語彙",
+    "problem": 3,
+    "type": "contextual_vocab",
     "sentence": "しゃしんの うつりが わるかったので、もう いちど （　　）。",
-    "options": ["とりました", "みました", "きりました", "うつしました"],
+    "options": [
+      "とりました",
+      "みました",
+      "きりました",
+      "うつしました"
+    ],
     "answer": 0,
     "explanation": "相片拍得不好，所以再「撮りました（とりました＝拍了一次）」。「撮る（とる）」是拍照的動詞。"
   },
   {
-    "id": "v3-7", "section": "文字・語彙", "problem": 3, "type": "contextual_vocab",
+    "id": "v3-7",
+    "section": "文字・語彙",
+    "problem": 3,
+    "type": "contextual_vocab",
     "sentence": "かれは かばんを （　　）まま、でかけました。",
-    "options": ["わすれた", "もった", "なくした", "おいた"],
+    "options": [
+      "わすれた",
+      "もった",
+      "なくした",
+      "おいた"
+    ],
     "answer": 0,
     "explanation": "「かばんを忘れたまま（就那樣忘了帶包包）出かけた」，「〜たまま」表示保持某狀態。「忘れた（わすれた）」最符合語意。"
   },
   {
-    "id": "v4-1", "section": "文字・語彙", "problem": 4, "type": "paraphrase",
+    "id": "v4-1",
+    "section": "文字・語彙",
+    "problem": 4,
+    "type": "paraphrase",
     "sentence": "かれは こどもに にほんごを おしえています。",
     "target": "おしえています",
-    "options": ["きいています", "なつけています", "しどうしています", "そだてています"],
+    "options": [
+      "きいています",
+      "なつけています",
+      "しどうしています",
+      "そだてています"
+    ],
     "answer": 2,
     "explanation": "「教えています（おしえています）」表示教學，與「指導しています（しどうしています＝指導）」意思最接近。"
   },
   {
-    "id": "v4-2", "section": "文字・語彙", "problem": 4, "type": "paraphrase",
+    "id": "v4-2",
+    "section": "文字・語彙",
+    "problem": 4,
+    "type": "paraphrase",
     "sentence": "あのふたりは とても なかがいいです。",
     "target": "なかがいい",
-    "options": ["けんかしている", "ともだちではない", "しんゆうだ", "あまり はなさない"],
+    "options": [
+      "けんかしている",
+      "ともだちではない",
+      "しんゆうだ",
+      "あまり はなさない"
+    ],
     "answer": 2,
     "explanation": "「仲がいい（なかがいい）」表示感情好，與「親友だ（しんゆうだ＝是好朋友）」意思最接近。"
   },
   {
-    "id": "v4-3", "section": "文字・語彙", "problem": 4, "type": "paraphrase",
+    "id": "v4-3",
+    "section": "文字・語彙",
+    "problem": 4,
+    "type": "paraphrase",
     "sentence": "このへやは せまいです。",
     "target": "せまい",
-    "options": ["くらい", "ひろくない", "たかい", "うるさい"],
+    "options": [
+      "くらい",
+      "ひろくない",
+      "たかい",
+      "うるさい"
+    ],
     "answer": 1,
     "explanation": "「狭い（せまい）」表示空間窄小，與「広くない（ひろくない＝不寬）」意思最相近。"
   },
   {
-    "id": "v4-4", "section": "文字・語彙", "problem": 4, "type": "paraphrase",
+    "id": "v4-4",
+    "section": "文字・語彙",
+    "problem": 4,
+    "type": "paraphrase",
     "sentence": "かれは すこし おくれて きました。",
     "target": "おくれて",
-    "options": ["はやく", "おそく", "ていねいに", "すぐに"],
+    "options": [
+      "はやく",
+      "おそく",
+      "ていねいに",
+      "すぐに"
+    ],
     "answer": 1,
     "explanation": "「遅れて（おくれて）きた（遲到了）」，「遅れる」表示晚到，與「遅く（おそく）来た（晚來了）」意思最接近。"
   },
   {
-    "id": "v4-5", "section": "文字・語彙", "problem": 4, "type": "paraphrase",
+    "id": "v4-5",
+    "section": "文字・語彙",
+    "problem": 4,
+    "type": "paraphrase",
     "sentence": "かれは すぐに しごとを はじめました。",
     "target": "すぐに",
-    "options": ["ゆっくり", "おそく", "たちまち", "もっと"],
+    "options": [
+      "ゆっくり",
+      "おそく",
+      "たちまち",
+      "もっと"
+    ],
     "answer": 2,
     "explanation": "「すぐに（馬上、立刻）」表示立即，與「たちまち（立刻、轉眼間）」意思最接近。"
   },
   {
-    "id": "g1-1", "section": "文法・読解", "problem": 1, "type": "grammar_form",
+    "id": "g1-1",
+    "section": "文法・読解",
+    "problem": 1,
+    "type": "grammar_form",
     "sentence": "ここは むかし えいがかんだっ（　　）そうです。",
-    "options": ["た", "て", "の", "で"],
+    "options": [
+      "た",
+      "て",
+      "の",
+      "で"
+    ],
     "answer": 0,
     "explanation": "「〜そうです（聽說〜）」傳聞用法，前接普通形。「だった」是「だ」的過去形，「だったそうです（聽說以前是…）」。"
   },
   {
-    "id": "g1-2", "section": "文法・読解", "problem": 1, "type": "grammar_form",
+    "id": "g1-2",
+    "section": "文法・読解",
+    "problem": 1,
+    "type": "grammar_form",
     "sentence": "かれが くる（　　）、わたしは かえります。",
-    "options": ["まえに", "あとで", "ときに", "ために"],
+    "options": [
+      "まえに",
+      "あとで",
+      "ときに",
+      "ために"
+    ],
     "answer": 0,
     "explanation": "「〜まえに（在〜之前）」，「彼が来る前に、私は帰ります（在他來之前我就回去）」，前接動詞辭書形。"
   },
   {
-    "id": "g1-3", "section": "文法・読解", "problem": 1, "type": "grammar_form",
+    "id": "g1-3",
+    "section": "文法・読解",
+    "problem": 1,
+    "type": "grammar_form",
     "sentence": "このくすりは いちにち さんかい の（　　）ください。",
-    "options": ["んで", "みて", "いて", "して"],
+    "options": [
+      "んで",
+      "みて",
+      "いて",
+      "して"
+    ],
     "answer": 0,
     "explanation": "「飲んで（のんで）ください（請服藥）」，「飲む（のむ）」te形「飲んで」+ください是請求用法。"
   },
   {
-    "id": "g1-4", "section": "文法・読解", "problem": 1, "type": "grammar_form",
+    "id": "g1-4",
+    "section": "文法・読解",
+    "problem": 1,
+    "type": "grammar_form",
     "sentence": "もし じかんが あれ（　　）、てつだって ください。",
-    "options": ["ば", "て", "が", "に"],
+    "options": [
+      "ば",
+      "て",
+      "が",
+      "に"
+    ],
     "answer": 0,
     "explanation": "「もし〜ば（如果〜的話）」，「時間があれば（如果有時間的話）」，い形容詞/い段動詞假定形+ば。"
   },
   {
-    "id": "g1-5", "section": "文法・読解", "problem": 1, "type": "grammar_form",
+    "id": "g1-5",
+    "section": "文法・読解",
+    "problem": 1,
+    "type": "grammar_form",
     "sentence": "この えが だれに か（　　）か しっていますか。",
-    "options": ["かれた", "いた", "された", "われた"],
+    "options": [
+      "かれた",
+      "いた",
+      "された",
+      "われた"
+    ],
     "answer": 0,
     "explanation": "「誰に描かれたか（是誰畫的）」，受身形「描かれる（かかれる）」的た形「描かれた」。"
   },
   {
-    "id": "g1-6", "section": "文法・読解", "problem": 1, "type": "grammar_form",
+    "id": "g1-6",
+    "section": "文法・読解",
+    "problem": 1,
+    "type": "grammar_form",
     "sentence": "かれに たのん（　　）、にもつを はこんで もらいました。",
-    "options": ["で", "だ", "に", "が"],
+    "options": [
+      "で",
+      "だ",
+      "に",
+      "が"
+    ],
     "answer": 0,
     "explanation": "「〜てもらう（請對方幫我做）」，「頼んで（たのんで）もらいました」的前部是「頼む」的te形，連接「もらいました（請…了）」。"
   },
   {
-    "id": "g1-7", "section": "文法・読解", "problem": 1, "type": "grammar_form",
+    "id": "g1-7",
+    "section": "文法・読解",
+    "problem": 1,
+    "type": "grammar_form",
     "sentence": "あしたは はれ（　　）でしょう。",
-    "options": ["の", "る", "です", "な"],
+    "options": [
+      "の",
+      "る",
+      "です",
+      "な"
+    ],
     "answer": 1,
     "explanation": "「晴れる（はれる）」是動詞，辭書形+でしょう表示推測。「晴れるでしょう（大概會放晴）」。"
   },
   {
-    "id": "g1-8", "section": "文法・読解", "problem": 1, "type": "grammar_form",
+    "id": "g1-8",
+    "section": "文法・読解",
+    "problem": 1,
+    "type": "grammar_form",
     "sentence": "かれは がっこうを そつぎょうし（　　）、かいしゃに はいりました。",
-    "options": ["てから", "ながら", "たのに", "ために"],
+    "options": [
+      "てから",
+      "ながら",
+      "たのに",
+      "ために"
+    ],
     "answer": 0,
     "explanation": "「〜てから（〜了之後）」表示先後順序，「卒業してから、会社に入った（畢業後進了公司）」。"
   },
   {
-    "id": "g1-9", "section": "文法・読解", "problem": 1, "type": "grammar_form",
+    "id": "g1-9",
+    "section": "文法・読解",
+    "problem": 1,
+    "type": "grammar_form",
     "sentence": "このしごとを おわらせる（　　）に、3じかん かかります。",
-    "options": ["ため", "のに", "まで", "こと"],
+    "options": [
+      "ため",
+      "のに",
+      "まで",
+      "こと"
+    ],
     "answer": 0,
     "explanation": "「〜ために（為了〜）」表示目的，「この仕事を終わらせるために（為了完成這份工作）」，前接動詞辭書形。"
   },
   {
-    "id": "g1-10", "section": "文法・読解", "problem": 1, "type": "grammar_form",
+    "id": "g1-10",
+    "section": "文法・読解",
+    "problem": 1,
+    "type": "grammar_form",
     "sentence": "あの こは とても かわい（　　）みえます。",
-    "options": ["く", "そうに", "に", "です"],
+    "options": [
+      "く",
+      "そうに",
+      "に",
+      "です"
+    ],
     "answer": 1,
     "explanation": "「〜そうに見える（看起來好像〜）」，い形容詞語幹+そうに+見える。「かわいそうに見えます（看起來很可愛）」。"
   },
   {
-    "id": "g2-1", "section": "文法・読解", "problem": 2, "type": "sentence_order",
+    "id": "g2-1",
+    "section": "文法・読解",
+    "problem": 2,
+    "type": "sentence_order",
     "lead": "あめが",
     "trail": "ください。",
-    "parts": ["ふる", "かさを", "ので", "もって いって"],
+    "parts": [
+      "ふる",
+      "かさを",
+      "ので",
+      "もって いって"
+    ],
     "star": 2,
-    "correct_sequence": [0, 2, 1, 3],
-    "answer": 1,
-    "explanation": "正確語序：「あめが ①ふる ③ので ②かさを ④もっていって ください」→「雨が降るので、傘を持っていってください」。★第2格填「ので」。"
+    "correct_sequence": [
+      0,
+      2,
+      1,
+      3
+    ],
+    "answer": 2,
+    "explanation": "正確語序：「あめが ①ふる ③ので ②かさを ④もっていって ください」→「雨が降るので、傘を持っていってください（因為要下雨，請帶傘）」。★（第2格）填「③ので」。"
   },
   {
-    "id": "g2-2", "section": "文法・読解", "problem": 2, "type": "sentence_order",
+    "id": "g2-2",
+    "section": "文法・読解",
+    "problem": 2,
+    "type": "sentence_order",
     "lead": "かれは",
-    "trail": "います。",
-    "parts": ["たこと", "ない", "にほんに", "いった"],
+    "trail": "です。",
+    "parts": [
+      "たこと",
+      "ない",
+      "にほんに",
+      "いった"
+    ],
     "star": 1,
-    "correct_sequence": [2, 3, 0, 1],
-    "answer": 3,
-    "explanation": "正確語序：「かれは ③にほんに ④いった ①たこと ②ない います」→「彼は日本に行ったことがない（他沒去過日本）」。★第1格填「いった」。"
+    "correct_sequence": [
+      2,
+      3,
+      0,
+      1
+    ],
+    "answer": 2,
+    "explanation": "正確語序：「かれは ③にほんに ④いった ①たこと ②ない です」→「彼は日本に行ったことがない（他沒去過日本）」。★（第1格）填「③にほんに」。"
   },
   {
-    "id": "g2-3", "section": "文法・読解", "problem": 2, "type": "sentence_order",
+    "id": "g2-3",
+    "section": "文法・読解",
+    "problem": 2,
+    "type": "sentence_order",
     "lead": "おかあさんに",
     "trail": "ました。",
-    "parts": ["て", "りょうりを", "もらい", "つくっ"],
+    "parts": [
+      "て",
+      "りょうりを",
+      "もらい",
+      "つくっ"
+    ],
     "star": 3,
-    "correct_sequence": [1, 3, 0, 2],
+    "correct_sequence": [
+      1,
+      3,
+      0,
+      2
+    ],
     "answer": 0,
     "explanation": "正確語序：「おかあさんに ②りょうりを ④つくっ ①て ③もらい ました」→「お母さんに料理を作ってもらいました（請媽媽做了料理）」。★第3格填「りょうりを」。"
   },
   {
-    "id": "g2-4", "section": "文法・読解", "problem": 2, "type": "sentence_order",
+    "id": "g2-4",
+    "section": "文法・読解",
+    "problem": 2,
+    "type": "sentence_order",
     "lead": "かれは",
     "trail": "です。",
-    "parts": ["ひとつも", "ない", "わからない", "ことばが"],
+    "parts": [
+      "ひとつも",
+      "ない",
+      "わからない",
+      "ことばが"
+    ],
     "star": 2,
-    "correct_sequence": [0, 3, 2, 1],
+    "correct_sequence": [
+      0,
+      3,
+      2,
+      1
+    ],
     "answer": 3,
     "explanation": "正確語序：「かれは ①ひとつも ④ことばが ③わからない ②ない です」→「彼は一つも言葉がわからない（他一個詞也不懂）」。★第2格填「ことばが」。"
   },
   {
-    "id": "g2-5", "section": "文法・読解", "problem": 2, "type": "sentence_order",
+    "id": "g2-5",
+    "section": "文法・読解",
+    "problem": 2,
+    "type": "sentence_order",
     "lead": "ははが",
     "trail": "います。",
-    "parts": ["くれた", "を", "セーター", "きて"],
+    "parts": [
+      "くれた",
+      "を",
+      "セーター",
+      "きて"
+    ],
     "star": 1,
-    "correct_sequence": [2, 1, 0, 3],
+    "correct_sequence": [
+      2,
+      1,
+      0,
+      3
+    ],
     "answer": 2,
     "explanation": "正確語序：「ははが ③セーター ②を ①くれた ④きて います」→「母がくれたセーターを着ています（穿著媽媽給的毛衣）」。★第1格填「を」。"
   },
   {
-    "id": "g3-1", "section": "文法・読解", "problem": 3, "type": "passage_grammar",
+    "id": "g3-1",
+    "section": "文法・読解",
+    "problem": 3,
+    "type": "passage_grammar",
     "passage_shared": "pg06",
     "passage": "わたしは ことし から にほんごを は（１）。はじめは ひらがなも か（２）、たいへんでした。でも まいにち すこしずつ れんしゅう（３）、いまは かんたんな かいわが（４）ように なりました。これから も もっと じょうずに な（５）たいです。",
     "blank_no": 1,
-    "options": ["じめました", "じまりました", "じめています", "じめていました"],
+    "options": [
+      "じめました",
+      "じまりました",
+      "じめています",
+      "じめていました"
+    ],
     "answer": 0,
     "explanation": "「今年から日本語を始めました（今年開始學日語）」，他動詞「始める（はじめる）」過去式「始めました」，前面有「を」。"
   },
   {
-    "id": "g3-2", "section": "文法・読解", "problem": 3, "type": "passage_grammar",
+    "id": "g3-2",
+    "section": "文法・読解",
+    "problem": 3,
+    "type": "passage_grammar",
     "passage_shared": "pg06",
     "passage": "わたしは ことし から にほんごを は（１）。はじめは ひらがなも か（２）、たいへんでした。でも まいにち すこしずつ れんしゅう（３）、いまは かんたんな かいわが（４）ように なりました。これから も もっと じょうずに な（５）たいです。",
     "blank_no": 2,
-    "options": ["けなくて", "けて", "けなければ", "けなくても"],
+    "options": [
+      "けなくて",
+      "けて",
+      "けなければ",
+      "けなくても"
+    ],
     "answer": 0,
     "explanation": "「ひらがなも書けなくて（連平假名都不會寫，）、大変でした」，「〜なくて」以て形連接原因與後句。"
   },
   {
-    "id": "g3-3", "section": "文法・読解", "problem": 3, "type": "passage_grammar",
+    "id": "g3-3",
+    "section": "文法・読解",
+    "problem": 3,
+    "type": "passage_grammar",
     "passage_shared": "pg06",
     "passage": "わたしは ことし から にほんごを は（１）。はじめは ひらがなも か（２）、たいへんでした。でも まいにち すこしずつ れんしゅう（３）、いまは かんたんな かいわが（４）ように なりました。これから も もっと じょうずに な（５）たいです。",
     "blank_no": 3,
-    "options": ["したので", "するのに", "したのに", "するので"],
+    "options": [
+      "したので",
+      "するのに",
+      "したのに",
+      "するので"
+    ],
     "answer": 0,
     "explanation": "「毎日練習したので（因為每天練習）、今は…できるようになりました」，「したので」以過去式+ので表示原因。"
   },
   {
-    "id": "g3-4", "section": "文法・読解", "problem": 3, "type": "passage_grammar",
+    "id": "g3-4",
+    "section": "文法・読解",
+    "problem": 3,
+    "type": "passage_grammar",
     "passage_shared": "pg06",
     "passage": "わたしは ことし から にほんごを は（１）。はじめは ひらがなも か（２）、たいへんでした。でも まいにち すこしずつ れんしゅう（３）、いまは かんたんな かいわが（４）ように なりました。これから も もっと じょうずに な（５）たいです。",
     "blank_no": 4,
-    "options": ["できる", "できた", "でき", "できて"],
+    "options": [
+      "できる",
+      "できた",
+      "でき",
+      "できて"
+    ],
     "answer": 0,
     "explanation": "「簡単な会話ができるようになりました（能夠進行簡單的對話了）」，「〜ようになる（變得能夠〜）」前接動詞辭書形「できる」。"
   },
   {
-    "id": "g3-5", "section": "文法・読解", "problem": 3, "type": "passage_grammar",
+    "id": "g3-5",
+    "section": "文法・読解",
+    "problem": 3,
+    "type": "passage_grammar",
     "passage_shared": "pg06",
     "passage": "わたしは ことし から にほんごを は（１）。はじめは ひらがなも か（２）、たいへんでした。でも まいにち すこしずつ れんしゅう（３）、いまは かんたんな かいわが（４）ように なりました。これから も もっと じょうずに な（５）たいです。",
     "blank_no": 5,
-    "options": ["り", "る", "って", "れ"],
+    "options": [
+      "り",
+      "る",
+      "って",
+      "れ"
+    ],
     "answer": 0,
     "explanation": "「もっと上手になりたいです（想變得更厲害）」，「〜たい」前接動詞ます形去ます。「なる→なり」+たい。"
   },
   {
-    "id": "g4-1", "section": "文法・読解", "problem": 4, "type": "reading",
+    "id": "g4-1",
+    "section": "文法・読解",
+    "problem": 4,
+    "type": "reading",
     "passage_shared": "rd11",
     "passage": "みなさんへ\n\nあすから 3にちかん、 プールは そうじのため クローズします。りようできるのは 4にちごから です。ジムと テニスコートは そのあいだも りようできます。ふべんを おかけしますが、ごりょうしょうください。",
     "question": "プールは何日間使えませんか。",
-    "options": ["1日間", "2日間", "3日間", "4日間"],
+    "options": [
+      "1日間",
+      "2日間",
+      "3日間",
+      "4日間"
+    ],
     "answer": 2,
     "explanation": "公告寫到「あすから3にちかん、プールはクローズ（從明天開始關閉3天）」，所以3天無法使用。"
   },
   {
-    "id": "g4-2", "section": "文法・読解", "problem": 4, "type": "reading",
+    "id": "g4-2",
+    "section": "文法・読解",
+    "problem": 4,
+    "type": "reading",
     "passage_shared": "rd11",
     "passage": "みなさんへ\n\nあすから 3にちかん、 プールは そうじのため クローズします。りようできるのは 4にちごから です。ジムと テニスコートは そのあいだも りようできます。ふべんを おかけしますが、ごりょうしょうください。",
     "question": "プールが閉まっている間、何が使えますか。",
-    "options": ["プールとジム", "ジムとテニスコート", "テニスコートだけ", "何も使えない"],
+    "options": [
+      "プールとジム",
+      "ジムとテニスコート",
+      "テニスコートだけ",
+      "何も使えない"
+    ],
     "answer": 1,
     "explanation": "公告寫到「ジムとテニスコートはそのあいだもりようできます（這段期間，健身房和網球場仍可使用）」。"
   },
   {
-    "id": "g4-3", "section": "文法・読解", "problem": 4, "type": "reading",
+    "id": "g4-3",
+    "section": "文法・読解",
+    "problem": 4,
+    "type": "reading",
     "passage_shared": "rd12",
     "passage": "わたしは ペットを かいたいと おもっていますが、いまは アパートに すんでいるので、かうことが できません。アパートの きそくで ペットが きんしされています。そのため、まず いえを かって、それから ペットを かおうと おもっています。",
     "question": "この人はなぜ今ペットを買えませんか。",
-    "options": ["お金がないから", "ペットが嫌いだから", "アパートのルールでペットが禁止されているから", "世話できないから"],
+    "options": [
+      "お金がないから",
+      "ペットが嫌いだから",
+      "アパートのルールでペットが禁止されているから",
+      "世話できないから"
+    ],
     "answer": 2,
     "explanation": "文中寫到「アパートのきそくでペットがきんしされています（公寓規定禁止養寵物）」，這是現在無法養寵物的原因。"
   },
   {
-    "id": "g4-4", "section": "文法・読解", "problem": 4, "type": "reading",
+    "id": "g4-4",
+    "section": "文法・読解",
+    "problem": 4,
+    "type": "reading",
     "passage_shared": "rd12",
     "passage": "わたしは ペットを かいたいと おもっていますが、いまは アパートに すんでいるので、かうことが できません。アパートの きそくで ペットが きんしされています。そのため、まず いえを かって、それから ペットを かおうと おもっています。",
     "question": "この人はこれからどうしますか。",
-    "options": ["すぐにペットを買う", "アパートを引っ越す", "まず家を買ってからペットを飼う", "ペットを諦める"],
+    "options": [
+      "すぐにペットを買う",
+      "アパートを引っ越す",
+      "まず家を買ってからペットを飼う",
+      "ペットを諦める"
+    ],
     "answer": 2,
     "explanation": "文中寫到「まずいえをかって、それからペットをかおうとおもっています（打算先買房子，然後再養寵物）」。"
   },
   {
-    "id": "l1-1", "section": "聴解", "problem": 1, "type": "listening_task",
+    "id": "l1-1",
+    "section": "聴解",
+    "problem": 1,
+    "type": "listening_task",
     "script_parts": [
-      {"role": "narrator", "text": "おとこのひとがおんなのひとにきいています。"},
-      {"role": "male",     "text": "すみません、このちかくにATMはありますか。"},
-      {"role": "female",   "text": "えきのなかにありますよ。"},
-      {"role": "male",     "text": "えきのなかですね。ありがとうございます。"},
-      {"role": "female",   "text": "でも、ATMはよる10じにしまりますよ。"},
-      {"role": "male",     "text": "いまは8じですね。じゃあ、いそがないと。"},
-      {"role": "narrator", "text": "おとこのひとはこれからどこへいきますか。"}
+      {
+        "role": "narrator",
+        "text": "おとこのひとがおんなのひとにきいています。"
+      },
+      {
+        "role": "male",
+        "text": "すみません、このちかくにATMはありますか。"
+      },
+      {
+        "role": "female",
+        "text": "えきのなかにありますよ。"
+      },
+      {
+        "role": "male",
+        "text": "えきのなかですね。ありがとうございます。"
+      },
+      {
+        "role": "female",
+        "text": "でも、ATMはよる10じにしまりますよ。"
+      },
+      {
+        "role": "male",
+        "text": "いまは8じですね。じゃあ、いそがないと。"
+      },
+      {
+        "role": "narrator",
+        "text": "おとこのひとはこれからどこへいきますか。"
+      }
     ],
     "question": "おとこのひとはこれからどこへいきますか。",
-    "options": ["コンビニ", "銀行", "駅の中のATM", "郵便局"],
+    "options": [
+      "コンビニ",
+      "銀行",
+      "駅の中のATM",
+      "郵便局"
+    ],
     "answer": 2,
     "explanation": "女性告知「えきのなかにATMがある（車站裡有ATM）」，男性說要趕快去，答案是「駅の中のATM」。"
   },
   {
-    "id": "l1-2", "section": "聴解", "problem": 1, "type": "listening_task",
+    "id": "l1-2",
+    "section": "聴解",
+    "problem": 1,
+    "type": "listening_task",
     "script_parts": [
-      {"role": "narrator", "text": "おんなのひとがかいぎのことをはなしています。"},
-      {"role": "female",   "text": "らいしゅうのかいぎですが、はじめは 10にんのよていでしたが、かちょうもさんかするので、11にんになりました。"},
-      {"role": "male",     "text": "そうですか。かいぎしつは10にんようですが、だいじょうぶですか。"},
-      {"role": "female",   "text": "そうですね、おおきいかいぎしつにかえないといけませんね。"},
-      {"role": "narrator", "text": "ふたりはこれからなにをしなければなりませんか。"}
+      {
+        "role": "narrator",
+        "text": "おんなのひとがかいぎのことをはなしています。"
+      },
+      {
+        "role": "female",
+        "text": "らいしゅうのかいぎですが、はじめは 10にんのよていでしたが、かちょうもさんかするので、11にんになりました。"
+      },
+      {
+        "role": "male",
+        "text": "そうですか。かいぎしつは10にんようですが、だいじょうぶですか。"
+      },
+      {
+        "role": "female",
+        "text": "そうですね、おおきいかいぎしつにかえないといけませんね。"
+      },
+      {
+        "role": "narrator",
+        "text": "ふたりはこれからなにをしなければなりませんか。"
+      }
     ],
     "question": "ふたりはこれからなにをしなければなりませんか。",
-    "options": ["会議を中止する", "人数を減らす", "大きい会議室に変える", "課長に連絡する"],
+    "options": [
+      "会議を中止する",
+      "人数を減らす",
+      "大きい会議室に変える",
+      "課長に連絡する"
+    ],
     "answer": 2,
     "explanation": "女性說「おおきいかいぎしつにかえないといけませんね（必須換成大的會議室）」。答案是「大きい会議室に変える」。"
   },
   {
-    "id": "l1-3", "section": "聴解", "problem": 1, "type": "listening_task",
+    "id": "l1-3",
+    "section": "聴解",
+    "problem": 1,
+    "type": "listening_task",
     "script_parts": [
-      {"role": "narrator", "text": "おんなのひとがかいものをしています。"},
-      {"role": "female",   "text": "すみません、このりんごはいくつでいくらですか。"},
-      {"role": "male",     "text": "6つで500えんです。"},
-      {"role": "female",   "text": "じゃあ、500えんぶんで、3つください。"},
-      {"role": "male",     "text": "すみません、6つがひとつのセットなんです。"},
-      {"role": "female",   "text": "わかりました、じゃあ6つください。"},
-      {"role": "narrator", "text": "おんなのひとはりんごをいくつかいましたか。"}
+      {
+        "role": "narrator",
+        "text": "おんなのひとがかいものをしています。"
+      },
+      {
+        "role": "female",
+        "text": "すみません、このりんごはいくつでいくらですか。"
+      },
+      {
+        "role": "male",
+        "text": "6つで500えんです。"
+      },
+      {
+        "role": "female",
+        "text": "じゃあ、500えんぶんで、3つください。"
+      },
+      {
+        "role": "male",
+        "text": "すみません、6つがひとつのセットなんです。"
+      },
+      {
+        "role": "female",
+        "text": "わかりました、じゃあ6つください。"
+      },
+      {
+        "role": "narrator",
+        "text": "おんなのひとはりんごをいくつかいましたか。"
+      }
     ],
     "question": "おんなのひとはりんごをいくつかいましたか。",
-    "options": ["3つ", "4つ", "5つ", "6つ"],
+    "options": [
+      "3つ",
+      "4つ",
+      "5つ",
+      "6つ"
+    ],
     "answer": 3,
     "explanation": "最後女性說「じゃあ6つください（那就給我6個吧）」。賣家說明必須買6個一組，所以買了「6つ」。"
   },
   {
-    "id": "l1-4", "section": "聴解", "problem": 1, "type": "listening_task",
+    "id": "l1-4",
+    "section": "聴解",
+    "problem": 1,
+    "type": "listening_task",
     "script_parts": [
-      {"role": "narrator", "text": "こうこうせいがはなしています。"},
-      {"role": "male",     "text": "ねえ、しゅうまつなにしてた？"},
-      {"role": "female",   "text": "どようびはアルバイトがあって、にちようびは図書館で勉強してた。"},
-      {"role": "male",     "text": "まじめだね。"},
-      {"role": "female",   "text": "らいげつテストがあるから。あなたは？"},
-      {"role": "male",     "text": "ともだちとゲームばかりしてた。"},
-      {"role": "narrator", "text": "おんなのひとはにちようびになにをしましたか。"}
+      {
+        "role": "narrator",
+        "text": "こうこうせいがはなしています。"
+      },
+      {
+        "role": "male",
+        "text": "ねえ、しゅうまつなにしてた？"
+      },
+      {
+        "role": "female",
+        "text": "どようびはアルバイトがあって、にちようびは図書館で勉強してた。"
+      },
+      {
+        "role": "male",
+        "text": "まじめだね。"
+      },
+      {
+        "role": "female",
+        "text": "らいげつテストがあるから。あなたは？"
+      },
+      {
+        "role": "male",
+        "text": "ともだちとゲームばかりしてた。"
+      },
+      {
+        "role": "narrator",
+        "text": "おんなのひとはにちようびになにをしましたか。"
+      }
     ],
     "question": "おんなのひとはにちようびになにをしましたか。",
-    "options": ["アルバイトをした", "ゲームをした", "図書館で勉強した", "友達と遊んだ"],
+    "options": [
+      "アルバイトをした",
+      "ゲームをした",
+      "図書館で勉強した",
+      "友達と遊んだ"
+    ],
     "answer": 2,
     "explanation": "女性說「にちようびは図書館で勉強してた（週日在圖書館唸書）」。答案是「図書館で勉強した」。"
   },
   {
-    "id": "l2-1", "section": "聴解", "problem": 2, "type": "listening_point",
+    "id": "l2-1",
+    "section": "聴解",
+    "problem": 2,
+    "type": "listening_point",
     "script_parts": [
-      {"role": "narrator", "text": "おとこのひとがしんかんせんのアナウンスをきいています。"},
-      {"role": "male",     "text": "のぞみ15ごうとうきょうゆきは、じこのえいきょうにより、ただいまやく20ぷんおくれてはっしゃします。おきゃくさまにはたいへんごめいわくをおかけします。"},
-      {"role": "narrator", "text": "しんかんせんはどうなりましたか。"}
+      {
+        "role": "narrator",
+        "text": "おとこのひとがしんかんせんのアナウンスをきいています。"
+      },
+      {
+        "role": "male",
+        "text": "のぞみ15ごうとうきょうゆきは、じこのえいきょうにより、ただいまやく20ぷんおくれてはっしゃします。おきゃくさまにはたいへんごめいわくをおかけします。"
+      },
+      {
+        "role": "narrator",
+        "text": "しんかんせんはどうなりましたか。"
+      }
     ],
     "question": "しんかんせんはどうなりましたか。",
-    "options": ["20分早く出発する", "20分遅れて出発する", "今日は運休する", "別の駅に止まる"],
+    "options": [
+      "20分早く出発する",
+      "20分遅れて出発する",
+      "今日は運休する",
+      "別の駅に止まる"
+    ],
     "answer": 1,
     "explanation": "廣播說「やく20ぷんおくれてはっしゃします（將延遲約20分鐘出發）」。答案是「20分遅れて出発する」。"
   },
   {
-    "id": "l2-2", "section": "聴解", "problem": 2, "type": "listening_point",
+    "id": "l2-2",
+    "section": "聴解",
+    "problem": 2,
+    "type": "listening_point",
     "script_parts": [
-      {"role": "narrator", "text": "おとこのひとがおんなのひとにきいています。"},
-      {"role": "male",     "text": "しゅみはなんですか。"},
-      {"role": "female",   "text": "りょうりとよむことですね。とくにほんをよむのがすきで、まいつきだいたい5さつよみます。"},
-      {"role": "narrator", "text": "おんなのひとはひとつきにほんをなんさつよみますか。"}
+      {
+        "role": "narrator",
+        "text": "おとこのひとがおんなのひとにきいています。"
+      },
+      {
+        "role": "male",
+        "text": "しゅみはなんですか。"
+      },
+      {
+        "role": "female",
+        "text": "りょうりとよむことですね。とくにほんをよむのがすきで、まいつきだいたい5さつよみます。"
+      },
+      {
+        "role": "narrator",
+        "text": "おんなのひとはひとつきにほんをなんさつよみますか。"
+      }
     ],
     "question": "おんなのひとはひとつきにほんをなんさつよみますか。",
-    "options": ["約2冊", "約3冊", "約5冊", "約10冊"],
+    "options": [
+      "約2冊",
+      "約3冊",
+      "約5冊",
+      "約10冊"
+    ],
     "answer": 2,
     "explanation": "女性說「まいつきだいたい5さつよみます（每月大約讀5本）」。答案是「約5冊」。"
   },
   {
-    "id": "l2-3", "section": "聴解", "problem": 2, "type": "listening_point",
+    "id": "l2-3",
+    "section": "聴解",
+    "problem": 2,
+    "type": "listening_point",
     "script_parts": [
-      {"role": "narrator", "text": "おかあさんとこどもがはなしています。"},
-      {"role": "female",   "text": "おかえり。きょうのがっこうはどうだった？"},
-      {"role": "child",    "text": "たのしかったよ。きょうあたらしいともだちができた！"},
-      {"role": "female",   "text": "そう、よかったね。なまえはなんていうの？"},
-      {"role": "child",    "text": "たろうくん。おなじクラスで、サッカーがすきなんだって。"},
-      {"role": "narrator", "text": "こどもはきょうなにをしましたか。"}
+      {
+        "role": "narrator",
+        "text": "おかあさんとこどもがはなしています。"
+      },
+      {
+        "role": "female",
+        "text": "おかえり。きょうのがっこうはどうだった？"
+      },
+      {
+        "role": "child",
+        "text": "たのしかったよ。きょうあたらしいともだちができた！"
+      },
+      {
+        "role": "female",
+        "text": "そう、よかったね。なまえはなんていうの？"
+      },
+      {
+        "role": "child",
+        "text": "たろうくん。おなじクラスで、サッカーがすきなんだって。"
+      },
+      {
+        "role": "narrator",
+        "text": "こどもはきょうなにをしましたか。"
+      }
     ],
     "question": "こどもはきょうなにをしましたか。",
-    "options": ["サッカーをした", "テストを受けた", "新しい友達ができた", "先生と話した"],
+    "options": [
+      "サッカーをした",
+      "テストを受けた",
+      "新しい友達ができた",
+      "先生と話した"
+    ],
     "answer": 2,
     "explanation": "孩子說「きょうあたらしいともだちができた（今天交到了新朋友）」。答案是「新しい友達ができた」。"
   },
   {
-    "id": "l3-1", "section": "聴解", "problem": 3, "type": "verbal_expression",
+    "id": "l3-1",
+    "section": "聴解",
+    "problem": 3,
+    "type": "verbal_expression",
     "script_parts": [
-      {"role": "narrator", "text": "えをみてください。やじるし（→）のひとはなんといいますか。"},
-      {"role": "narrator", "text": "おとうとのなまえをよんでいます。なんといいますか。"},
-      {"role": "narrator", "text": "１、けんじ、ごはんだよ。"},
-      {"role": "narrator", "text": "２、けんじ、おかえり。"},
-      {"role": "narrator", "text": "３、けんじ、ありがとう。"}
+      {
+        "role": "narrator",
+        "text": "えをみてください。やじるし（→）のひとはなんといいますか。"
+      },
+      {
+        "role": "narrator",
+        "text": "おとうとのなまえをよんでいます。なんといいますか。"
+      },
+      {
+        "role": "narrator",
+        "text": "１、けんじ、ごはんだよ。"
+      },
+      {
+        "role": "narrator",
+        "text": "２、けんじ、おかえり。"
+      },
+      {
+        "role": "narrator",
+        "text": "３、けんじ、ありがとう。"
+      }
     ],
     "question": "ごはんのじかんです。おとうとをよびたいです。なんといいますか。",
     "svg": "<svg viewBox=\"0 0 220 130\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%;max-width:220px\"><rect x=\"10\" y=\"10\" width=\"90\" height=\"110\" rx=\"4\" stroke=\"#888\" stroke-width=\"1.5\" fill=\"#fff9f0\"/><ellipse cx=\"55\" cy=\"65\" rx=\"28\" ry=\"20\" fill=\"#ffe0a0\" stroke=\"#bbb\" stroke-width=\"1\"/><text x=\"35\" y=\"70\" font-size=\"11\" fill=\"#888\">ごはん</text><circle cx=\"170\" cy=\"36\" r=\"13\" stroke=\"#888\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"170\" y1=\"49\" x2=\"170\" y2=\"85\" stroke=\"#888\" stroke-width=\"1.5\"/><line x1=\"153\" y1=\"65\" x2=\"187\" y2=\"65\" stroke=\"#888\" stroke-width=\"1.5\"/><line x1=\"170\" y1=\"85\" x2=\"158\" y2=\"110\" stroke=\"#888\" stroke-width=\"1.5\"/><line x1=\"170\" y1=\"85\" x2=\"182\" y2=\"110\" stroke=\"#888\" stroke-width=\"1.5\"/><circle cx=\"55\" cy=\"28\" r=\"13\" stroke=\"#555\" stroke-width=\"2\" fill=\"none\"/><line x1=\"55\" y1=\"41\" x2=\"55\" y2=\"77\" stroke=\"#555\" stroke-width=\"2\"/><line x1=\"38\" y1=\"57\" x2=\"72\" y2=\"57\" stroke=\"#555\" stroke-width=\"2\"/><line x1=\"55\" y1=\"77\" x2=\"43\" y2=\"102\" stroke=\"#555\" stroke-width=\"1.5\"/><line x1=\"55\" y1=\"77\" x2=\"67\" y2=\"102\" stroke=\"#555\" stroke-width=\"1.5\"/><line x1=\"105\" y1=\"55\" x2=\"152\" y2=\"46\" stroke=\"#555\" stroke-width=\"1.5\" stroke-dasharray=\"4,3\"/><text x=\"36\" y=\"16\" font-size=\"17\" fill=\"#e33\" font-weight=\"bold\">→</text></svg>",
-    "options": ["けんじ、ごはんだよ。", "けんじ、おかえり。", "けんじ、ありがとう。"],
+    "options": [
+      "けんじ、ごはんだよ。",
+      "けんじ、おかえり。",
+      "けんじ、ありがとう。"
+    ],
     "answer": 0,
     "explanation": "吃飯時間叫弟弟來吃飯，說「けんじ、ごはんだよ（健二，開飯了）」。「おかえり」是迎接回家，「ありがとう」是感謝。"
   },
   {
-    "id": "l3-2", "section": "聴解", "problem": 3, "type": "verbal_expression",
+    "id": "l3-2",
+    "section": "聴解",
+    "problem": 3,
+    "type": "verbal_expression",
     "script_parts": [
-      {"role": "narrator", "text": "えをみてください。やじるし（→）のひとはなんといいますか。"},
-      {"role": "narrator", "text": "かいものをしました。おかねをはらいたいです。なんといいますか。"},
-      {"role": "narrator", "text": "１、おつりをください。"},
-      {"role": "narrator", "text": "２、これをください。"},
-      {"role": "narrator", "text": "３、おいくらですか。"}
+      {
+        "role": "narrator",
+        "text": "えをみてください。やじるし（→）のひとはなんといいますか。"
+      },
+      {
+        "role": "narrator",
+        "text": "かいものをしました。おかねをはらいたいです。なんといいますか。"
+      },
+      {
+        "role": "narrator",
+        "text": "１、おつりをください。"
+      },
+      {
+        "role": "narrator",
+        "text": "２、これをください。"
+      },
+      {
+        "role": "narrator",
+        "text": "３、おいくらですか。"
+      }
     ],
     "question": "かいものをして、おかねをはらいたいです。なんといいますか。",
     "svg": "<svg viewBox=\"0 0 220 130\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%;max-width:220px\"><rect x=\"100\" y=\"20\" width=\"110\" height=\"90\" rx=\"4\" stroke=\"#888\" stroke-width=\"1.5\" fill=\"#f5f5f5\"/><text x=\"118\" y=\"55\" font-size=\"11\" fill=\"#666\">レジ</text><rect x=\"118\" y=\"65\" width=\"55\" height=\"30\" rx=\"2\" stroke=\"#999\" stroke-width=\"1\" fill=\"#e0e0e0\"/><circle cx=\"42\" cy=\"30\" r=\"13\" stroke=\"#555\" stroke-width=\"2\" fill=\"none\"/><line x1=\"42\" y1=\"43\" x2=\"42\" y2=\"80\" stroke=\"#555\" stroke-width=\"2\"/><line x1=\"25\" y1=\"60\" x2=\"59\" y2=\"60\" stroke=\"#555\" stroke-width=\"2\"/><line x1=\"42\" y1=\"80\" x2=\"30\" y2=\"108\" stroke=\"#555\" stroke-width=\"2\"/><line x1=\"42\" y1=\"80\" x2=\"54\" y2=\"108\" stroke=\"#555\" stroke-width=\"2\"/><rect x=\"58\" y=\"55\" width=\"20\" height=\"14\" rx=\"2\" stroke=\"#888\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"82\" y1=\"60\" x2=\"98\" y2=\"60\" stroke=\"#888\" stroke-width=\"1.5\"/><polygon points=\"98,55 107,60 98,65\" fill=\"#888\"/><text x=\"23\" y=\"18\" font-size=\"17\" fill=\"#e33\" font-weight=\"bold\">→</text></svg>",
-    "options": ["おつりをください。", "これをください。", "おいくらですか。"],
+    "options": [
+      "おつりをください。",
+      "これをください。",
+      "おいくらですか。"
+    ],
     "answer": 2,
     "explanation": "想知道商品價格要付款，先問「おいくらですか（多少錢？）」。「おつりをください」是找錢，「これをください」是說要購買某物。"
   },
   {
-    "id": "l3-3", "section": "聴解", "problem": 3, "type": "verbal_expression",
+    "id": "l3-3",
+    "section": "聴解",
+    "problem": 3,
+    "type": "verbal_expression",
     "script_parts": [
-      {"role": "narrator", "text": "えをみてください。やじるし（→）のひとはなんといいますか。"},
-      {"role": "narrator", "text": "ともだちのうちをでます。なんといいますか。"},
-      {"role": "narrator", "text": "１、いってきます。"},
-      {"role": "narrator", "text": "２、おじゃましました。"},
-      {"role": "narrator", "text": "３、ただいま。"}
+      {
+        "role": "narrator",
+        "text": "えをみてください。やじるし（→）のひとはなんといいますか。"
+      },
+      {
+        "role": "narrator",
+        "text": "ともだちのうちをでます。なんといいますか。"
+      },
+      {
+        "role": "narrator",
+        "text": "１、いってきます。"
+      },
+      {
+        "role": "narrator",
+        "text": "２、おじゃましました。"
+      },
+      {
+        "role": "narrator",
+        "text": "３、ただいま。"
+      }
     ],
     "question": "ともだちのうちをでます。なんといいますか。",
     "svg": "<svg viewBox=\"0 0 220 130\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%;max-width:220px\"><rect x=\"10\" y=\"15\" width=\"115\" height=\"105\" rx=\"4\" stroke=\"#888\" stroke-width=\"2\" fill=\"#f5f5f5\"/><rect x=\"55\" y=\"85\" width=\"30\" height=\"35\" rx=\"2\" stroke=\"#888\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"72\" cy=\"103\" r=\"2.5\" fill=\"#888\"/><circle cx=\"170\" cy=\"36\" r=\"13\" stroke=\"#555\" stroke-width=\"2\" fill=\"none\"/><line x1=\"170\" y1=\"49\" x2=\"170\" y2=\"86\" stroke=\"#555\" stroke-width=\"2\"/><line x1=\"152\" y1=\"66\" x2=\"188\" y2=\"66\" stroke=\"#555\" stroke-width=\"2\"/><line x1=\"170\" y1=\"86\" x2=\"158\" y2=\"112\" stroke=\"#555\" stroke-width=\"1.5\"/><line x1=\"170\" y1=\"86\" x2=\"182\" y2=\"112\" stroke=\"#555\" stroke-width=\"1.5\"/><line x1=\"128\" y1=\"72\" x2=\"152\" y2=\"65\" stroke=\"#888\" stroke-width=\"1.5\"/><polygon points=\"152,60 160,65 152,70\" fill=\"#888\"/><text x=\"152\" y=\"24\" font-size=\"17\" fill=\"#e33\" font-weight=\"bold\">→</text></svg>",
-    "options": ["いってきます。", "おじゃましました。", "ただいま。"],
+    "options": [
+      "いってきます。",
+      "おじゃましました。",
+      "ただいま。"
+    ],
     "answer": 1,
     "explanation": "離開別人家時說「おじゃましました（打擾了、告辭了）」。「いってきます」是從自己家出門說的，「ただいま」是回到自己家說的。"
   },
   {
-    "id": "l4-1", "section": "聴解", "problem": 4, "type": "immediate_response",
+    "id": "l4-1",
+    "section": "聴解",
+    "problem": 4,
+    "type": "immediate_response",
     "script_parts": [
-      {"role": "narrator", "text": "ちょっと まどを しめても いいですか。"},
-      {"role": "narrator", "text": "１、はい、どうぞ。"},
-      {"role": "narrator", "text": "２、まどはそちらです。"},
-      {"role": "narrator", "text": "３、まどをあけました。"}
+      {
+        "role": "narrator",
+        "text": "ちょっと まどを しめても いいですか。"
+      },
+      {
+        "role": "narrator",
+        "text": "１、はい、どうぞ。"
+      },
+      {
+        "role": "narrator",
+        "text": "２、まどはそちらです。"
+      },
+      {
+        "role": "narrator",
+        "text": "３、まどをあけました。"
+      }
     ],
     "question": "",
-    "options": ["はい、どうぞ。", "まどはそちらです。", "まどをあけました。"],
+    "options": [
+      "はい、どうぞ。",
+      "まどはそちらです。",
+      "まどをあけました。"
+    ],
     "answer": 0,
     "explanation": "「ちょっと窓を閉めてもいいですか（可以把窗戶關一下嗎？）」，給予許可說「はい、どうぞ（好的，請）」。"
   },
   {
-    "id": "l4-2", "section": "聴解", "problem": 4, "type": "immediate_response",
+    "id": "l4-2",
+    "section": "聴解",
+    "problem": 4,
+    "type": "immediate_response",
     "script_parts": [
-      {"role": "narrator", "text": "せんせい、しつもんしても いいですか。"},
-      {"role": "narrator", "text": "１、はい、どうぞ。"},
-      {"role": "narrator", "text": "２、はい、しつもんです。"},
-      {"role": "narrator", "text": "３、しつもんはむずかしいです。"}
+      {
+        "role": "narrator",
+        "text": "せんせい、しつもんしても いいですか。"
+      },
+      {
+        "role": "narrator",
+        "text": "１、はい、どうぞ。"
+      },
+      {
+        "role": "narrator",
+        "text": "２、はい、しつもんです。"
+      },
+      {
+        "role": "narrator",
+        "text": "３、しつもんはむずかしいです。"
+      }
     ],
     "question": "",
-    "options": ["はい、どうぞ。", "はい、しつもんです。", "しつもんはむずかしいです。"],
+    "options": [
+      "はい、どうぞ。",
+      "はい、しつもんです。",
+      "しつもんはむずかしいです。"
+    ],
     "answer": 0,
     "explanation": "「先生、質問してもいいですか（老師，我可以問問題嗎？）」，老師給予許可說「はい、どうぞ（好的，請）」。"
   },
   {
-    "id": "l4-3", "section": "聴解", "problem": 4, "type": "immediate_response",
+    "id": "l4-3",
+    "section": "聴解",
+    "problem": 4,
+    "type": "immediate_response",
     "script_parts": [
-      {"role": "narrator", "text": "このへんに ゆうびんきょくはありますか。"},
-      {"role": "narrator", "text": "１、ゆうびんきょくはやすみです。"},
-      {"role": "narrator", "text": "２、すみません、わかりません。"},
-      {"role": "narrator", "text": "３、てがみをかきます。"}
+      {
+        "role": "narrator",
+        "text": "このへんに ゆうびんきょくはありますか。"
+      },
+      {
+        "role": "narrator",
+        "text": "１、ゆうびんきょくはやすみです。"
+      },
+      {
+        "role": "narrator",
+        "text": "２、すみません、わかりません。"
+      },
+      {
+        "role": "narrator",
+        "text": "３、てがみをかきます。"
+      }
     ],
     "question": "",
-    "options": ["ゆうびんきょくはやすみです。", "すみません、わかりません。", "てがみをかきます。"],
+    "options": [
+      "ゆうびんきょくはやすみです。",
+      "すみません、わかりません。",
+      "てがみをかきます。"
+    ],
     "answer": 1,
     "explanation": "「この辺に郵便局はありますか（這附近有郵局嗎？）」，如果不知道就說「すみません、わかりません（對不起，我不清楚）」。"
   }
