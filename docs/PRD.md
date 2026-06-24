@@ -84,6 +84,27 @@
 | task_listening | 課題理解（聽解） |
 | understanding_key | 重點理解（聽解） |
 
+#### sentence_order 題型規範
+
+`sentence_order` 題由 `lead`、四個 `parts`、`trail`、`correct_sequence`、`star`、`answer` 組成。
+
+**資料一致性（必須同時滿足）**
+
+1. `answer === correct_sequence[star - 1]`（★ 格的 parts 索引）
+2. 完整句子 = `lead` + `parts[cs[0]]` + `parts[cs[1]]` + `parts[cs[2]]` + `parts[cs[3]]` + `trail`，必須是語法正確的自然日文
+
+**常見設計錯誤（曾實際出現）**
+
+| 錯誤類型 | 範例 | 修法 |
+|----------|------|------|
+| `answer` ≠ `correct_sequence[star-1]` | star=2 但 answer 指向其他格 | 對齊其中一個 |
+| part 與 trail 重疊 | part「てください」+ trail「ください。」 | 拆 part 或改 trail |
+| part 之間重複用詞 | parts 含「して」又含「て」，拼出「してて」 | 重新設計 parts |
+| ます/です 重複 | part「あります」+ trail「です。」→「ありますです」 | trail 改「か。」等 |
+| 同類助詞混用 | parts 同時含「ように」和「ために」 | 擇一刪除 |
+| 雙重否定 | parts 含「わからない」又含「ない」 | 拆開「ひとつも」→「ひとつ」+「も」 |
+| 語序產生的語意錯誤 | correct_sequence 使「くれた」跑到動詞前成「くれたきています」 | 重設 correct_sequence |
+
 #### 聽解 TTS 規格
 - 使用 Web Speech API，語言 ja-JP
 - 語速 0.9（正常的 90%）
