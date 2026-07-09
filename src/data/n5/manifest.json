@@ -1,0 +1,11 @@
+{
+  "level": "N5",
+  "quizzes": [
+    { "id": 1, "page": "quiz.html", "title": "模擬考 1" },
+    { "id": 2, "page": "quiz2.html", "title": "模擬考 2" },
+    { "id": 3, "page": "quiz3.html", "title": "模擬考 3" },
+    { "id": 4, "page": "quiz4.html", "title": "模擬考 4" },
+    { "id": 5, "page": "quiz5.html", "title": "模擬考 5" },
+    { "id": 6, "page": "quiz6.html", "title": "模擬考 6" }
+  ]
+}

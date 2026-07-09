@@ -3,7 +3,8 @@
  */
 
 (function () {
-  const STATE_KEY = 'nihongo_vocab_study_state';
+  const LEVEL = getCurrentLevel();
+  const STATE_KEY = `nihongo_vocab_study_state_${LEVEL}`;
 
   const UNIT_ORDER = [
     "數字・量詞", "家族", "身體部位", "職業・人物", "場所・建築",
@@ -32,9 +33,10 @@
 
   async function init() {
     setupTheme();
+    setupLevelSelect();
 
     try {
-      allCards = await fetchJSON('data/n5-vocab.json');
+      allCards = await fetchJSON(`data/${getLevelDataDir()}/vocab.json`);
     } catch (e) {
       console.error('[vocab-study] 無法載入單字資料', e);
       cardScene.style.display = 'none';

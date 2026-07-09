@@ -3,10 +3,11 @@
  */
 
 (function () {
-  const PROGRESS_KEY = 'nihongo_grammar_progress';
-  const SEEN_KEY = 'nihongo_grammar_seen';
+  const LEVEL = getCurrentLevel();
+  const PROGRESS_KEY = `nihongo_grammar_progress_${LEVEL}`;
+  const SEEN_KEY = `nihongo_grammar_seen_${LEVEL}`;
   const ORDER_KEY = 'nihongo_grammar_order';
-  const STATE_KEY = 'nihongo_grammar_flashcard_state';
+  const STATE_KEY = `nihongo_grammar_flashcard_state_${LEVEL}`;
 
   let deck = [];
   let currentIndex = 0;
@@ -35,10 +36,11 @@
 
   async function init() {
     setupTheme();
+    setupLevelSelect();
     bindEvents();
 
     try {
-      allCards = await fetchJSON('data/n5-grammar.json');
+      allCards = await fetchJSON(`data/${getLevelDataDir()}/grammar.json`);
     } catch (e) {
       console.error('[grammar] 無法載入文法資料', e);
       showFetchError();

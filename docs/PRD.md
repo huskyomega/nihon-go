@@ -55,7 +55,7 @@
 
 ### 5. JLPT 模擬考（quiz.html、quiz2.html … quiz6.html）
 - 共 6 套獨立模擬考（模擬考 1–6），各有獨立 HTML / JS / JSON
-- 對應檔案：`quiz{n}.html`、`assets/js/quiz{n}.js`（n=1 時為 `quiz.js`）、`data/n5-quiz{n}.json`
+- 對應檔案：`quiz{n}.html`、`assets/js/quiz{n}.js`（n=1 時為 `quiz.js`）、`` data/${level}/quiz{n}.json ``
 - 完整模擬 JLPT N5 三大節：言語知識（文字・語彙）、言語知識（文法）・読解、聴解
 - 全日文題目說明（無中文說明）；解析、結果畫面部分使用繁體中文
 - 作答後立即顯示對錯與中文解析
@@ -153,7 +153,10 @@
 
 ## 資料格式
 
-### n5-vocab.json
+資料依 JLPT 等級分放於 `data/{level}/`（如 `data/n5/`、`data/n4/`），檔名不再帶等級前綴。
+詳見 CLAUDE.md「多等級（JLPT Level）架構」一節。
+
+### {level}/vocab.json
 ```json
 {
   "id": "v001",
@@ -168,7 +171,7 @@
 }
 ```
 
-### n5-grammar.json
+### {level}/grammar.json
 ```json
 {
   "id": "g001",
@@ -200,7 +203,7 @@
 ```
 `example` / `example_ruby` 保留作第一個主題（向後相容）；顯示時以 `examples` 優先。
 
-### n5-quiz.json
+### {level}/quizN.json
 聽解題使用 `script_parts` 陣列：
 ```json
 {
@@ -220,28 +223,41 @@
 }
 ```
 
+## 多等級（JLPT Level）架構
+- `localStorage['nihongo_level']`：`'N5'` \| `'N4'`，預設 `'N5'`；由各頁 header 的等級下拉選單設定，
+  切換時記錄並 reload 頁面套用
+- `utils.js` 提供 `getCurrentLevel()`、`getLevelDataDir()`（小寫，用於組資料路徑）、
+  `setupLevelSelect()`（綁定下拉選單事件）
+- 資料路徑一律為 `` data/${getLevelDataDir()}/xxx.json ``，不可寫死等級
+- `data/{level}/manifest.json` 描述該等級可用的模擬考，首頁依此動態產生卡片：
+  ```json
+  { "level": "N5", "quizzes": [{ "id": 1, "page": "quiz.html", "title": "模擬考 1" }, ...] }
+  ```
+  N4 目前 `quizzes` 為空陣列（尚未製作），首頁顯示「製作中」佔位卡片
+
 ## 進度儲存
-使用 localStorage，key 命名規則：
+使用 localStorage，內容相關 key（進度、已學 id、最後瀏覽位置、模擬考紀錄）皆加上等級後綴
+`_${getCurrentLevel()}`，避免切換等級後覆蓋彼此進度；UI 偏好類 key（顯示模式、排序、主題）不分等級：
 | Key | 內容 |
 |-----|------|
-| `nihongo_vocab_progress` | `{ known: seenIds.size, total: 480 }` |
-| `nihongo_vocab_seen` | 已學單字 id 陣列（跨 session 累積） |
-| `nihongo_vocab_mode` | `'jp'`（日→中）\| `'zh'`（中→日） |
-| `nihongo_vocab_order` | `'seq'`（固定）\| `'rnd'`（隨機） |
-| `nihongo_vocab_study_state` | `{ unit, cardId }` — 單字學習最後位置 |
-| `nihongo_vocab_flashcard_state` | `{ unit, cardId }` — 單字閃卡最後位置 |
-| `nihongo_grammar_progress` | `{ known: seenIds.size, total: 100 }` |
-| `nihongo_grammar_seen` | 已學句型 id 陣列（跨 session 累積） |
-| `nihongo_grammar_order` | `'seq'`（固定）\| `'rnd'`（隨機） |
-| `nihongo_grammar_study_state` | `{ unit, cardId }` — 文法學習最後位置 |
-| `nihongo_grammar_flashcard_state` | `{ unit, cardId }` — 文法閃卡最後位置 |
-| `nihongo_quiz_history` | `{ lastScore: %, lastTotal: N }` — 模擬考 1 |
-| `nihongo_quiz2_history` | 同上，模擬考 2 |
-| `nihongo_quiz3_history` | 同上，模擬考 3 |
-| `nihongo_quiz4_history` | 同上，模擬考 4 |
-| `nihongo_quiz5_history` | 同上，模擬考 5 |
-| `nihongo_quiz6_history` | 同上，模擬考 6 |
-| `nihongo_theme` | `'cupcake'` \| `'dark'` |
+| `nihongo_vocab_progress_{level}` | `{ known: seenIds.size, total }` |
+| `nihongo_vocab_seen_{level}` | 已學單字 id 陣列（跨 session 累積） |
+| `nihongo_vocab_mode` | `'jp'`（日→中）\| `'zh'`（中→日）— 全域共用 |
+| `nihongo_vocab_order` | `'seq'`（固定）\| `'rnd'`（隨機）— 全域共用 |
+| `nihongo_vocab_study_state_{level}` | `{ unit, cardId }` — 單字學習最後位置 |
+| `nihongo_vocab_flashcard_state_{level}` | `{ unit, cardId }` — 單字閃卡最後位置 |
+| `nihongo_grammar_progress_{level}` | `{ known: seenIds.size, total }` |
+| `nihongo_grammar_seen_{level}` | 已學句型 id 陣列（跨 session 累積） |
+| `nihongo_grammar_order` | `'seq'`（固定）\| `'rnd'`（隨機）— 全域共用 |
+| `nihongo_grammar_study_state_{level}` | `{ unit, cardId }` — 文法學習最後位置 |
+| `nihongo_grammar_flashcard_state_{level}` | `{ unit, cardId }` — 文法閃卡最後位置 |
+| `nihongo_quiz_history_{level}` | `{ lastScore: %, lastTotal: N }` — 模擬考 1 |
+| `nihongo_quiz2_history_{level}` | 同上，模擬考 2 |
+| `nihongo_quiz3_history_{level}` | 同上，模擬考 3 |
+| `nihongo_quiz4_history_{level}` | 同上，模擬考 4 |
+| `nihongo_quiz5_history_{level}` | 同上，模擬考 5 |
+| `nihongo_quiz6_history_{level}` | 同上，模擬考 6 |
+| `nihongo_theme` | `'cupcake'` \| `'dark'` — 全域共用 |
 
 ## 假名標注（Ruby）
 - 工具函式 `toRuby(word, reading)` 定義於 `utils.js`

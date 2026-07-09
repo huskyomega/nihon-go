@@ -13,6 +13,37 @@ async function fetchJSON(url) {
   return res.json();
 }
 
+const NIHONGO_LEVEL_KEY = 'nihongo_level';
+
+/**
+ * 取得目前選擇的 JLPT 等級（如 "N5"、"N4"），預設 N5
+ * @returns {string}
+ */
+function getCurrentLevel() {
+  return localStorage.getItem(NIHONGO_LEVEL_KEY) || 'N5';
+}
+
+/**
+ * 取得目前等級對應的資料目錄路徑片段（如 "n5"、"n4"）
+ * @returns {string}
+ */
+function getLevelDataDir() {
+  return getCurrentLevel().toLowerCase();
+}
+
+/**
+ * 初始化 header 上的等級下拉選單：反映目前等級，並於切換時記錄並重新整理頁面
+ */
+function setupLevelSelect() {
+  const select = document.getElementById('level-select');
+  if (!select) return;
+  select.value = getCurrentLevel();
+  select.addEventListener('change', () => {
+    localStorage.setItem(NIHONGO_LEVEL_KEY, select.value);
+    location.reload();
+  });
+}
+
 /**
  * 儲存進度到 localStorage
  * @param {string} key - localStorage key

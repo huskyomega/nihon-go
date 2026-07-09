@@ -3,7 +3,8 @@
  */
 
 (function () {
-  const STATE_KEY = 'nihongo_grammar_study_state';
+  const LEVEL = getCurrentLevel();
+  const STATE_KEY = `nihongo_grammar_study_state_${LEVEL}`;
 
   const UNIT_ORDER = [
     "基本文型", "い形容詞", "な形容詞", "動詞活用", "助詞",
@@ -30,9 +31,10 @@
 
   async function init() {
     setupTheme();
+    setupLevelSelect();
 
     try {
-      allCards = await fetchJSON('data/n5-grammar.json');
+      allCards = await fetchJSON(`data/${getLevelDataDir()}/grammar.json`);
     } catch (e) {
       console.error('[grammar-study] 無法載入文法資料', e);
       cardScene.style.display = 'none';

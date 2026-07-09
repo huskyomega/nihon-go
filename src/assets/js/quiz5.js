@@ -3,7 +3,8 @@
  */
 
 (function () {
-  const PROGRESS_KEY = 'nihongo_quiz5_history';
+  const LEVEL = getCurrentLevel();
+  const PROGRESS_KEY = `nihongo_quiz5_history_${LEVEL}`;
 
   // 各問題タイプの説明文
   const INSTRUCTIONS = {
@@ -88,10 +89,11 @@
 
   async function init() {
     setupTheme();
+    setupLevelSelect();
     bindEvents();
 
     try {
-      allQuestions = await fetchJSON('data/n5-quiz5.json');
+      allQuestions = await fetchJSON(`data/${getLevelDataDir()}/quiz5.json`);
     } catch (e) {
       console.error('[quiz] データの読み込みに失敗しました', e);
       showFetchError();

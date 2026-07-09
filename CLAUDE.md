@@ -1,7 +1,7 @@
 # NihonGo（霓虹狗）專案說明
 
 ## 專案概述
-JLPT N5 日文學習網站，繁體中文介面。
+JLPT 日文學習網站，繁體中文介面，目前支援 N5（完整）與 N4（籌備中，暫用 N5 內容佔位）。
 純靜態網站，無後端，無需編譯工具。
 網站本體在 `src/` 目錄，根目錄是給開發工具用的。
 
@@ -13,23 +13,47 @@ JLPT N5 日文學習網站，繁體中文介面。
 
 ## 目錄結構
 src/                 ← 網站根目錄
-├── index.html       ← 首頁 / 導覽
-├── flashcard.html   ← 單字閃卡
-├── grammar.html     ← 文法閃卡
-├── quiz.html        ← JLPT 模擬考
+├── index.html       ← 首頁 / 導覽（依當前等級動態產生模擬考卡片）
+├── flashcard.html    ← 單字閃卡
+├── grammar.html      ← 文法閃卡
+├── vocab-study.html  ← 單字學習
+├── grammar-study.html ← 文法學習
+├── quiz.html ~ quiz6.html ← JLPT 模擬考（僅 N5 有內容）
 ├── assets/
 │   ├── css/
 │   │   └── main.css     ← 含 ruby rt 假名標注樣式
 │   └── js/
+│       ├── index.js
 │       ├── flashcard.js
 │       ├── grammar.js
-│       ├── quiz.js
+│       ├── vocab-study.js
+│       ├── grammar-study.js
+│       ├── quiz.js, quiz2.js ~ quiz6.js
 │       ├── tts.js       ← 發音模組（Web Speech API）
-│       └── utils.js     ← 共用工具：fetchJSON, shuffle, toRuby, saveProgress, loadProgress
+│       └── utils.js     ← 共用工具：fetchJSON, shuffle, toRuby, saveProgress, loadProgress,
+│                            getCurrentLevel, getLevelDataDir, setupLevelSelect
 └── data/
-    ├── n5-vocab.json    ← N5 單字（480 字，含 unit 欄位）
-    ├── n5-grammar.json  ← N5 文法（100 句型，含 unit、example_ruby 欄位）
-    └── n5-quiz.json     ← 模擬考題目（59 題）
+    ├── n5/
+    │   ├── vocab.json      ← N5 單字（480 字，含 unit 欄位）
+    │   ├── grammar.json    ← N5 文法（100 句型，含 unit、example_ruby 欄位）
+    │   ├── quiz1.json ~ quiz6.json ← 模擬考題目
+    │   └── manifest.json   ← 該等級可用內容清單（見下方多等級架構）
+    └── n4/
+        ├── vocab.json      ← 目前為 N5 內容佔位，待實際 N4 內容製作
+        ├── grammar.json    ← 同上
+        └── manifest.json   ← quizzes 為空陣列（N4 模擬考尚未製作）
+
+## 多等級（JLPT Level）架構
+- 全站以 `localStorage['nihongo_level']`（`N5` / `N4`，預設 `N5`）記錄使用者目前選擇的等級
+- 每個頁面 header 的 navbar-end 皆有 `<select id="level-select">`，切換時透過 `utils.js` 的
+  `setupLevelSelect()` 記錄新等級並 `location.reload()` 重新載入頁面套用
+- 資料路徑一律用 `` `data/${getLevelDataDir()}/xxx.json` `` 組成，不可寫死 `n5-xxx.json`
+- 學習進度類 localStorage key（如 `*_progress`、`*_seen`、`*_state`、`*_history`）須加上
+  `${getCurrentLevel()}` 後綴，避免不同等級進度互相覆蓋；UI 偏好（主題、排序模式）維持全域共用
+- 新增等級（如未來 N3）時：在 `data/` 下新增對應資料夾 + `manifest.json`，並在各頁 `<select>`
+  加入新的 `<option>`
+- `data/{level}/manifest.json` 描述該等級目前有哪些模擬考（`quizzes` 陣列，含 `id`/`page`/`title`），
+  首頁依此動態產生模擬考卡片；陣列為空時顯示「製作中」佔位卡片
 
 docs/
 ├── PRD.md           ← 功能規格文件（含資料格式、單元清單、TTS 規格）
@@ -73,6 +97,7 @@ docs/
 - **累積進度**：`seenIds` Set 持久化至 localStorage（`*_seen` key）；首頁顯示 `已學 X / 總數`
 
 ## 資料欄位說明
-- `n5-vocab.json`：每筆含 `unit` 欄位（21 個單元之一）
-- `n5-grammar.json`：每筆含 `unit` 欄位（12 個單元之一）及 `example_ruby` 欄位
-- `n5-quiz.json`：聽解題用 `script_parts` 陣列取代舊有 `script` 字串
+- `{level}/vocab.json`：每筆含 `unit` 欄位（21 個單元之一）
+- `{level}/grammar.json`：每筆含 `unit` 欄位（12 個單元之一）及 `example_ruby` 欄位
+- `{level}/quizN.json`：聽解題用 `script_parts` 陣列取代舊有 `script` 字串
+- `{level}/manifest.json`：`{ "level": "N5", "quizzes": [{ "id", "page", "title" }, ...] }`

@@ -3,11 +3,12 @@
  */
 
 (function () {
-  const PROGRESS_KEY = 'nihongo_vocab_progress';
-  const SEEN_KEY = 'nihongo_vocab_seen';
+  const LEVEL = getCurrentLevel();
+  const PROGRESS_KEY = `nihongo_vocab_progress_${LEVEL}`;
+  const SEEN_KEY = `nihongo_vocab_seen_${LEVEL}`;
   const MODE_KEY = 'nihongo_vocab_mode';
   const ORDER_KEY = 'nihongo_vocab_order';
-  const STATE_KEY = 'nihongo_vocab_flashcard_state';
+  const STATE_KEY = `nihongo_vocab_flashcard_state_${LEVEL}`;
 
   // 模式：'jp'（日→中）或 'zh'（中→日）
   let mode = localStorage.getItem(MODE_KEY) || 'zh';
@@ -40,11 +41,12 @@
   // 初始化
   async function init() {
     setupTheme();
+    setupLevelSelect();
     setupModeButtons();
     bindEvents();  // 先綁定，不依賴資料載入
 
     try {
-      allCards = await fetchJSON('data/n5-vocab.json');
+      allCards = await fetchJSON(`data/${getLevelDataDir()}/vocab.json`);
     } catch (e) {
       console.error('[flashcard] 無法載入單字資料', e);
       showFetchError();
