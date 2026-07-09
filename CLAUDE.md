@@ -1,7 +1,7 @@
 # NihonGo（霓虹狗）專案說明
 
 ## 專案概述
-JLPT 日文學習網站，繁體中文介面，目前支援 N5（完整）與 N4（單字已完成，文法暫用 N5 內容佔位，模擬考尚未製作）。
+JLPT 日文學習網站，繁體中文介面，目前支援 N5（完整）與 N4（單字、文法已完成，模擬考尚未製作）。
 純靜態網站，無後端，無需編譯工具。
 網站本體在 `src/` 目錄，根目錄是給開發工具用的。
 
@@ -41,17 +41,20 @@ src/                 ← 網站根目錄
     └── n4/
         ├── vocab.json      ← N4 單字（559 字，取材自 sigure.tw N4進階單字第01~19課，
         │                      詞條/讀音/中文意思取自來源網站，羅馬拼音、例句由 AI 依日文知識補寫）
-        ├── grammar.json    ← 目前仍為 N5 內容佔位，待實際 N4 文法內容製作
+        ├── grammar.json    ← N4 文法（57 句型，取材自 sigure.tw N4文法第01~53課，跳過第27課
+        │                      純複習內容；接續/說明/例句/example_ruby 由 AI 依日文知識撰寫）
         └── manifest.json   ← quizzes 為空陣列（N4 模擬考尚未製作）
 
 ## 多等級（JLPT Level）架構
 - 全站以 `localStorage['nihongo_level']`（`N5` / `N4`，預設 `N5`）記錄使用者目前選擇的等級
-- 每個頁面 header 的 navbar-end 皆有 `<select id="level-select">`，切換時透過 `utils.js` 的
-  `setupLevelSelect()` 記錄新等級並 `location.reload()` 重新載入頁面套用
+- 等級切換只在首頁（`index.html`）進行：header navbar-end 有 `<select id="level-select">`，
+  切換時透過 `utils.js` 的 `setupLevelSelect()` 記錄新等級並 `location.reload()` 重新載入頁面套用
+- 其餘頁面（單字/文法閃卡、學習頁、模擬考）的 header 只用 `<span id="level-badge">` 顯示目前等級，
+  不可互動；由 `setupLevelBadge()` 於頁面載入時填入文字，要切換等級須回首頁操作
 - 資料路徑一律用 `` `data/${getLevelDataDir()}/xxx.json` `` 組成，不可寫死 `n5-xxx.json`
 - 學習進度類 localStorage key（如 `*_progress`、`*_seen`、`*_state`、`*_history`）須加上
   `${getCurrentLevel()}` 後綴，避免不同等級進度互相覆蓋；UI 偏好（主題、排序模式）維持全域共用
-- 新增等級（如未來 N3）時：在 `data/` 下新增對應資料夾 + `manifest.json`，並在各頁 `<select>`
+- 新增等級（如未來 N3）時：在 `data/` 下新增對應資料夾 + `manifest.json`，並在首頁的 `<select>`
   加入新的 `<option>`
 - `data/{level}/manifest.json` 描述該等級目前有哪些模擬考（`quizzes` 陣列，含 `id`/`page`/`title`），
   首頁依此動態產生模擬考卡片；陣列為空時顯示「製作中」佔位卡片

@@ -84,9 +84,9 @@ src/
     │   ├── grammar.json    文法資料（100 句型）
     │   ├── quiz1.json ~ quiz6.json  模擬考題目
     │   └── manifest.json   可用模擬考清單
-    └── n4/              JLPT N4（籌備中）
+    └── n4/              JLPT N4（籌備中，模擬考尚未製作）
         ├── vocab.json      單字資料（559 字，已完成）
-        ├── grammar.json    文法資料（暫為 N5 佔位內容，待製作）
+        ├── grammar.json    文法資料（57 句型，已完成）
         └── manifest.json   尚無模擬考
 ```
 

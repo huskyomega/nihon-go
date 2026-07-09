@@ -6,11 +6,20 @@
   const LEVEL = getCurrentLevel();
   const STATE_KEY = `nihongo_grammar_study_state_${LEVEL}`;
 
-  const UNIT_ORDER = [
-    "基本文型", "い形容詞", "な形容詞", "動詞活用", "助詞",
-    "て形的用法", "時間・順序", "意向・勧誘・願望", "疑問・限定",
-    "副詞・接続詞", "普通體・語氣", "比較・能力"
-  ];
+  const UNIT_ORDERS = {
+    N5: [
+      "基本文型", "い形容詞", "な形容詞", "動詞活用", "助詞",
+      "て形的用法", "時間・順序", "意向・勧誘・願望", "疑問・限定",
+      "副詞・接続詞", "普通體・語氣", "比較・能力"
+    ],
+    N4: [
+      "名詞接續表現", "形容詞・形容動詞", "條件・假定", "使役・受身",
+      "て形補助動詞", "動詞活用", "様態・推量・伝聞", "授受表現",
+      "敬語", "意向・打算", "原因・理由・目的", "複合動詞・衍生表現",
+      "命令・許可・禁止", "形式名詞表現", "副詞・接続詞", "助詞"
+    ]
+  };
+  const UNIT_ORDER = UNIT_ORDERS[LEVEL] || [];
 
   let allCards = [];
   let deck = [];
@@ -31,7 +40,7 @@
 
   async function init() {
     setupTheme();
-    setupLevelSelect();
+    setupLevelBadge();
 
     try {
       allCards = await fetchJSON(`data/${getLevelDataDir()}/grammar.json`);

@@ -41,7 +41,7 @@
   // 初始化
   async function init() {
     setupTheme();
-    setupLevelSelect();
+    setupLevelBadge();
     setupModeButtons();
     bindEvents();  // 先綁定，不依賴資料載入
 

@@ -89,7 +89,7 @@
 
   async function init() {
     setupTheme();
-    setupLevelSelect();
+    setupLevelBadge();
     bindEvents();
 
     try {

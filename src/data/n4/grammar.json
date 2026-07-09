@@ -1,1166 +1,1399 @@
 [
   {
     "id": "g001",
-    "pattern": "〜は〜です",
-    "level": "N5",
-    "unit": "基本文型",
-    "meaning": "〜是〜（表示說明、判斷）",
-    "explanation": "最基本的句型，「は」是主題提示助詞，「です」是斷定助動詞，用於說明主語的身份或狀態。",
-    "example": "私は学生です。",
-    "example_meaning": "我是學生。",
-    "example_ruby": "<ruby>私<rt>わたし</rt></ruby>は<ruby>学生<rt>がくせい</rt></ruby>です。"
+    "pattern": "〜にする",
+    "level": "N4",
+    "unit": "名詞接續表現",
+    "meaning": "決定〜、要〜",
+    "explanation": "表示說話者做出的決定或選擇。「にします」表示當下做的決定，「にしました」表示過去已做的決定；動作性名詞（如勉強、留学、掃除）需加「すること」再接「にする」。",
+    "example": "コーヒーにしますか、紅茶にしますか。",
+    "example_meaning": "要咖啡還是紅茶？",
+    "example_ruby": "コーヒーにしますか、<ruby>紅茶<rt>こうちゃ</rt></ruby>にしますか。",
+    "examples": [
+      {
+        "label": "當下的決定",
+        "sentence": "コーヒーにしますか、紅茶にしますか。",
+        "meaning": "要咖啡還是紅茶？",
+        "ruby": "コーヒーにしますか、<ruby>紅茶<rt>こうちゃ</rt></ruby>にしますか。"
+      },
+      {
+        "label": "過去已做的決定",
+        "sentence": "母の日のプレゼントはスマホにしました。",
+        "meaning": "母親節禮物我已經決定送智慧型手機了。",
+        "ruby": "<ruby>母<rt>はは</rt></ruby>の<ruby>日<rt>ひ</rt></ruby>のプレゼントはスマホにしました。"
+      },
+      {
+        "label": "動作性名詞＋することにする",
+        "sentence": "日本へ留学することにします。",
+        "meaning": "我決定去日本留學。",
+        "ruby": "<ruby>日本<rt>にほん</rt></ruby>へ<ruby>留学<rt>りゅうがく</rt></ruby>することにします。"
+      }
+    ]
   },
   {
     "id": "g002",
-    "pattern": "〜ではありません",
-    "level": "N5",
-    "unit": "基本文型",
-    "meaning": "〜不是〜（丁寧體否定）",
-    "explanation": "名詞句的丁寧體否定形，「ではありません」與「じゃありません」意思相同，後者更口語。",
-    "example": "私は先生ではありません。",
-    "example_meaning": "我不是老師。",
-    "example_ruby": "<ruby>私<rt>わたし</rt></ruby>は<ruby>先生<rt>せんせい</rt></ruby>ではありません。"
+    "pattern": "Nがする",
+    "level": "N4",
+    "unit": "名詞接續表現",
+    "meaning": "感覺〜、覺得有〜（感官感受）",
+    "explanation": "表達透過嗅覺、聽覺、味覺、觸覺或第六感傳來的感覺，帶有不確定感，常接在におい、音、味、気之後；與明確表達身體感受的「感じる」不同。",
+    "example": "この味噌は変な味がします。",
+    "example_meaning": "這味噌有怪味道。",
+    "example_ruby": "この<ruby>味噌<rt>みそ</rt></ruby>は<ruby>変<rt>へん</rt></ruby>な<ruby>味<rt>あじ</rt></ruby>がします。"
   },
   {
     "id": "g003",
-    "pattern": "〜でした",
-    "level": "N5",
-    "unit": "基本文型",
-    "meaning": "〜是〜（過去式肯定）",
-    "explanation": "丁寧體的過去式肯定形，表達過去的狀態或身份。",
-    "example": "昨日は月曜日でした。",
-    "example_meaning": "昨天是星期一。",
-    "example_ruby": "<ruby>昨日<rt>きのう</rt></ruby>は<ruby>月曜日<rt>げつようび</rt></ruby>でした。"
+    "pattern": "Nについて",
+    "level": "N4",
+    "unit": "名詞接續表現",
+    "meaning": "關於〜",
+    "explanation": "表示針對前項內容進行說明、提問或評論；修飾名詞用「についての」，作主題用「については」，鄭重場合可用「につきまして」。",
+    "example": "この文法について質問があります。",
+    "example_meaning": "關於這個文法我有個疑問。",
+    "example_ruby": "この<ruby>文法<rt>ぶんぽう</rt></ruby>について<ruby>質問<rt>しつもん</rt></ruby>があります。"
   },
   {
     "id": "g004",
-    "pattern": "〜ではありませんでした",
-    "level": "N5",
-    "unit": "基本文型",
-    "meaning": "〜不是〜（過去式否定）",
-    "explanation": "丁寧體的過去否定形，表達過去不是某事物的狀態。",
-    "example": "昨日は火曜日ではありませんでした。",
-    "example_meaning": "昨天不是星期二。",
-    "example_ruby": "<ruby>昨日<rt>きのう</rt></ruby>は<ruby>火曜日<rt>かようび</rt></ruby>ではありませんでした。"
+    "pattern": "Nによると〜そうだ／ということだ",
+    "level": "N4",
+    "unit": "名詞接續表現",
+    "meaning": "根據〜（消息、傳言的出處）",
+    "explanation": "表示傳聞或消息的來源出處，句尾常搭配傳聞助動詞「そうだ」「ということだ」「とのことだ」；此處的「そうだ」是傳聞用法，而非樣態用法。",
+    "example": "天気予報によると、来週台風が来るそうだ。",
+    "example_meaning": "根據氣象預報，下週會有颱風來。",
+    "example_ruby": "<ruby>天気予報<rt>てんきよほう</rt></ruby>によると、<ruby>来週<rt>らいしゅう</rt></ruby><ruby>台風<rt>たいふう</rt></ruby>が<ruby>来<rt>く</rt></ruby>るそうだ。"
   },
   {
     "id": "g005",
-    "pattern": "〜ですか",
-    "level": "N5",
-    "unit": "基本文型",
-    "meaning": "〜是〜嗎？（疑問句）",
-    "explanation": "在丁寧體句尾加疑問助詞「か」，構成疑問句，相當於中文的「嗎」。",
-    "example": "あなたは学生ですか。",
-    "example_meaning": "你是學生嗎？",
-    "example_ruby": "あなたは<ruby>学生<rt>がくせい</rt></ruby>ですか。"
+    "pattern": "〜になる／〜にする",
+    "level": "N4",
+    "unit": "名詞接續表現",
+    "meaning": "變得〜、變成〜（自然變化）／使〜變成、決定〜（人為變化）",
+    "explanation": "「になる」焦點在事實結果，強調自然變化或外界影響所致的結果；「にする」焦點在當事人的意志，強調人為的決定或動作。名詞、な形容詞接「に」，い形容詞語幹接「く」，再接「なる」或「する」。",
+    "example": "肌が綺麗になりました。",
+    "example_meaning": "肌膚變得更美麗了。",
+    "example_ruby": "<ruby>肌<rt>はだ</rt></ruby>が<ruby>綺麗<rt>きれい</rt></ruby>になりました。",
+    "examples": [
+      {
+        "label": "になる（自然變化）",
+        "sentence": "肌が綺麗になりました。",
+        "meaning": "肌膚變得更美麗了。",
+        "ruby": "<ruby>肌<rt>はだ</rt></ruby>が<ruby>綺麗<rt>きれい</rt></ruby>になりました。"
+      },
+      {
+        "label": "にする（人為變化）",
+        "sentence": "肌を綺麗にします。",
+        "meaning": "使肌膚變得更美麗。",
+        "ruby": "<ruby>肌<rt>はだ</rt></ruby>を<ruby>綺麗<rt>きれい</rt></ruby>にします。"
+      },
+      {
+        "label": "決定用法的焦點差異",
+        "sentence": "雨が降ってきたので、試合は中止にします。",
+        "meaning": "由於下起雨來了，所以決定中止比賽。",
+        "ruby": "<ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>ってきたので、<ruby>試合<rt>しあい</rt></ruby>は<ruby>中止<rt>ちゅうし</rt></ruby>にします。"
+      }
+    ]
   },
   {
     "id": "g006",
-    "pattern": "N＋で（名詞中止形）",
-    "level": "N5",
-    "unit": "基本文型",
-    "meaning": "連接兩個句子（中止形）",
-    "explanation": "名詞後接斷定助動詞「だ」的連用形「で」，用來連接前後兩個句子，類似中文的「，而且」。",
-    "example": "私は学生で、先生ではありません。",
-    "example_meaning": "我是學生，不是老師。",
-    "example_ruby": "<ruby>私<rt>わたし</rt></ruby>は<ruby>学生<rt>がくせい</rt></ruby>で、<ruby>先生<rt>せんせい</rt></ruby>ではありません。"
+    "pattern": "Aさ・Naさ",
+    "level": "N4",
+    "unit": "形容詞・形容動詞",
+    "meaning": "〜的程度、〜度（形容詞/形容動詞轉為名詞）",
+    "explanation": "形容詞語幹或形容動詞語幹加「さ」，將原本表狀態的形容詞、形容動詞轉換成表程度的名詞，常用於客觀描述長度、重量、高度等可量化的程度。",
+    "example": "このビルの高さは509メートルです。",
+    "example_meaning": "這棟大樓的高度有509公尺。",
+    "example_ruby": "このビルの<ruby>高<rt>たか</rt></ruby>さは509メートルです。",
+    "examples": [
+      {
+        "label": "形容詞語幹＋さ",
+        "sentence": "このビルの高さは509メートルです。",
+        "meaning": "這棟大樓的高度有509公尺。",
+        "ruby": "このビルの<ruby>高<rt>たか</rt></ruby>さは509メートルです。"
+      },
+      {
+        "label": "形容動詞語幹＋さ",
+        "sentence": "犬猫を捨てる人に命の大切さを伝えたい。",
+        "meaning": "想對棄養貓狗的人傳達生命的重要性。",
+        "ruby": "<ruby>犬<rt>いぬ</rt></ruby><ruby>猫<rt>ねこ</rt></ruby>を<ruby>捨<rt>す</rt></ruby>てる<ruby>人<rt>ひと</rt></ruby>に<ruby>命<rt>いのち</rt></ruby>の<ruby>大切<rt>たいせつ</rt></ruby>さを<ruby>伝<rt>つた</rt></ruby>えたい。"
+      }
+    ]
   },
   {
     "id": "g007",
-    "pattern": "N＋の＋N（所有格）",
-    "level": "N5",
-    "unit": "基本文型",
-    "meaning": "〜的〜（表示所有、歸屬關係）",
-    "explanation": "助詞「の」連接兩個名詞，表示所有關係，前面的名詞擁有或修飾後面的名詞。",
-    "example": "私の本です。",
-    "example_meaning": "是我的書。",
-    "example_ruby": "<ruby>私<rt>わたし</rt></ruby>の<ruby>本<rt>ほん</rt></ruby>です。"
+    "pattern": "い形容詞活用（未然形・連用形・終止形・連體形・假定形）",
+    "level": "N4",
+    "unit": "形容詞・形容動詞",
+    "meaning": "い形容詞的五種活用變化",
+    "explanation": "い形容詞以「暑い」為例：未然形「暑かろ（う）」表推測；連用形「暑かっ（た）」表過去、「暑く（ない/て）」表否定或中止；終止形「暑い」用於言畢；連體形「暑い（とき）」修飾名詞；假定形「暑けれ（ば）」表假設。「いい／よい」較特殊，「いい」只有終止形與連體形兩種變化，其餘活用形須用「よい」（如よかった、よくない）。",
+    "example": "明日は暑かろう。",
+    "example_meaning": "明天大概很熱吧。",
+    "example_ruby": "<ruby>明日<rt>あした</rt></ruby>は<ruby>暑<rt>あつ</rt></ruby>かろう。",
+    "examples": [
+      {
+        "label": "未然形（暑かろう）",
+        "sentence": "明日は暑かろう。",
+        "meaning": "明天大概很熱吧。",
+        "ruby": "<ruby>明日<rt>あした</rt></ruby>は<ruby>暑<rt>あつ</rt></ruby>かろう。"
+      },
+      {
+        "label": "連用形・過去（暑かった）",
+        "sentence": "昨日は暑かったです。",
+        "meaning": "昨天很熱。",
+        "ruby": "<ruby>昨日<rt>きのう</rt></ruby>は<ruby>暑<rt>あつ</rt></ruby>かったです。"
+      },
+      {
+        "label": "連用形・否定（暑くない）",
+        "sentence": "今日は暑くないです。",
+        "meaning": "今天不熱。",
+        "ruby": "<ruby>今日<rt>きょう</rt></ruby>は<ruby>暑<rt>あつ</rt></ruby>くないです。"
+      },
+      {
+        "label": "連體形（暑いとき）",
+        "sentence": "暑いときはこの服を着ます。",
+        "meaning": "熱的時候我會穿這件衣服。",
+        "ruby": "<ruby>暑<rt>あつ</rt></ruby>いときはこの<ruby>服<rt>ふく</rt></ruby>を<ruby>着<rt>き</rt></ruby>ます。"
+      },
+      {
+        "label": "假定形（暑ければ）",
+        "sentence": "暑ければ、窓を開けてください。",
+        "meaning": "如果很熱的話，請打開窗戶。",
+        "ruby": "<ruby>暑<rt>あつ</rt></ruby>ければ、<ruby>窓<rt>まど</rt></ruby>を<ruby>開<rt>あ</rt></ruby>けてください。"
+      },
+      {
+        "label": "いい／よい的特殊變化",
+        "sentence": "天気がよかったら、公園に行きます。",
+        "meaning": "天氣好的話，我會去公園。",
+        "ruby": "<ruby>天気<rt>てんき</rt></ruby>がよかったら、<ruby>公園<rt>こうえん</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます。"
+      }
+    ]
   },
   {
     "id": "g008",
-    "pattern": "N＋の（準體助詞）",
-    "level": "N5",
-    "unit": "基本文型",
-    "meaning": "〜的（代替後方名詞）",
-    "explanation": "「の」作準體助詞使用，代替前面提及或已知的名詞，相當於「〜のもの（〜的東西）」。",
-    "example": "その車は私のです。",
-    "example_meaning": "那台車是我的。",
-    "example_ruby": "その<ruby>車<rt>くるま</rt></ruby>は<ruby>私<rt>わたし</rt></ruby>のです。"
+    "pattern": "Na・A＋がる／V（連用形）＋たい・たがる",
+    "level": "N4",
+    "unit": "形容詞・形容動詞",
+    "meaning": "覺得〜、感到〜／想要〜（他人）",
+    "explanation": "日文中不能直接用主觀感情形容詞描述第三人稱的感受，需將形容詞、形容動詞加「がる」動詞化；表達希望時，「たい」用於第一人稱自己，「たがる」用於第三人稱；第二人稱一般以疑問句表達，不需改用「がる」。「〜がっている」描述當下情況，「〜がる」描述一般客觀事實。",
+    "example": "両親は寂しがっています。",
+    "example_meaning": "父母感到很寂寞。",
+    "example_ruby": "<ruby>両親<rt>りょうしん</rt></ruby>は<ruby>寂<rt>さび</rt></ruby>しがっています。",
+    "examples": [
+      {
+        "label": "形容詞／形容動詞＋がる",
+        "sentence": "両親は寂しがっています。",
+        "meaning": "父母感到很寂寞。",
+        "ruby": "<ruby>両親<rt>りょうしん</rt></ruby>は<ruby>寂<rt>さび</rt></ruby>しがっています。"
+      },
+      {
+        "label": "たい（第一人稱）",
+        "sentence": "私はゲームをやりたいです。",
+        "meaning": "我想玩遊戲。",
+        "ruby": "<ruby>私<rt>わたし</rt></ruby>はゲームをやりたいです。"
+      },
+      {
+        "label": "たがる（第三人稱）",
+        "sentence": "彼女は海を見たがっています。",
+        "meaning": "她想看海。",
+        "ruby": "<ruby>彼女<rt>かのじょ</rt></ruby>は<ruby>海<rt>うみ</rt></ruby>を<ruby>見<rt>み</rt></ruby>たがっています。"
+      },
+      {
+        "label": "を與が的差異",
+        "sentence": "彼女は犬を怖がっています。",
+        "meaning": "她怕狗。",
+        "ruby": "<ruby>彼女<rt>かのじょ</rt></ruby>は<ruby>犬<rt>いぬ</rt></ruby>を<ruby>怖<rt>こわ</rt></ruby>がっています。"
+      }
+    ]
   },
   {
     "id": "g009",
-    "pattern": "連體詞（この・その・あの・どの）＋N",
-    "level": "N5",
-    "unit": "基本文型",
-    "meaning": "這個/那個/那個/哪個〜（修飾名詞）",
-    "explanation": "連體詞直接修飾後方名詞，「この」指靠近說話者，「その」靠近聽話者，「あの」兩者都遠，「どの」用於詢問。",
-    "example": "この本は面白いです。",
-    "example_meaning": "這本書很有趣。",
-    "example_ruby": "この<ruby>本<rt>ほん</rt></ruby>は<ruby>面白<rt>おもしろ</rt></ruby>いです。"
+    "pattern": "な形容詞活用（未然形・連用形・終止形・連體形・假定形）",
+    "level": "N4",
+    "unit": "形容詞・形容動詞",
+    "meaning": "な形容詞（形容動詞）的五種活用變化",
+    "explanation": "形容動詞語尾為「だ」，以「静か」為例：未然形「静かだろ（う）」表推測；連用形「静かだっ（た）」表過去、「静かで」表中止、「静かに（なる）」表變化；終止形「静かだ」用於言畢；連體形「静かな」修飾名詞；假定形「静かなら（ば）」表假設。形容詞語尾為「い」，形容動詞語尾為「だ」，是兩者最主要的辨別方式。",
+    "example": "教室は静かだろう。",
+    "example_meaning": "教室大概很安靜吧。",
+    "example_ruby": "<ruby>教室<rt>きょうしつ</rt></ruby>は<ruby>静<rt>しず</rt></ruby>かだろう。",
+    "examples": [
+      {
+        "label": "未然形（静かだろう）",
+        "sentence": "教室は静かだろう。",
+        "meaning": "教室大概很安靜吧。",
+        "ruby": "<ruby>教室<rt>きょうしつ</rt></ruby>は<ruby>静<rt>しず</rt></ruby>かだろう。"
+      },
+      {
+        "label": "連用形・過去（静かだった）",
+        "sentence": "昨日の夜は静かだった。",
+        "meaning": "昨天晚上很安靜。",
+        "ruby": "<ruby>昨日<rt>きのう</rt></ruby>の<ruby>夜<rt>よる</rt></ruby>は<ruby>静<rt>しず</rt></ruby>かだった。"
+      },
+      {
+        "label": "連用形・中止／變化（静かで／静かに）",
+        "sentence": "静かにしてください。",
+        "meaning": "請保持安靜。",
+        "ruby": "<ruby>静<rt>しず</rt></ruby>かにしてください。"
+      },
+      {
+        "label": "連體形（静かな）",
+        "sentence": "静かな部屋が好きです。",
+        "meaning": "我喜歡安靜的房間。",
+        "ruby": "<ruby>静<rt>しず</rt></ruby>かな<ruby>部屋<rt>へや</rt></ruby>が<ruby>好<rt>す</rt></ruby>きです。"
+      },
+      {
+        "label": "假定形（静かなら）",
+        "sentence": "静かなら勉強に集中できます。",
+        "meaning": "如果安靜的話就能專心念書。",
+        "ruby": "<ruby>静<rt>しず</rt></ruby>かなら<ruby>勉強<rt>べんきょう</rt></ruby>に<ruby>集中<rt>しゅうちゅう</rt></ruby>できます。"
+      }
+    ]
   },
   {
     "id": "g010",
-    "pattern": "連體修飾節中「が」→「の」替換",
-    "level": "N5",
-    "unit": "基本文型",
-    "meaning": "修飾名詞的從句中，主語助詞「が」可換成「の」",
-    "explanation": "在修飾名詞的從句中，格助詞「が」可以替換為「の」，源自古日文文法，兩者皆正確。",
-    "example": "母の作ったケーキを食べました。",
-    "example_meaning": "吃了媽媽做的蛋糕。",
-    "example_ruby": "<ruby>母<rt>はは</rt></ruby>の<ruby>作<rt>つく</rt></ruby>ったケーキを<ruby>食<rt>た</rt></ruby>べました。"
+    "pattern": "Nだ・Naだ＋と／A・V（終止形）＋と",
+    "level": "N4",
+    "unit": "條件・假定",
+    "meaning": "一〜就〜（必然的假定順接）",
+    "explanation": "表示前項條件成立時，後項必定發生，常用於自然現象、數學定理、常理推論或個人習慣；後句不可接主觀語氣（推測、勸誘、命令），需要表達主觀意志時應改用「たら」。",
+    "example": "大雨が降ると、道路が浸水する。",
+    "example_meaning": "一下大雨，道路就會淹水。",
+    "example_ruby": "<ruby>大雨<rt>おおあめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>ると、<ruby>道路<rt>どうろ</rt></ruby>が<ruby>浸水<rt>しんすい</rt></ruby>する。"
   },
   {
     "id": "g011",
-    "pattern": "い形容詞＋です",
-    "level": "N5",
-    "unit": "い形容詞",
-    "meaning": "很〜（現在/未來肯定，丁寧體）",
-    "explanation": "い形容詞直接加「です」構成丁寧體現在式肯定，表示現在或未來的狀態。",
-    "example": "今日は暑いです。",
-    "example_meaning": "今天很熱。",
-    "example_ruby": "<ruby>今日<rt>きょう</rt></ruby>は<ruby>暑<rt>あつ</rt></ruby>いです。"
+    "pattern": "N・Na＋なら（ば）／A・V（假定形）＋ば",
+    "level": "N4",
+    "unit": "條件・假定",
+    "meaning": "如果〜就〜",
+    "explanation": "表示前項為假定條件，成立時導致後項結果；名詞、形容動詞的「ならば」常省略成「なら」。也可用於表達自然現象、數學定理、常理推論或個人習慣等恆常必然條件。",
+    "example": "雨が止めば、出かけます。",
+    "example_meaning": "如果雨停了，我就出門。",
+    "example_ruby": "<ruby>雨<rt>あめ</rt></ruby>が<ruby>止<rt>や</rt></ruby>めば、<ruby>出<rt>で</rt></ruby>かけます。",
+    "examples": [
+      {
+        "label": "假定條件",
+        "sentence": "雨が止めば、出かけます。",
+        "meaning": "如果雨停了，我就出門。",
+        "ruby": "<ruby>雨<rt>あめ</rt></ruby>が<ruby>止<rt>や</rt></ruby>めば、<ruby>出<rt>で</rt></ruby>かけます。"
+      },
+      {
+        "label": "恆常必然條件",
+        "sentence": "冬になれば寒くなる。",
+        "meaning": "到了冬天就會變冷。",
+        "ruby": "<ruby>冬<rt>ふゆ</rt></ruby>になれば<ruby>寒<rt>さむ</rt></ruby>くなる。"
+      }
+    ]
   },
   {
     "id": "g012",
-    "pattern": "い形容詞語幹＋くないです／くありません",
-    "level": "N5",
-    "unit": "い形容詞",
-    "meaning": "不〜（現在/未來否定，丁寧體）",
-    "explanation": "將い形容詞語尾「い」去掉改為「く」，加「ないです」或「ありません」，後者更正式。",
-    "example": "今日は暑くないです。",
-    "example_meaning": "今天不熱。",
-    "example_ruby": "<ruby>今日<rt>きょう</rt></ruby>は<ruby>暑<rt>あつ</rt></ruby>くないです。"
+    "pattern": "N・Na＋だったら／Aかっ＋たら／V＋たら",
+    "level": "N4",
+    "unit": "條件・假定",
+    "meaning": "如果〜的話、〜之後",
+    "explanation": "表示假定的順接條件，前項成立則導致後項結果，可用於單純假設，也可用來描述做了某動作後才發現的新事實（「發現」用法）。",
+    "example": "安かったら買います。",
+    "example_meaning": "若便宜就買。",
+    "example_ruby": "<ruby>安<rt>やす</rt></ruby>かったら<ruby>買<rt>か</rt></ruby>います。",
+    "examples": [
+      {
+        "label": "假定條件",
+        "sentence": "安かったら買います。",
+        "meaning": "若便宜就買。",
+        "ruby": "<ruby>安<rt>やす</rt></ruby>かったら<ruby>買<rt>か</rt></ruby>います。"
+      },
+      {
+        "label": "發現用法",
+        "sentence": "冷蔵庫を開けたら、ビールが３本あった。",
+        "meaning": "打開冰箱發現有三瓶啤酒。",
+        "ruby": "<ruby>冷蔵庫<rt>れいぞうこ</rt></ruby>を<ruby>開<rt>あ</rt></ruby>けたら、ビールが３<ruby>本<rt>ほん</rt></ruby>あった。"
+      }
+    ]
   },
   {
     "id": "g013",
-    "pattern": "い形容詞語幹＋かったです",
-    "level": "N5",
-    "unit": "い形容詞",
-    "meaning": "很〜（過去肯定，丁寧體）",
-    "explanation": "將い形容詞語尾「い」去掉改為「かった」，加「です」構成丁寧體過去肯定形。",
-    "example": "昨日は寒かったです。",
-    "example_meaning": "昨天很冷。",
-    "example_ruby": "<ruby>昨日<rt>きのう</rt></ruby>は<ruby>寒<rt>さむ</rt></ruby>かったです。"
+    "pattern": "N・Na＋なら／A・V（の）＋なら",
+    "level": "N4",
+    "unit": "條件・假定",
+    "meaning": "（如果）〜的話",
+    "explanation": "針對已知的部分做出建議或結論，強調前項尚未發生、是說話者聽到資訊後做出的判斷，與強調前項已完成的「たら」不同；動詞、形容詞常加準體助詞「の」變成「のなら」，語感上更強調「根據對方所說的前提」。",
+    "example": "暇なら遊びに行きましょう。",
+    "example_meaning": "你有空的話，一起去玩吧。",
+    "example_ruby": "<ruby>暇<rt>ひま</rt></ruby>なら<ruby>遊<rt>あそ</rt></ruby>びに<ruby>行<rt>い</rt></ruby>きましょう。",
+    "examples": [
+      {
+        "label": "なら（建議/結論）",
+        "sentence": "暇なら遊びに行きましょう。",
+        "meaning": "你有空的話，一起去玩吧。",
+        "ruby": "<ruby>暇<rt>ひま</rt></ruby>なら<ruby>遊<rt>あそ</rt></ruby>びに<ruby>行<rt>い</rt></ruby>きましょう。"
+      },
+      {
+        "label": "のなら（收到資訊後的前提）",
+        "sentence": "そんなに仕事が辛いのなら、早く辞めた方がいいですよ。",
+        "meaning": "工作讓你這麼難受的話，趕快辭掉比較好哦。",
+        "ruby": "そんなに<ruby>仕事<rt>しごと</rt></ruby>が<ruby>辛<rt>つら</rt></ruby>いのなら、<ruby>早<rt>はや</rt></ruby>く<ruby>辞<rt>や</rt></ruby>めた<ruby>方<rt>ほう</rt></ruby>がいいですよ。"
+      }
+    ]
   },
   {
     "id": "g014",
-    "pattern": "い形容詞語幹＋くなかったです／くありませんでした",
-    "level": "N5",
-    "unit": "い形容詞",
-    "meaning": "不〜（過去否定，丁寧體）",
-    "explanation": "い形容詞過去否定形，「なかったです」較口語，「ありませんでした」較正式。",
-    "example": "昨日は寒くなかったです。",
-    "example_meaning": "昨天不冷。",
-    "example_ruby": "<ruby>昨日<rt>きのう</rt></ruby>は<ruby>寒<rt>さむ</rt></ruby>くなかったです。"
+    "pattern": "〜（さ）せる",
+    "level": "N4",
+    "unit": "使役・受身",
+    "meaning": "讓〜、叫〜、使〜（使役）",
+    "explanation": "使役助動詞：五段動詞未然形＋せる、一段動詞未然形＋させる、する→させる、来る→来させる。依語境可表示強制命令、非強制的誘發，或放任容許等不同語感。",
+    "example": "課長は部下を出張させます。",
+    "example_meaning": "課長要下屬出差。",
+    "example_ruby": "<ruby>課長<rt>かちょう</rt></ruby>は<ruby>部下<rt>ぶか</rt></ruby>を<ruby>出張<rt>しゅっちょう</rt></ruby>させます。",
+    "examples": [
+      {
+        "label": "強制",
+        "sentence": "課長は部下を出張させます。",
+        "meaning": "課長要下屬出差。",
+        "ruby": "<ruby>課長<rt>かちょう</rt></ruby>は<ruby>部下<rt>ぶか</rt></ruby>を<ruby>出張<rt>しゅっちょう</rt></ruby>させます。"
+      },
+      {
+        "label": "非強制（誘發）",
+        "sentence": "僕は満点を取って、両親を喜ばせました。",
+        "meaning": "我考了滿分，讓父母高興了。",
+        "ruby": "<ruby>僕<rt>ぼく</rt></ruby>は<ruby>満点<rt>まんてん</rt></ruby>を<ruby>取<rt>と</rt></ruby>って、<ruby>両親<rt>りょうしん</rt></ruby>を<ruby>喜<rt>よろこ</rt></ruby>ばせました。"
+      },
+      {
+        "label": "放任・允許",
+        "sentence": "母は子供を遊ばせています。",
+        "meaning": "媽媽讓孩子自由玩耍。",
+        "ruby": "<ruby>母<rt>はは</rt></ruby>は<ruby>子供<rt>こども</rt></ruby>を<ruby>遊<rt>あそ</rt></ruby>ばせています。"
+      }
+    ]
   },
   {
     "id": "g015",
-    "pattern": "い形容詞語幹＋くて（中止形）",
-    "level": "N5",
-    "unit": "い形容詞",
-    "meaning": "連接形容詞句子（又…又…、因為…所以…）",
-    "explanation": "將い形容詞語尾「い」換成「くて」可連接前後句子，表示並列、對比或因果關係。",
-    "example": "高橋さんは優しくて、かっこいいです。",
-    "example_meaning": "高橋先生又溫柔又帥氣。",
-    "example_ruby": "<ruby>高橋<rt>たかはし</rt></ruby>さんは<ruby>優<rt>やさ</rt></ruby>しくて、かっこいいです。"
+    "pattern": "〜（ら）れる",
+    "level": "N4",
+    "unit": "使役・受身",
+    "meaning": "被〜／能〜／不禁〜／敬語表現（受身・可能・自発・尊敬）",
+    "explanation": "五段動詞未然形＋れる、一段動詞未然形＋られる（口語常省略ら，稱「ら抜き言葉」）、する→される、来る→来られる。依助詞（を/が）與語境可表示被動、能力、不由自主的自然感受，或尊敬語，四種用法容易混淆需依情境判斷。",
+    "example": "妹は先生に叱られました。",
+    "example_meaning": "妹妹被老師罵了。",
+    "example_ruby": "<ruby>妹<rt>いもうと</rt></ruby>は<ruby>先生<rt>せんせい</rt></ruby>に<ruby>叱<rt>しか</rt></ruby>られました。",
+    "examples": [
+      {
+        "label": "受身",
+        "sentence": "妹は先生に叱られました。",
+        "meaning": "妹妹被老師罵了。",
+        "ruby": "<ruby>妹<rt>いもうと</rt></ruby>は<ruby>先生<rt>せんせい</rt></ruby>に<ruby>叱<rt>しか</rt></ruby>られました。"
+      },
+      {
+        "label": "可能",
+        "sentence": "弟はフランス語が話せます。",
+        "meaning": "弟弟會說法語。",
+        "ruby": "<ruby>弟<rt>おとうと</rt></ruby>はフランス<ruby>語<rt>ご</rt></ruby>が<ruby>話<rt>はな</rt></ruby>せます。"
+      },
+      {
+        "label": "自発",
+        "sentence": "この写真を見ると、子供のころが思い出されます。",
+        "meaning": "看到這張照片，就不禁想起了小時候。",
+        "ruby": "この<ruby>写真<rt>しゃしん</rt></ruby>を<ruby>見<rt>み</rt></ruby>ると、<ruby>子供<rt>こども</rt></ruby>のころが<ruby>思<rt>おも</rt></ruby>い<ruby>出<rt>だ</rt></ruby>されます。"
+      },
+      {
+        "label": "尊敬",
+        "sentence": "先生、刺身を食べられますか。",
+        "meaning": "老師，您要吃生魚片嗎？",
+        "ruby": "<ruby>先生<rt>せんせい</rt></ruby>、<ruby>刺身<rt>さしみ</rt></ruby>を<ruby>食<rt>た</rt></ruby>べられますか。"
+      }
+    ]
   },
   {
     "id": "g016",
-    "pattern": "い形容詞語幹＋く＋動詞",
-    "level": "N5",
-    "unit": "い形容詞",
-    "meaning": "〜地（形容詞修飾動詞）",
-    "explanation": "將い形容詞語尾「い」換成「く」，用來修飾後方動詞，描述動作的方式或狀態。",
-    "example": "母は毎日早く起きます。",
-    "example_meaning": "媽媽每天都很早起床。",
-    "example_ruby": "<ruby>母<rt>はは</rt></ruby>は<ruby>毎日<rt>まいにち</rt></ruby><ruby>早<rt>はや</rt></ruby>く<ruby>起<rt>お</rt></ruby>きます。"
+    "pattern": "〜ていく",
+    "level": "N4",
+    "unit": "て形補助動詞",
+    "meaning": "〜下去、逐漸〜（由近而遠／狀態變化／動作持續）",
+    "explanation": "動詞て形＋いく，本義源自「行く」，可表示動作或事物由近而遠地移動、狀態逐漸變化，或動作從現在起持續下去。補助動詞須用平假名書寫。",
+    "example": "飛行機が飛んでいきました。",
+    "example_meaning": "飛機飛遠了。",
+    "example_ruby": "<ruby>飛行機<rt>ひこうき</rt></ruby>が<ruby>飛<rt>と</rt></ruby>んでいきました。",
+    "examples": [
+      {
+        "label": "由近而遠",
+        "sentence": "飛行機が飛んでいきました。",
+        "meaning": "飛機飛遠了。",
+        "ruby": "<ruby>飛行機<rt>ひこうき</rt></ruby>が<ruby>飛<rt>と</rt></ruby>んでいきました。"
+      },
+      {
+        "label": "狀態變化",
+        "sentence": "人口がだんだん減っていきます。",
+        "meaning": "人口會漸漸減少。",
+        "ruby": "<ruby>人口<rt>じんこう</rt></ruby>がだんだん<ruby>減<rt>へ</rt></ruby>っていきます。"
+      },
+      {
+        "label": "動作持續",
+        "sentence": "これからも頑張っていきましょう。",
+        "meaning": "從今以後也要繼續努力下去。",
+        "ruby": "これからも<ruby>頑張<rt>がんば</rt></ruby>っていきましょう。"
+      }
+    ]
   },
   {
     "id": "g017",
-    "pattern": "い形容詞＋の（準體助詞）",
-    "level": "N5",
-    "unit": "い形容詞",
-    "meaning": "〜的（代替名詞或名詞化）",
-    "explanation": "い形容詞加準體助詞「の」，可代替前面提到的名詞，或將形容詞句名詞化。",
-    "example": "大きいのをください。",
-    "example_meaning": "請給我大的。",
-    "example_ruby": "<ruby>大<rt>おお</rt></ruby>きいのをください。"
+    "pattern": "〜てくる",
+    "level": "N4",
+    "unit": "て形補助動詞",
+    "meaning": "〜過來、逐漸〜起來（由遠而近／狀態變化／動作持續／做了再回來）",
+    "explanation": "動詞て形＋くる，本義源自「来る」，可表示由遠而近的移動、狀態開始顯現變化、動作一直持續到現在，或做完某動作後會再回來。補助動詞須用平假名書寫。",
+    "example": "バスがやってきました。",
+    "example_meaning": "公車開過來了。",
+    "example_ruby": "バスがやってきました。",
+    "examples": [
+      {
+        "label": "由遠而近",
+        "sentence": "バスがやってきました。",
+        "meaning": "公車開過來了。",
+        "ruby": "バスがやってきました。"
+      },
+      {
+        "label": "狀態變化",
+        "sentence": "月が見えてきました。",
+        "meaning": "月亮漸漸露出來了。",
+        "ruby": "<ruby>月<rt>つき</rt></ruby>が<ruby>見<rt>み</rt></ruby>えてきました。"
+      },
+      {
+        "label": "做了再回來",
+        "sentence": "お土産をたくさん買ってくるから待っててね。",
+        "meaning": "我會買很多伴手禮回來，等我一下喔。",
+        "ruby": "お<ruby>土産<rt>みやげ</rt></ruby>をたくさん<ruby>買<rt>か</rt></ruby>ってくるから<ruby>待<rt>ま</rt></ruby>っててね。"
+      }
+    ]
   },
   {
     "id": "g018",
-    "pattern": "な形容詞語幹＋です／だ",
-    "level": "N5",
-    "unit": "な形容詞",
-    "meaning": "很〜（現在肯定，丁寧體/普通體）",
-    "explanation": "な形容詞丁寧體用「語幹＋です」，普通體用「語幹＋だ」，表示現在或未來的肯定狀態。",
-    "example": "夜市は賑やかです。",
-    "example_meaning": "夜市很熱鬧。",
-    "example_ruby": "<ruby>夜市<rt>よいち</rt></ruby>は<ruby>賑<rt>にぎ</rt></ruby>やかです。"
+    "pattern": "〜てみる",
+    "level": "N4",
+    "unit": "て形補助動詞",
+    "meaning": "試著〜看看",
+    "explanation": "動詞て形＋みる，本義源自「見る」，表示嘗試做某動作以確認結果如何。補助動詞須用平假名書寫。",
+    "example": "彼女の作った料理が食べてみたいです。",
+    "example_meaning": "想吃看看女朋友做的料理。",
+    "example_ruby": "<ruby>彼女<rt>かのじょ</rt></ruby>の<ruby>作<rt>つく</rt></ruby>った<ruby>料理<rt>りょうり</rt></ruby>が<ruby>食<rt>た</rt></ruby>べてみたいです。"
   },
   {
     "id": "g019",
-    "pattern": "な形容詞語幹＋ではありません／じゃない",
-    "level": "N5",
-    "unit": "な形容詞",
-    "meaning": "不〜（否定形）",
-    "explanation": "な形容詞否定，丁寧體用「ではありません」，普通體用「じゃない」，「じゃ」是較口語的說法。",
-    "example": "ピーマンが好きではありません。",
-    "example_meaning": "不喜歡青椒。",
-    "example_ruby": "ピーマンが<ruby>好<rt>す</rt></ruby>きではありません。"
+    "pattern": "〜てしまう",
+    "level": "N4",
+    "unit": "て形補助動詞",
+    "meaning": "〜完了、不小心〜了（完了耗盡／遺憾懊悔／不由自主）",
+    "explanation": "動詞て形＋しまう，可表示動作徹底完成或東西耗盡，也常帶有「不小心、後悔」的語感，或表示無法抑制的動作。口語常縮約為「ちゃう／じゃう」。",
+    "example": "この小説はもう読んでしまったから、あげるね。",
+    "example_meaning": "這本小說我已經看完了，給你吧。",
+    "example_ruby": "この<ruby>小説<rt>しょうせつ</rt></ruby>はもう<ruby>読<rt>よ</rt></ruby>んでしまったから、あげるね。",
+    "examples": [
+      {
+        "label": "完了・耗盡",
+        "sentence": "この小説はもう読んでしまったから、あげるね。",
+        "meaning": "這本小說我已經看完了，給你吧。",
+        "ruby": "この<ruby>小説<rt>しょうせつ</rt></ruby>はもう<ruby>読<rt>よ</rt></ruby>んでしまったから、あげるね。"
+      },
+      {
+        "label": "遺憾・後悔",
+        "sentence": "電車の中にスマホを忘れてきてしまった。",
+        "meaning": "把手機忘在電車裡了。",
+        "ruby": "<ruby>電車<rt>でんしゃ</rt></ruby>の<ruby>中<rt>なか</rt></ruby>にスマホを<ruby>忘<rt>わす</rt></ruby>れてきてしまった。"
+      },
+      {
+        "label": "不由自主",
+        "sentence": "思わず泣いてしまった。",
+        "meaning": "不禁哭了出來。",
+        "ruby": "<ruby>思<rt>おも</rt></ruby>わず<ruby>泣<rt>な</rt></ruby>いてしまった。"
+      }
+    ]
   },
   {
     "id": "g020",
-    "pattern": "な形容詞語幹＋でした／だった",
-    "level": "N5",
-    "unit": "な形容詞",
-    "meaning": "很〜（過去肯定）",
-    "explanation": "な形容詞的過去式肯定，丁寧體用「でした」，普通體用「だった」，與名詞的時態變化相同。",
-    "example": "期末試験は簡単でした。",
-    "example_meaning": "期末考很簡單。",
-    "example_ruby": "<ruby>期末試験<rt>きまつしけん</rt></ruby>は<ruby>簡単<rt>かんたん</rt></ruby>でした。"
+    "pattern": "〜ておく",
+    "level": "N4",
+    "unit": "て形補助動詞",
+    "meaning": "事先〜好、〜著不管（事先準備／放著不管）",
+    "explanation": "動詞て形＋おく，表示為了某目的事先做好準備，或表示暫時維持某狀態、放著不處理。口語常縮約為「とく」。",
+    "example": "旅行の前に、切符を買っておく。",
+    "example_meaning": "旅行前先把票買好。",
+    "example_ruby": "<ruby>旅行<rt>りょこう</rt></ruby>の<ruby>前<rt>まえ</rt></ruby>に、<ruby>切符<rt>きっぷ</rt></ruby>を<ruby>買<rt>か</rt></ruby>っておく。",
+    "examples": [
+      {
+        "label": "事先準備",
+        "sentence": "旅行の前に、切符を買っておく。",
+        "meaning": "旅行前先把票買好。",
+        "ruby": "<ruby>旅行<rt>りょこう</rt></ruby>の<ruby>前<rt>まえ</rt></ruby>に、<ruby>切符<rt>きっぷ</rt></ruby>を<ruby>買<rt>か</rt></ruby>っておく。"
+      },
+      {
+        "label": "放著不管",
+        "sentence": "暑いので、窓を開けておいてください。",
+        "meaning": "因為很熱，請把窗戶開著。",
+        "ruby": "<ruby>暑<rt>あつ</rt></ruby>いので、<ruby>窓<rt>まど</rt></ruby>を<ruby>開<rt>あ</rt></ruby>けておいてください。"
+      }
+    ]
   },
   {
     "id": "g021",
-    "pattern": "な形容詞語幹＋で（中止形）",
-    "level": "N5",
-    "unit": "な形容詞",
-    "meaning": "連接な形容詞句子（又…又…、因為…所以…）",
-    "explanation": "な形容詞後接「で」連接前後句子，可表示並列、對比或因果關係，用法與名詞中止形相同。",
-    "example": "鈴木さんはきれいで優しいです。",
-    "example_meaning": "鈴木小姐既漂亮又溫柔。",
-    "example_ruby": "<ruby>鈴木<rt>すずき</rt></ruby>さんはきれいで<ruby>優<rt>やさ</rt></ruby>しいです。"
+    "pattern": "〜ず（に）／〜ぬ（ん）／〜ね",
+    "level": "N4",
+    "unit": "動詞活用",
+    "meaning": "不〜、沒〜（動詞否定形的書面／古典變體）",
+    "explanation": "動詞未然形＋「ず」（＝なくて，表並列或原因）、「ずに」（＝ないで，表手段或附帶狀況）、「ぬ／ん」（＝ない的書面／古典終止形・連體形，常見於諺語歌詞）、「ね／ねば」（＝なければ的古典假定形）。する的特殊變化為せず・せぬ・せね。",
+    "example": "電気を消さずに寝てしまった。",
+    "example_meaning": "沒關燈就睡著了。",
+    "example_ruby": "<ruby>電気<rt>でんき</rt></ruby>を<ruby>消<rt>け</rt></ruby>さずに<ruby>寝<rt>ね</rt></ruby>てしまった。",
+    "examples": [
+      {
+        "label": "ず／ずに",
+        "sentence": "電気を消さずに寝てしまった。",
+        "meaning": "沒關燈就睡著了。",
+        "ruby": "<ruby>電気<rt>でんき</rt></ruby>を<ruby>消<rt>け</rt></ruby>さずに<ruby>寝<rt>ね</rt></ruby>てしまった。"
+      },
+      {
+        "label": "ぬ（ん）",
+        "sentence": "年には勝てぬ。",
+        "meaning": "歲月不饒人。",
+        "ruby": "<ruby>年<rt>とし</rt></ruby>には<ruby>勝<rt>か</rt></ruby>てぬ。"
+      },
+      {
+        "label": "ね（ねば）",
+        "sentence": "もう行かねばならない。",
+        "meaning": "已經不得不走了。",
+        "ruby": "もう<ruby>行<rt>い</rt></ruby>かねばならない。"
+      }
+    ]
   },
   {
     "id": "g022",
-    "pattern": "な形容詞語幹＋な＋N",
-    "level": "N5",
-    "unit": "な形容詞",
-    "meaning": "〜的〜（な形容詞修飾名詞）",
-    "explanation": "な形容詞修飾名詞時，需在語幹後加「な」再接名詞，這是「連體形」用法。",
-    "example": "静かな町に住んでいます。",
-    "example_meaning": "住在安靜的城鎮裡。",
-    "example_ruby": "<ruby>静<rt>しず</rt></ruby>かな<ruby>町<rt>まち</rt></ruby>に<ruby>住<rt>す</rt></ruby>んでいます。"
+    "pattern": "〜そうだ（樣態）",
+    "level": "N4",
+    "unit": "様態・推量・伝聞",
+    "meaning": "看起來好像〜（依外觀樣子推測）",
+    "explanation": "動詞連用形／い形容詞・な形容詞語幹＋そうだ，表示依眼前所見的樣子做出的主觀推測，比「ようだ」更直接依賴視覺印象；否定形容詞用「なさそうだ」，動詞用「〜そうにない」。與下一課「そうだ（傳聞）」接續方式不同（樣態接語幹/連用形，傳聞接終止形），意思也不同（樣態＝看起來，傳聞＝聽說）。",
+    "example": "雨が降りそうだ。",
+    "example_meaning": "好像快要下雨了。",
+    "example_ruby": "<ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>りそうだ。"
   },
   {
     "id": "g023",
-    "pattern": "な形容詞語幹＋に＋動詞",
-    "level": "N5",
-    "unit": "な形容詞",
-    "meaning": "〜地（な形容詞修飾動詞）",
-    "explanation": "な形容詞語幹後加「に」，用來修飾後方動詞，表示動作的方式或狀態。",
-    "example": "きれいに掃除してください。",
-    "example_meaning": "請打掃乾淨。",
-    "example_ruby": "きれいに<ruby>掃除<rt>そうじ</rt></ruby>してください。"
+    "pattern": "〜そうだ（傳聞）",
+    "level": "N4",
+    "unit": "様態・推量・伝聞",
+    "meaning": "聽說〜（轉述他人資訊）",
+    "explanation": "動詞・形容詞終止形／形容動詞・名詞＋だ＋そうだ，表示說話者轉述從他處聽來的訊息，不含說話者本人的推測，語尾不隨主語變化。與前一課「そうだ（樣態）」的接續（終止形而非語幹）與意思（傳聞而非外觀推測）皆不同。",
+    "example": "明日、雨が降るそうだ。",
+    "example_meaning": "聽說明天會下雨。",
+    "example_ruby": "<ruby>明日<rt>あした</rt></ruby>、<ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>るそうだ。"
   },
   {
     "id": "g024",
-    "pattern": "な形容詞語幹＋な＋の",
-    "level": "N5",
-    "unit": "な形容詞",
-    "meaning": "〜的（代替名詞或名詞化）",
-    "explanation": "な形容詞加準體助詞「の」，可代替名詞或將整個形容詞句名詞化。",
-    "example": "果物の中で一番好きなのはバナナです。",
-    "example_meaning": "水果之中最喜歡的是香蕉。",
-    "example_ruby": "<ruby>果物<rt>くだもの</rt></ruby>の<ruby>中<rt>なか</rt></ruby>で<ruby>一番<rt>いちばん</rt></ruby><ruby>好<rt>す</rt></ruby>きなのはバナナです。"
+    "pattern": "〜らしい",
+    "level": "N4",
+    "unit": "様態・推量・伝聞",
+    "meaning": "似乎〜、好像〜（根據客觀依據的推測）",
+    "explanation": "動詞・形容詞終止形／形容動詞語幹／名詞＋らしい，表示說話者根據所見所聞的客觀依據做出的推測，比「そうだ（傳聞）」更保有推測色彩；也常用於表示「有〜的樣子/風範」，如「男らしい」。",
+    "example": "明日は雨が降るらしいです。",
+    "example_meaning": "明天似乎會下雨。",
+    "example_ruby": "<ruby>明日<rt>あした</rt></ruby>は<ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>るらしいです。"
   },
   {
     "id": "g025",
-    "pattern": "動詞（五段）活用",
-    "level": "N5",
-    "unit": "動詞活用",
-    "meaning": "五段動詞（第一類）的活用變化",
-    "explanation": "語尾落在「ウ段」的動詞，依照不同用途變化為不同活用形（未然、連用、終止、連體、假定、命令形）。",
-    "example": "毎日早く起きます。",
-    "example_meaning": "每天早起。",
-    "example_ruby": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>早<rt>はや</rt></ruby>く<ruby>起<rt>お</rt></ruby>きます。"
+    "pattern": "〜ようだ",
+    "level": "N4",
+    "unit": "様態・推量・伝聞",
+    "meaning": "好像〜、宛如〜（推量／比喻／例示）",
+    "explanation": "動詞・形容詞連體形／形容動詞連體形／名詞＋の＋ようだ，可表示依感受做的主觀推量、把某事物比喻成另一事物，或舉出代表性例子。書面語感較口語的「みたいだ」正式。",
+    "example": "教室に誰かいるようだ。",
+    "example_meaning": "教室裡好像有人在。",
+    "example_ruby": "<ruby>教室<rt>きょうしつ</rt></ruby>に<ruby>誰<rt>だれ</rt></ruby>かいるようだ。",
+    "examples": [
+      {
+        "label": "推量",
+        "sentence": "教室に誰かいるようだ。",
+        "meaning": "教室裡好像有人在。",
+        "ruby": "<ruby>教室<rt>きょうしつ</rt></ruby>に<ruby>誰<rt>だれ</rt></ruby>かいるようだ。"
+      },
+      {
+        "label": "比喻",
+        "sentence": "彼はまるでアメリカ人のように英語を流暢に話す。",
+        "meaning": "他說起英文流利得像美國人一樣。",
+        "ruby": "<ruby>彼<rt>かれ</rt></ruby>はまるでアメリカ<ruby>人<rt>じん</rt></ruby>のように<ruby>英語<rt>えいご</rt></ruby>を<ruby>流暢<rt>りゅうちょう</rt></ruby>に<ruby>話<rt>はな</rt></ruby>す。"
+      },
+      {
+        "label": "例示",
+        "sentence": "台北のような大都市にはいろいろな人がいる。",
+        "meaning": "像台北這樣的大都市裡有各式各樣的人。",
+        "ruby": "<ruby>台北<rt>たいぺい</rt></ruby>のような<ruby>大都市<rt>だいとし</rt></ruby>にはいろいろな<ruby>人<rt>ひと</rt></ruby>がいる。"
+      }
+    ]
   },
   {
     "id": "g026",
-    "pattern": "動詞（上下一段）活用",
-    "level": "N5",
-    "unit": "動詞活用",
-    "meaning": "上下一段動詞（第二類）的活用變化",
-    "explanation": "上一段：語尾「る」前為イ段音；下一段：語尾「る」前為エ段音。活用時去掉「る」後接變化。",
-    "example": "ご飯を食べます。",
-    "example_meaning": "吃飯。",
-    "example_ruby": "ご<ruby>飯<rt>はん</rt></ruby>を<ruby>食<rt>た</rt></ruby>べます。"
+    "pattern": "〜みたいだ",
+    "level": "N4",
+    "unit": "様態・推量・伝聞",
+    "meaning": "好像〜、宛如〜（口語版ようだ）",
+    "explanation": "動詞・形容詞終止形／形容動詞語幹／名詞＋みたいだ，意思與「ようだ」相同（推量／比喻／例示），但語感較口語、不正式，接續也更單純（名詞後不需加「の」）。",
+    "example": "教室に誰かいるみたいだ。",
+    "example_meaning": "教室裡好像有人在。",
+    "example_ruby": "<ruby>教室<rt>きょうしつ</rt></ruby>に<ruby>誰<rt>だれ</rt></ruby>かいるみたいだ。",
+    "examples": [
+      {
+        "label": "推量",
+        "sentence": "教室に誰かいるみたいだ。",
+        "meaning": "教室裡好像有人在。",
+        "ruby": "<ruby>教室<rt>きょうしつ</rt></ruby>に<ruby>誰<rt>だれ</rt></ruby>かいるみたいだ。"
+      },
+      {
+        "label": "比喻",
+        "sentence": "あの人は猿みたいな顔をしている。",
+        "meaning": "那個人長得有點像猴子。",
+        "ruby": "あの<ruby>人<rt>ひと</rt></ruby>は<ruby>猿<rt>さる</rt></ruby>みたいな<ruby>顔<rt>かお</rt></ruby>をしている。"
+      },
+      {
+        "label": "例示",
+        "sentence": "犬や猫みたいな動物が好きです。",
+        "meaning": "我喜歡狗、貓這類的動物。",
+        "ruby": "<ruby>犬<rt>いぬ</rt></ruby>や<ruby>猫<rt>ねこ</rt></ruby>みたいな<ruby>動物<rt>どうぶつ</rt></ruby>が<ruby>好<rt>す</rt></ruby>きです。"
+      }
+    ]
   },
   {
     "id": "g027",
-    "pattern": "サ変・カ変動詞活用",
-    "level": "N5",
-    "unit": "動詞活用",
-    "meaning": "第三類動詞「する」「くる」的活用",
-    "explanation": "「する」和「くる」是不規則動詞，各有固定的活用形，需特別記憶。",
-    "example": "友達が来ます。",
-    "example_meaning": "朋友來了。",
-    "example_ruby": "<ruby>友達<rt>ともだち</rt></ruby>が<ruby>来<rt>き</rt></ruby>ます。"
+    "pattern": "あげる／くれる／もらう",
+    "level": "N4",
+    "unit": "授受表現",
+    "meaning": "給予・收受表現（あげる：我給人；くれる：人給我；もらう：我收到）",
+    "explanation": "「あげる」用於我方或他人給第三方，「くれる」用於對方給我方，「もらう」表示我方從他人那裡得到某物，三者依人稱方向與授受角度區分使用。",
+    "example": "私は佐藤さんに本をあげます。",
+    "example_meaning": "我送書給佐藤小姐。",
+    "example_ruby": "<ruby>私<rt>わたし</rt></ruby>は<ruby>佐藤<rt>さとう</rt></ruby>さんに<ruby>本<rt>ほん</rt></ruby>をあげます。",
+    "examples": [
+      {
+        "label": "あげる",
+        "sentence": "私は佐藤さんに本をあげます。",
+        "meaning": "我送書給佐藤小姐。",
+        "ruby": "<ruby>私<rt>わたし</rt></ruby>は<ruby>佐藤<rt>さとう</rt></ruby>さんに<ruby>本<rt>ほん</rt></ruby>をあげます。"
+      },
+      {
+        "label": "くれる",
+        "sentence": "佐藤さんは私に本をくれます。",
+        "meaning": "佐藤小姐送書給我。",
+        "ruby": "<ruby>佐藤<rt>さとう</rt></ruby>さんは<ruby>私<rt>わたし</rt></ruby>に<ruby>本<rt>ほん</rt></ruby>をくれます。"
+      },
+      {
+        "label": "もらう",
+        "sentence": "私は佐藤さんに本をもらいます。",
+        "meaning": "我從佐藤小姐那裡收到書。",
+        "ruby": "<ruby>私<rt>わたし</rt></ruby>は<ruby>佐藤<rt>さとう</rt></ruby>さんに<ruby>本<rt>ほん</rt></ruby>をもらいます。"
+      }
+    ]
   },
   {
     "id": "g028",
-    "pattern": "五段動詞音便（て形）",
-    "level": "N5",
-    "unit": "動詞活用",
-    "meaning": "五段動詞接「て/た」時產生的語音變化",
-    "explanation": "五段動詞變為て形時，依語尾不同產生促音便（っ）、撥音便（ん）或イ音便，其中「行く→行って」為例外。",
-    "example": "友達に会って、話しました。",
-    "example_meaning": "和朋友見面，說話了。",
-    "example_ruby": "<ruby>友達<rt>ともだち</rt></ruby>に<ruby>会<rt>あ</rt></ruby>って、<ruby>話<rt>はな</rt></ruby>しました。"
+    "pattern": "～てあげる／～てさしあげる／～てくれる／～てくださる／～てもらう／～ていただく",
+    "level": "N4",
+    "unit": "授受表現",
+    "meaning": "為別人做／別人為我做／請對方為我做（動作的授受表現）",
+    "explanation": "て形加授受動詞可表示「動作」的授受關係：てあげる（我為別人做）、てくれる（別人為我做）、てもらう（我請對方做／從對方得到動作的恩惠），さしあげる／くださる／いただく為對應的謙讓・尊敬形式。",
+    "example": "私は星野さんに料理を作ってあげます。",
+    "example_meaning": "我幫星野小姐做了料理。",
+    "example_ruby": "<ruby>私<rt>わたし</rt></ruby>は<ruby>星野<rt>ほしの</rt></ruby>さんに<ruby>料理<rt>りょうり</rt></ruby>を<ruby>作<rt>つく</rt></ruby>ってあげます。",
+    "examples": [
+      {
+        "label": "てあげる",
+        "sentence": "私は星野さんに料理を作ってあげます。",
+        "meaning": "我幫星野小姐做了料理。",
+        "ruby": "<ruby>私<rt>わたし</rt></ruby>は<ruby>星野<rt>ほしの</rt></ruby>さんに<ruby>料理<rt>りょうり</rt></ruby>を<ruby>作<rt>つく</rt></ruby>ってあげます。"
+      },
+      {
+        "label": "てさしあげる",
+        "sentence": "私は先生にお茶を入れてさしあげました。",
+        "meaning": "我為老師泡了茶。",
+        "ruby": "<ruby>私<rt>わたし</rt></ruby>は<ruby>先生<rt>せんせい</rt></ruby>にお<ruby>茶<rt>ちゃ</rt></ruby>を<ruby>入<rt>い</rt></ruby>れてさしあげました。"
+      },
+      {
+        "label": "てくれる",
+        "sentence": "友達が引っ越しを手伝ってくれました。",
+        "meaning": "朋友幫我搬家。",
+        "ruby": "<ruby>友達<rt>ともだち</rt></ruby>が<ruby>引<rt>ひ</rt></ruby>っ<ruby>越<rt>こ</rt></ruby>しを<ruby>手伝<rt>てつだ</rt></ruby>ってくれました。"
+      },
+      {
+        "label": "てくださる",
+        "sentence": "先生が漢字を教えてくださいました。",
+        "meaning": "老師教了我漢字。",
+        "ruby": "<ruby>先生<rt>せんせい</rt></ruby>が<ruby>漢字<rt>かんじ</rt></ruby>を<ruby>教<rt>おし</rt></ruby>えてくださいました。"
+      },
+      {
+        "label": "てもらう",
+        "sentence": "私は友達に日本語を直してもらいました。",
+        "meaning": "我請朋友幫我修改日文。",
+        "ruby": "<ruby>私<rt>わたし</rt></ruby>は<ruby>友達<rt>ともだち</rt></ruby>に<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>直<rt>なお</rt></ruby>してもらいました。"
+      },
+      {
+        "label": "ていただく",
+        "sentence": "私は先生に作文を直していただきました。",
+        "meaning": "我請老師幫我修改作文。",
+        "ruby": "<ruby>私<rt>わたし</rt></ruby>は<ruby>先生<rt>せんせい</rt></ruby>に<ruby>作文<rt>さくぶん</rt></ruby>を<ruby>直<rt>なお</rt></ruby>していただきました。"
+      }
+    ]
   },
   {
     "id": "g029",
-    "pattern": "V＋ます／ません／ました／ませんでした",
-    "level": "N5",
-    "unit": "動詞活用",
-    "meaning": "動詞的時態變化（丁寧體）",
-    "explanation": "動詞接「ます」系列助動詞構成丁寧體，包含現在肯定（ます）、否定（ません）、過去肯定（ました）、過去否定（ませんでした）。",
-    "example": "昨日本を読みました。",
-    "example_meaning": "昨天讀了書。",
-    "example_ruby": "<ruby>昨日<rt>きのう</rt></ruby><ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>みました。",
-    "examples": [
-      {"label": "ます", "sentence": "毎日日本語を勉強します。", "meaning": "每天學日文。", "ruby": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>日本語<rt>にほんご</rt></ruby>を<ruby>勉強<rt>べんきょう</rt></ruby>します。"},
-      {"label": "ません", "sentence": "今日は学校に行きません。", "meaning": "今天不去學校。", "ruby": "<ruby>今日<rt>きょう</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>に<ruby>行<rt>い</rt></ruby>きません。"},
-      {"label": "ました", "sentence": "昨日映画を見ました。", "meaning": "昨天看了電影。", "ruby": "<ruby>昨日<rt>きのう</rt></ruby><ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>ました。"},
-      {"label": "ませんでした", "sentence": "昨日は学校に行きませんでした。", "meaning": "昨天沒去學校。", "ruby": "<ruby>昨日<rt>きのう</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>に<ruby>行<rt>い</rt></ruby>きませんでした。"}
-    ]
+    "pattern": "～でございます",
+    "level": "N4",
+    "unit": "敬語",
+    "meaning": "是～（「です」的鄭重敬語形式）",
+    "explanation": "「でございます」是「です」更為鄭重恭敬的表現，常用於商務、服務業等正式場合；形容詞則以「ウ音便＋ございます」表達，如「ありがとうございます」。",
+    "example": "こちらは課長の山田でございます。",
+    "example_meaning": "這位是課長山田。",
+    "example_ruby": "こちらは<ruby>課長<rt>かちょう</rt></ruby>の<ruby>山田<rt>やまだ</rt></ruby>でございます。"
   },
   {
     "id": "g030",
-    "pattern": "V（連用形）＋て（中止形）",
-    "level": "N5",
-    "unit": "動詞活用",
-    "meaning": "連接動詞句子（然後、而且、因為）",
-    "explanation": "動詞て形連接前後句子，可表示動作的連續進行、並列敘述、因果關係或方法手段。",
-    "example": "顔を洗って、歯を磨きました。",
-    "example_meaning": "洗臉後刷了牙。",
-    "example_ruby": "<ruby>顔<rt>かお</rt></ruby>を<ruby>洗<rt>あら</rt></ruby>って、<ruby>歯<rt>は</rt></ruby>を<ruby>磨<rt>みが</rt></ruby>きました。"
+    "pattern": "～（よ）う／～（よ）うとする／～（よ）うと思う",
+    "level": "N4",
+    "unit": "意向・打算",
+    "meaning": "～吧（意志・勸誘）／正要～（動作將發生）／打算～",
+    "explanation": "「（よ）う」為意向形，表意志或勸誘；「（よ）うとする」表動作即將發生或正在嘗試；「（よ）うと思う」表說話者的打算，語感比單純意向形更委婉。",
+    "example": "熱いうちに食べよう。",
+    "example_meaning": "趁熱吃吧。",
+    "example_ruby": "<ruby>熱<rt>あつ</rt></ruby>いうちに<ruby>食<rt>た</rt></ruby>べよう。",
+    "examples": [
+      {
+        "label": "（よ）う",
+        "sentence": "熱いうちに食べよう。",
+        "meaning": "趁熱吃吧。",
+        "ruby": "<ruby>熱<rt>あつ</rt></ruby>いうちに<ruby>食<rt>た</rt></ruby>べよう。"
+      },
+      {
+        "label": "（よ）うとする",
+        "sentence": "出かけようとしたとき、友達が来ました。",
+        "meaning": "正要出門時，朋友來了。",
+        "ruby": "<ruby>出<rt>で</rt></ruby>かけようとしたとき、<ruby>友達<rt>ともだち</rt></ruby>が<ruby>来<rt>き</rt></ruby>ました。"
+      },
+      {
+        "label": "（よ）うと思う",
+        "sentence": "日本に留学しようと思っています。",
+        "meaning": "我打算去日本留學。",
+        "ruby": "<ruby>日本<rt>にほん</rt></ruby>に<ruby>留学<rt>りゅうがく</rt></ruby>しようと<ruby>思<rt>おも</rt></ruby>っています。"
+      }
+    ]
   },
   {
     "id": "g031",
-    "pattern": "自動詞（N＋が＋V）",
-    "level": "N5",
-    "unit": "動詞活用",
-    "meaning": "事物自然發生（不涉及外力）",
-    "explanation": "自動詞表示動作自然發生或物體本身的狀態變化，助詞使用「が」標示主語。",
-    "example": "ドアが開きます。",
-    "example_meaning": "門開了。",
-    "example_ruby": "ドアが<ruby>開<rt>あ</rt></ruby>きます。"
+    "pattern": "～ので",
+    "level": "N4",
+    "unit": "原因・理由・目的",
+    "meaning": "因為～所以～（客觀委婉的原因）",
+    "explanation": "「ので」表原因理由，語氣比「から」更客觀委婉，常用於對上司、長輩陳述事情等鄭重場合；名詞與な形容詞需接「な」再加「ので」。",
+    "example": "雨が降ってきたので、試合は中止します。",
+    "example_meaning": "因為下雨了，比賽將中止。",
+    "example_ruby": "<ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>ってきたので、<ruby>試合<rt>しあい</rt></ruby>は<ruby>中止<rt>ちゅうし</rt></ruby>します。"
   },
   {
     "id": "g032",
-    "pattern": "他動詞（N＋を＋V）",
-    "level": "N5",
-    "unit": "動詞活用",
-    "meaning": "人對某物執行動作",
-    "explanation": "他動詞表示有意志的主體對受詞施加動作，受詞以助詞「を」標示。",
-    "example": "ドアを開けます。",
-    "example_meaning": "打開門。",
-    "example_ruby": "ドアを<ruby>開<rt>あ</rt></ruby>けます。"
+    "pattern": "～のに",
+    "level": "N4",
+    "unit": "原因・理由・目的",
+    "meaning": "雖然～卻～（逆接，帶有意外或不滿語氣）",
+    "explanation": "「のに」表示結果與預期相違背，常帶有意外、不滿或遺憾的語氣；也可置於句尾單獨使用表示遺憾。須注意與表目的的「の＋に」（如「勉強するのに使う」）區分。",
+    "example": "雨が降っているのに、太郎は出かけて行った。",
+    "example_meaning": "明明在下雨，太郎卻出門了。",
+    "example_ruby": "<ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>っているのに、<ruby>太郎<rt>たろう</rt></ruby>は<ruby>出<rt>で</rt></ruby>かけて<ruby>行<rt>い</rt></ruby>った。"
   },
   {
     "id": "g033",
-    "pattern": "は（主題提示）",
-    "level": "N5",
-    "unit": "助詞",
-    "meaning": "提示句子的主題",
-    "explanation": "助詞「は」用來標記句子的主題，通常是已知或對話雙方都了解的事物，說明主題的性質或狀態。",
-    "example": "象は鼻が長いです。",
-    "example_meaning": "大象的鼻子很長。",
-    "example_ruby": "<ruby>象<rt>ぞう</rt></ruby>は<ruby>鼻<rt>はな</rt></ruby>が<ruby>長<rt>なが</rt></ruby>いです。"
+    "pattern": "複合動詞（～込む／～出す／～直す／～すぎる／～始める／～終わる／～続ける／～やすい・～にくい）",
+    "level": "N4",
+    "unit": "複合動詞・衍生表現",
+    "meaning": "動詞連用形＋動詞／形容詞，構成新的複合語意",
+    "explanation": "由「動詞連用形＋另一動詞（或形容詞）」組合而成的複合表現，可表示動作的方向、程度、階段等變化，如「食べすぎる（吃太多）」「読み始める（開始讀）」「使いやすい（好用）」。",
+    "example": "大事なことをノートに書き込みます。",
+    "example_meaning": "把重要的事情寫進筆記本裡。",
+    "example_ruby": "<ruby>大事<rt>だいじ</rt></ruby>なことをノートに<ruby>書<rt>か</rt></ruby>き<ruby>込<rt>こ</rt></ruby>みます。",
+    "examples": [
+      {
+        "label": "～込む",
+        "sentence": "大事なことをノートに書き込みます。",
+        "meaning": "把重要的事情寫進筆記本裡。",
+        "ruby": "<ruby>大事<rt>だいじ</rt></ruby>なことをノートに<ruby>書<rt>か</rt></ruby>き<ruby>込<rt>こ</rt></ruby>みます。"
+      },
+      {
+        "label": "～出す",
+        "sentence": "昔のことを思い出しました。",
+        "meaning": "想起了以前的事情。",
+        "ruby": "<ruby>昔<rt>むかし</rt></ruby>のことを<ruby>思<rt>おも</rt></ruby>い<ruby>出<rt>だ</rt></ruby>しました。"
+      },
+      {
+        "label": "～直す",
+        "sentence": "間違えたので、書き直しました。",
+        "meaning": "因為寫錯了，所以重寫了一次。",
+        "ruby": "<ruby>間違<rt>まちが</rt></ruby>えたので、<ruby>書<rt>か</rt></ruby>き<ruby>直<rt>なお</rt></ruby>しました。"
+      },
+      {
+        "label": "～すぎる",
+        "sentence": "昨日はお酒を飲みすぎました。",
+        "meaning": "昨天酒喝太多了。",
+        "ruby": "<ruby>昨日<rt>きのう</rt></ruby>はお<ruby>酒<rt>さけ</rt></ruby>を<ruby>飲<rt>の</rt></ruby>みすぎました。"
+      },
+      {
+        "label": "～始める",
+        "sentence": "赤ちゃんが泣き始めました。",
+        "meaning": "嬰兒開始哭了。",
+        "ruby": "<ruby>赤<rt>あか</rt></ruby>ちゃんが<ruby>泣<rt>な</rt></ruby>き<ruby>始<rt>はじ</rt></ruby>めました。"
+      },
+      {
+        "label": "～終わる",
+        "sentence": "レポートを書き終わりました。",
+        "meaning": "報告寫完了。",
+        "ruby": "レポートを<ruby>書<rt>か</rt></ruby>き<ruby>終<rt>お</rt></ruby>わりました。"
+      },
+      {
+        "label": "～続ける",
+        "sentence": "彼は同じ話を話し続けています。",
+        "meaning": "他一直持續在講同一件事。",
+        "ruby": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>同<rt>おな</rt></ruby>じ<ruby>話<rt>はなし</rt></ruby>を<ruby>話<rt>はな</rt></ruby>し<ruby>続<rt>つづ</rt></ruby>けています。"
+      },
+      {
+        "label": "～やすい／～にくい",
+        "sentence": "このペンはとても使いやすいです。",
+        "meaning": "這支筆非常好用。",
+        "ruby": "このペンはとても<ruby>使<rt>つか</rt></ruby>いやすいです。"
+      }
+    ]
   },
   {
     "id": "g034",
-    "pattern": "は（對比）",
-    "level": "N5",
-    "unit": "助詞",
-    "meaning": "對比兩件事物",
-    "explanation": "「は」用於對比時，強調前後兩項事物的差異或相對關係，有時帶有「但是」的語感。",
-    "example": "冬は寒いが、夏は暑いです。",
-    "example_meaning": "冬天很冷，但夏天很熱。",
-    "example_ruby": "<ruby>冬<rt>ふゆ</rt></ruby>は<ruby>寒<rt>さむ</rt></ruby>いが、<ruby>夏<rt>なつ</rt></ruby>は<ruby>暑<rt>あつ</rt></ruby>いです。"
+    "pattern": "お～になる（尊敬）／お～する（謙讓）",
+    "level": "N4",
+    "unit": "敬語",
+    "meaning": "（尊敬）您做～／（謙讓）我為您做～",
+    "explanation": "「お＋動詞連用形＋になる」用於尊敬對方的動作；「お＋動詞連用形＋する（いたす）」用於謙讓自己的動作，是日語敬語的重要句型。",
+    "example": "社長はもうお帰りになりました。",
+    "example_meaning": "社長已經回去了。",
+    "example_ruby": "<ruby>社長<rt>しゃちょう</rt></ruby>はもうお<ruby>帰<rt>かえ</rt></ruby>りになりました。",
+    "examples": [
+      {
+        "label": "お～になる（尊敬）",
+        "sentence": "社長はもうお帰りになりました。",
+        "meaning": "社長已經回去了。",
+        "ruby": "<ruby>社長<rt>しゃちょう</rt></ruby>はもうお<ruby>帰<rt>かえ</rt></ruby>りになりました。"
+      },
+      {
+        "label": "お～する（謙讓）",
+        "sentence": "会場まで私がお送りいたします。",
+        "meaning": "我送您到會場。",
+        "ruby": "<ruby>会場<rt>かいじょう</rt></ruby>まで<ruby>私<rt>わたくし</rt></ruby>がお<ruby>送<rt>おく</rt></ruby>りいたします。"
+      }
+    ]
   },
   {
     "id": "g035",
-    "pattern": "が（主語助詞）",
-    "level": "N5",
-    "unit": "助詞",
-    "meaning": "標示主語（新資訊、眼前現象、疑問詞）",
-    "explanation": "「が」用於標示全句的焦點，常用於新資訊、眼前現象、疑問詞作主語、排他強調，以及能力感情等的對象。",
-    "example": "誰が来ましたか。",
-    "example_meaning": "誰來了？",
-    "example_ruby": "<ruby>誰<rt>だれ</rt></ruby>が<ruby>来<rt>き</rt></ruby>ましたか。"
+    "pattern": "～方（かた）",
+    "level": "N4",
+    "unit": "複合動詞・衍生表現",
+    "meaning": "～的方法、～的做法",
+    "explanation": "「動詞連用形＋方」構成表示做某動作方法的名詞，如「作り方（做法）」「読み方（唸法）」。",
+    "example": "この漢字の読み方が分からないです。",
+    "example_meaning": "我不知道這個漢字的唸法。",
+    "example_ruby": "この<ruby>漢字<rt>かんじ</rt></ruby>の<ruby>読<rt>よ</rt></ruby>み<ruby>方<rt>かた</rt></ruby>が<ruby>分<rt>わ</rt></ruby>からないです。"
   },
   {
     "id": "g036",
-    "pattern": "に（時間）",
-    "level": "N5",
-    "unit": "助詞",
-    "meaning": "在〜時（表示動作發生的時間點）",
-    "explanation": "助詞「に」接具體時間名詞後，表示動作發生的特定時間點。表示時間段落（如「毎日」）時不加「に」。",
-    "example": "私は毎日八時に起きます。",
-    "example_meaning": "我每天八點起床。",
-    "example_ruby": "<ruby>私<rt>わたし</rt></ruby>は<ruby>毎日<rt>まいにち</rt></ruby><ruby>八時<rt>はちじ</rt></ruby>に<ruby>起<rt>お</rt></ruby>きます。"
+    "pattern": "～ために（表目的／表原因理由）",
+    "level": "N4",
+    "unit": "原因・理由・目的",
+    "meaning": "為了～／由於～（表目的或客觀原因）",
+    "explanation": "動詞辭書形＋ために表目的，「為了～而做～」；名詞・な形容詞・い形容詞・動詞連體形＋ため則表客觀原因，「由於～導致～」。",
+    "example": "将来のために勉強します。",
+    "example_meaning": "為了將來而讀書。",
+    "example_ruby": "<ruby>将来<rt>しょうらい</rt></ruby>のために<ruby>勉強<rt>べんきょう</rt></ruby>します。",
+    "examples": [
+      {
+        "label": "表目的",
+        "sentence": "将来のために勉強します。",
+        "meaning": "為了將來而讀書。",
+        "ruby": "<ruby>将来<rt>しょうらい</rt></ruby>のために<ruby>勉強<rt>べんきょう</rt></ruby>します。"
+      },
+      {
+        "label": "表原因理由",
+        "sentence": "雪が降ったため、電車が止まりました。",
+        "meaning": "因為下雪，電車停駛了。",
+        "ruby": "<ruby>雪<rt>ゆき</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>ったため、<ruby>電車<rt>でんしゃ</rt></ruby>が<ruby>止<rt>と</rt></ruby>まりました。"
+      }
+    ]
   },
   {
     "id": "g037",
-    "pattern": "に（歸著點）",
-    "level": "N5",
-    "unit": "助詞",
-    "meaning": "到〜（表示移動的目標地點）",
-    "explanation": "助詞「に」表示動作到達或作用的目標位置，如移動、放置、書寫等動作的歸著點。",
-    "example": "黒板に字を書きました。",
-    "example_meaning": "在黑板上寫了字。",
-    "example_ruby": "<ruby>黒板<rt>こくばん</rt></ruby>に<ruby>字<rt>じ</rt></ruby>を<ruby>書<rt>か</rt></ruby>きました。"
+    "pattern": "～つもり（＋はない）",
+    "level": "N4",
+    "unit": "意向・打算",
+    "meaning": "打算～／不打算～",
+    "explanation": "「動詞連體形＋つもり」表示說話者具體的計畫或打算，否定形「つもりはない」表示明確不打算做該動作，語感比「ないつもり」更強烈；與「（よ）うと思う」相比，「つもり」語感更偏向既定計畫。",
+    "example": "夏休みには旅行に行くつもりです。",
+    "example_meaning": "我打算暑假去旅行。",
+    "example_ruby": "<ruby>夏休<rt>なつやす</rt></ruby>みには<ruby>旅行<rt>りょこう</rt></ruby>に<ruby>行<rt>い</rt></ruby>くつもりです。"
   },
   {
     "id": "g038",
-    "pattern": "に（存在場所）",
-    "level": "N5",
-    "unit": "助詞",
-    "meaning": "在〜（表示人事物的存在位置）",
-    "explanation": "「場所＋に＋いる/ある」表示人或物存在的地點，能自主移動的用「いる」，不能移動的物體用「ある」。",
-    "example": "教室に学生がいます。",
-    "example_meaning": "教室裡有學生。",
-    "example_ruby": "<ruby>教室<rt>きょうしつ</rt></ruby>に<ruby>学生<rt>がくせい</rt></ruby>がいます。"
+    "pattern": "動詞連用形＋なさい",
+    "level": "N4",
+    "unit": "命令・許可・禁止",
+    "meaning": "輕微命令、「去做～」",
+    "explanation": "源自敬語「なさる」，語氣比命令形「しろ」委婉，常用於老師對學生、父母對孩子等上對下的關係，也常見於考卷指示語；只能用於肯定句，禁止時要用「てはいけない」或辭書形＋な。",
+    "example": "ちゃんと勉強しなさいよ。",
+    "example_meaning": "要好好念書喔！",
+    "example_ruby": "ちゃんと<ruby>勉強<rt>べんきょう</rt></ruby>しなさいよ。"
   },
   {
     "id": "g039",
-    "pattern": "に（轉換結果）",
-    "level": "N5",
-    "unit": "助詞",
-    "meaning": "成為〜（表示狀態或身份的轉變）",
-    "explanation": "「N＋になる」或「Adv＋になる」表示事物狀態或身份的轉變，相當於中文的「變成」。",
-    "example": "医者になりたいです。",
-    "example_meaning": "想成為醫生。",
-    "example_ruby": "<ruby>医者<rt>いしゃ</rt></ruby>になりたいです。"
+    "pattern": "動詞連體形＋こと",
+    "level": "N4",
+    "unit": "形式名詞表現",
+    "meaning": "把動作名詞化，「～這件事」",
+    "explanation": "形式名詞「こと」接在動詞連體形後，把整個動作或狀態轉換成名詞子句，常作主語或受詞使用。",
+    "example": "私の趣味は小説を読むことです。",
+    "example_meaning": "我的興趣是看小說。",
+    "example_ruby": "<ruby>私<rt>わたし</rt></ruby>の<ruby>趣味<rt>しゅみ</rt></ruby>は<ruby>小説<rt>しょうせつ</rt></ruby>を<ruby>読<rt>よ</rt></ruby>むことです。"
   },
   {
     "id": "g040",
-    "pattern": "に（目的）",
-    "level": "N5",
-    "unit": "助詞",
-    "meaning": "去〜（表示移動的目的）",
-    "explanation": "「動詞連用形＋に＋移動動詞」表示移動的目的，說明為了做什麼事而移動。",
-    "example": "映画を見に行きます。",
-    "example_meaning": "去看電影。",
-    "example_ruby": "<ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます。"
+    "pattern": "動詞連體形＋ことがある",
+    "level": "N4",
+    "unit": "形式名詞表現",
+    "meaning": "有時候會～（現在偶爾發生的情況）",
+    "explanation": "表示雖不常見，但偶爾會出現該狀況，強調現在式的可能性；常與「時々」「たまに」等副詞併用。",
+    "example": "時々、椅子で寝ることがあります。",
+    "example_meaning": "有時候會在椅子上睡著。",
+    "example_ruby": "<ruby>時々<rt>ときどき</rt></ruby>、<ruby>椅子<rt>いす</rt></ruby>で<ruby>寝<rt>ね</rt></ruby>ることがあります。"
   },
   {
     "id": "g041",
-    "pattern": "へ（方向）",
-    "level": "N5",
-    "unit": "助詞",
-    "meaning": "往〜（表示移動的方向）",
-    "explanation": "助詞「へ」表示移動的方向性，強調朝向某地移動，和「に」相比更強調方向而非到達點。",
-    "example": "日本へ行きます。",
-    "example_meaning": "去日本。",
-    "example_ruby": "<ruby>日本<rt>にほん</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます。"
+    "pattern": "動詞た形＋ことがある",
+    "level": "N4",
+    "unit": "形式名詞表現",
+    "meaning": "曾經～過（經驗）",
+    "explanation": "表示過去曾有過的經驗，常與「一度」「何回か」等頻率詞併用，否定形用「Vなかったことがある」。",
+    "example": "私は日本に住んだことがあります。",
+    "example_meaning": "我曾經住過日本。",
+    "example_ruby": "<ruby>私<rt>わたし</rt></ruby>は<ruby>日本<rt>にほん</rt></ruby>に<ruby>住<rt>す</rt></ruby>んだことがあります。"
   },
   {
     "id": "g042",
-    "pattern": "と（並列）",
-    "level": "N5",
-    "unit": "助詞",
-    "meaning": "〜和〜（全部列舉）",
-    "explanation": "助詞「と」用於完整列舉所有相關事物，表示「除了這些，沒有其他了」。",
-    "example": "机の上に本とノートがあります。",
-    "example_meaning": "桌上有書和筆記本。",
-    "example_ruby": "<ruby>机<rt>つくえ</rt></ruby>の<ruby>上<rt>うえ</rt></ruby>に<ruby>本<rt>ほん</rt></ruby>とノートがあります。"
+    "pattern": "動詞連體形＋ことになる",
+    "level": "N4",
+    "unit": "形式名詞表現",
+    "meaning": "（自然而然）決定～、演變成～",
+    "explanation": "表示事情自然演變而成的結果，通常不是說話者個人的意志所能左右，常用於通知他人決定事項；「～ことになっている」表示規定或慣例。",
+    "example": "大学に合格したので、引っ越すことになった。",
+    "example_meaning": "因為考上了大學，所以就要搬家了。",
+    "example_ruby": "<ruby>大学<rt>だいがく</rt></ruby>に<ruby>合格<rt>ごうかく</rt></ruby>したので、<ruby>引<rt>ひ</rt></ruby>っ<ruby>越<rt>こ</rt></ruby>すことになった。"
   },
   {
     "id": "g043",
-    "pattern": "と（共同動作）",
-    "level": "N5",
-    "unit": "助詞",
-    "meaning": "和〜一起（共同做某事）",
-    "explanation": "「N＋と（一緒に）＋V」表示和某人共同執行動作，「一緒に（一起）」可以省略。",
-    "example": "友達と一緒に映画を見ました。",
-    "example_meaning": "和朋友一起看了電影。",
-    "example_ruby": "<ruby>友達<rt>ともだち</rt></ruby>と<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>ました。"
+    "pattern": "動詞連體形＋ことにする",
+    "level": "N4",
+    "unit": "形式名詞表現",
+    "meaning": "決定～（個人的決定）",
+    "explanation": "表示說話者主動、有意識做出的決定或選擇，「～ことにしている」表示長期的習慣或堅持。",
+    "example": "今日はもう寝ることにする。",
+    "example_meaning": "今天就決定去睡了。",
+    "example_ruby": "<ruby>今日<rt>きょう</rt></ruby>はもう<ruby>寝<rt>ね</rt></ruby>ることにする。"
   },
   {
     "id": "g044",
-    "pattern": "や〜など",
-    "level": "N5",
-    "unit": "助詞",
-    "meaning": "〜和〜等（部分列舉）",
-    "explanation": "助詞「や」用於部分列舉，暗示除了提到的之外還有其他，常與「など」搭配。",
-    "example": "コーヒーやジュースなどを買いました。",
-    "example_meaning": "買了咖啡和果汁等。",
-    "example_ruby": "コーヒーやジュースなどを<ruby>買<rt>か</rt></ruby>いました。"
+    "pattern": "動詞連體形＋ことができる",
+    "level": "N4",
+    "unit": "形式名詞表現",
+    "meaning": "能夠～、可以～",
+    "explanation": "表示個人的能力，或因外在條件、規定而被允許做某事，用法比動詞可能形更正式。",
+    "example": "日本語を話すことができる。",
+    "example_meaning": "會說日語。",
+    "example_ruby": "<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>話<rt>はな</rt></ruby>すことができる。"
   },
   {
     "id": "g045",
-    "pattern": "を（受詞）",
-    "level": "N5",
-    "unit": "助詞",
-    "meaning": "把〜（標示他動詞的受詞）",
-    "explanation": "助詞「を」標記他動詞的作用對象（受詞），表示動作直接施加的目標物。",
-    "example": "ご飯を食べます。",
-    "example_meaning": "吃飯。",
-    "example_ruby": "ご<ruby>飯<rt>はん</rt></ruby>を<ruby>食<rt>た</rt></ruby>べます。"
+    "pattern": "Vところ／Vているところ／Vたところ／Vていたところ／Vたばかり",
+    "level": "N4",
+    "unit": "形式名詞表現",
+    "meaning": "正要～／正在～／剛～（動作進行階段的表現）",
+    "explanation": "用「ところ」搭配動詞不同時態表示動作進行的階段（正要開始／正在進行／剛結束／剛才在做），「Vたばかり」則強調動作才剛完成不久，語感比「Vたところ」更主觀強調時間很短。",
+    "example": "これから友達の家に遊びに行くところです。",
+    "example_meaning": "我現在正要去朋友家玩。",
+    "example_ruby": "これから<ruby>友達<rt>ともだち</rt></ruby>の<ruby>家<rt>いえ</rt></ruby>に<ruby>遊<rt>あそ</rt></ruby>びに<ruby>行<rt>い</rt></ruby>くところです。",
+    "examples": [
+      {
+        "label": "Vところ（正要～）",
+        "sentence": "これから友達の家に遊びに行くところです。",
+        "meaning": "我現在正要去朋友家玩。",
+        "ruby": "これから<ruby>友達<rt>ともだち</rt></ruby>の<ruby>家<rt>いえ</rt></ruby>に<ruby>遊<rt>あそ</rt></ruby>びに<ruby>行<rt>い</rt></ruby>くところです。"
+      },
+      {
+        "label": "Vているところ（正在～）",
+        "sentence": "今、そちらに向かっているところです。",
+        "meaning": "現在正在前往您那裡。",
+        "ruby": "<ruby>今<rt>いま</rt></ruby>、そちらに<ruby>向<rt>む</rt></ruby>かっているところです。"
+      },
+      {
+        "label": "Vたところ（剛～）",
+        "sentence": "ちょうど、夕食を作ったところです。",
+        "meaning": "剛好剛做好晚餐。",
+        "ruby": "ちょうど、<ruby>夕食<rt>ゆうしょく</rt></ruby>を<ruby>作<rt>つく</rt></ruby>ったところです。"
+      },
+      {
+        "label": "Vていたところ（剛才在～）",
+        "sentence": "ちょうど君のレポートを読んでいたところだよ。",
+        "meaning": "剛才正在看你的報告。",
+        "ruby": "ちょうど<ruby>君<rt>きみ</rt></ruby>のレポートを<ruby>読<rt>よ</rt></ruby>んでいたところだよ。"
+      },
+      {
+        "label": "Vたばかり（才剛～）",
+        "sentence": "このお弁当はできたばかりです。",
+        "meaning": "這個便當是剛做好的。",
+        "ruby": "このお<ruby>弁当<rt>べんとう</rt></ruby>はできたばかりです。"
+      }
+    ]
   },
   {
     "id": "g046",
-    "pattern": "を（經過場所）",
-    "level": "N5",
-    "unit": "助詞",
-    "meaning": "經過〜（表示動作所經過的場所）",
-    "explanation": "「場所＋を＋移動動詞」表示穿越或沿著某場所移動，助詞「を」表示穿越之意。",
-    "example": "公園を歩きます。",
-    "example_meaning": "在公園散步。",
-    "example_ruby": "<ruby>公園<rt>こうえん</rt></ruby>を<ruby>歩<rt>ある</rt></ruby>きます。"
+    "pattern": "動詞連體形／動詞ない形＋ようにする",
+    "level": "N4",
+    "unit": "形式名詞表現",
+    "meaning": "設法～、努力做到～",
+    "explanation": "表示為了達成某個目標而努力養成的習慣或刻意做法，長期持續的習慣則用「～ようにしている」。",
+    "example": "今日から野菜も食べるようにする。",
+    "example_meaning": "從今天開始也要盡量吃蔬菜。",
+    "example_ruby": "<ruby>今日<rt>きょう</rt></ruby>から<ruby>野菜<rt>やさい</rt></ruby>も<ruby>食<rt>た</rt></ruby>べるようにする。"
   },
   {
     "id": "g047",
-    "pattern": "を（離開場所）",
-    "level": "N5",
-    "unit": "助詞",
-    "meaning": "離開〜（表示動作脫離的場所）",
-    "explanation": "「場所＋を＋脫離性動詞」表示離開某地，可分為具體離開（如出門）和抽象脫離（如畢業）。",
-    "example": "家を出ます。",
-    "example_meaning": "出門。",
-    "example_ruby": "<ruby>家<rt>いえ</rt></ruby>を<ruby>出<rt>で</rt></ruby>ます。"
+    "pattern": "動詞連體形／動詞ない形＋ようになる",
+    "level": "N4",
+    "unit": "形式名詞表現",
+    "meaning": "變得～（自然的變化或能力的養成）",
+    "explanation": "表示狀態隨時間自然演變，或透過練習後獲得某種能力，強調變化的結果而非個人意志。",
+    "example": "大人になって、ブラックコーヒーを飲むようになった。",
+    "example_meaning": "長大之後，變得會喝黑咖啡了。",
+    "example_ruby": "<ruby>大人<rt>おとな</rt></ruby>になって、ブラックコーヒーを<ruby>飲<rt>の</rt></ruby>むようになった。"
   },
   {
     "id": "g048",
-    "pattern": "で（動作場所）",
-    "level": "N5",
-    "unit": "助詞",
-    "meaning": "在〜（表示動作進行的地點）",
-    "explanation": "助詞「で」表示動作施行的地點，強調動作在此地發生，與「に（存在）」不同。",
-    "example": "図書館で日本語を勉強します。",
-    "example_meaning": "在圖書館念日文。",
-    "example_ruby": "<ruby>図書館<rt>としょかん</rt></ruby>で<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>勉強<rt>べんきょう</rt></ruby>します。"
+    "pattern": "動詞連體形／動詞ない形＋ように言う",
+    "level": "N4",
+    "unit": "形式名詞表現",
+    "meaning": "叫（人）～、要求～（間接引述指示或命令）",
+    "explanation": "用於間接轉述對他人的指示、命令或要求，「言う」可替換成「頼む」「注意する」等動詞。",
+    "example": "近藤さんに明日までに資料を作っておくように言いました。",
+    "example_meaning": "已經交代近藤先生在明天之前把資料準備好。",
+    "example_ruby": "<ruby>近藤<rt>こんどう</rt></ruby>さんに<ruby>明日<rt>あした</rt></ruby>までに<ruby>資料<rt>しりょう</rt></ruby>を<ruby>作<rt>つく</rt></ruby>っておくように<ruby>言<rt>い</rt></ruby>いました。"
   },
   {
     "id": "g049",
-    "pattern": "で（手段方法）",
-    "level": "N5",
-    "unit": "助詞",
-    "meaning": "用〜（表示使用的工具或交通方式）",
-    "explanation": "助詞「で」表示完成動作所使用的工具、方法或交通方式。",
-    "example": "バスで学校に行きます。",
-    "example_meaning": "搭公車去學校。",
-    "example_ruby": "バスで<ruby>学校<rt>がっこう</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます。"
+    "pattern": "～てはいけない／てはならない／てはだめ（だ）",
+    "level": "N4",
+    "unit": "命令・許可・禁止",
+    "meaning": "不可以～、禁止～",
+    "explanation": "三者都表示禁止，但語感不同：「てはいけない」是一般性、客觀的禁止；「てはならない」語氣更強，常用於法律或書面規定等具有義務性質的禁止；「てはだめ（だ）」較口語，多用於父母師長對晚輩的個人性禁止。口語常縮約為「ちゃいけない」。",
+    "example": "ここに駐車してはいけない。",
+    "example_meaning": "這裡不可以停車。",
+    "example_ruby": "ここに<ruby>駐車<rt>ちゅうしゃ</rt></ruby>してはいけない。",
+    "examples": [
+      {
+        "label": "てはいけない（一般性禁止）",
+        "sentence": "ここに駐車してはいけない。",
+        "meaning": "這裡不可以停車。",
+        "ruby": "ここに<ruby>駐車<rt>ちゅうしゃ</rt></ruby>してはいけない。"
+      },
+      {
+        "label": "てはならない（規範性禁止）",
+        "sentence": "犯罪行為をしてはならない。",
+        "meaning": "嚴禁做出犯罪行為。",
+        "ruby": "<ruby>犯罪<rt>はんざい</rt></ruby><ruby>行為<rt>こうい</rt></ruby>をしてはならない。"
+      },
+      {
+        "label": "てはだめ（だ）（個人性禁止）",
+        "sentence": "その花を取ってはだめよ。",
+        "meaning": "不可以摘那朵花喔。",
+        "ruby": "その<ruby>花<rt>はな</rt></ruby>を<ruby>取<rt>と</rt></ruby>ってはだめよ。"
+      }
+    ]
   },
   {
     "id": "g050",
-    "pattern": "で（原因）",
-    "level": "N5",
-    "unit": "助詞",
-    "meaning": "因為〜（名詞表示原因）",
-    "explanation": "名詞後接「で」可表示後項事態的原因，後句不接主觀意願表達。",
-    "example": "病気で学校を休みました。",
-    "example_meaning": "因為生病而請假。",
-    "example_ruby": "<ruby>病気<rt>びょうき</rt></ruby>で<ruby>学校<rt>がっこう</rt></ruby>を<ruby>休<rt>やす</rt></ruby>みました。"
+    "pattern": "～ても／てもいい／てもかまわない",
+    "level": "N4",
+    "unit": "命令・許可・禁止",
+    "meaning": "即使～也～／可以～、～也沒關係",
+    "explanation": "「ても」單純表示逆接條件（即使～也～）；「てもいい」在此基礎上進一步表示許可（做～也可以）；「てもかまわない」語感與てもいい相近，但更強調「不在意、無所謂」。",
+    "example": "寒くても行きます。",
+    "example_meaning": "再冷也要去。",
+    "example_ruby": "<ruby>寒<rt>さむ</rt></ruby>くても<ruby>行<rt>い</rt></ruby>きます。",
+    "examples": [
+      {
+        "label": "ても（逆接條件）",
+        "sentence": "寒くても行きます。",
+        "meaning": "再冷也要去。",
+        "ruby": "<ruby>寒<rt>さむ</rt></ruby>くても<ruby>行<rt>い</rt></ruby>きます。"
+      },
+      {
+        "label": "てもいい（許可）",
+        "sentence": "ここはタバコを吸ってもいい場所ですか。",
+        "meaning": "這裡是可以抽菸的地方嗎？",
+        "ruby": "ここはタバコを<ruby>吸<rt>す</rt></ruby>ってもいい<ruby>場所<rt>ばしょ</rt></ruby>ですか。"
+      },
+      {
+        "label": "てもかまわない（許可，語感較隨意）",
+        "sentence": "タバコを吸ってもかまわないですか。",
+        "meaning": "就算抽菸也沒關係嗎？",
+        "ruby": "タバコを<ruby>吸<rt>す</rt></ruby>ってもかまわないですか。"
+      }
+    ]
   },
   {
     "id": "g051",
-    "pattern": "も（類比）",
-    "level": "N5",
-    "unit": "助詞",
-    "meaning": "也（表示相同情況）",
-    "explanation": "副助詞「も」表示此項目也有相同的特性或情況，相當於中文的「也」。",
-    "example": "英語は難しいです。日本語も難しいです。",
-    "example_meaning": "英文很難。日文也很難。",
-    "example_ruby": "<ruby>英語<rt>えいご</rt></ruby>は<ruby>難<rt>むずか</rt></ruby>しいです。<ruby>日本語<rt>にほんご</rt></ruby>も<ruby>難<rt>むずか</rt></ruby>しいです。"
+    "pattern": "それで／そこで",
+    "level": "N4",
+    "unit": "副詞・接続詞",
+    "meaning": "因此、於是（承接前項自然産生的結果／接續話題）",
+    "explanation": "「それで」單純承接前項的理由或話題，帶出結果或後續，語氣較輕；「そこで」除了表示因果關係外，也可用於轉換話題、指示地點或當下的時間點，語感上更強調「於是採取了行動」。",
+    "example": "雨が降りました。それで、試合は中止になりました。",
+    "example_meaning": "下雨了。因此比賽中止了。",
+    "example_ruby": "<ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>りました。それで、<ruby>試合<rt>しあい</rt></ruby>は<ruby>中止<rt>ちゅうし</rt></ruby>になりました。",
+    "examples": [
+      {
+        "label": "それで（因此、然後）",
+        "sentence": "雨が降りました。それで、試合は中止になりました。",
+        "meaning": "下雨了。因此比賽中止了。",
+        "ruby": "<ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>りました。それで、<ruby>試合<rt>しあい</rt></ruby>は<ruby>中止<rt>ちゅうし</rt></ruby>になりました。"
+      },
+      {
+        "label": "そこで（於是、因此）",
+        "sentence": "足をケガした。そこで病院へ行くことにした。",
+        "meaning": "腳受傷了。因此決定去醫院。",
+        "ruby": "<ruby>足<rt>あし</rt></ruby>をケガした。そこで<ruby>病院<rt>びょういん</rt></ruby>へ<ruby>行<rt>い</rt></ruby>くことにした。"
+      }
+    ]
   },
   {
     "id": "g052",
-    "pattern": "疑問詞＋も＋否定",
-    "level": "N5",
+    "pattern": "まで",
+    "level": "N4",
     "unit": "助詞",
-    "meaning": "什麼也不〜（全面否定）",
-    "explanation": "疑問詞與「も」結合後接否定，表達全面否定的意思，如「誰も」「何も」「どこも」。",
-    "example": "教室に誰もいません。",
-    "example_meaning": "教室裡一個人也沒有。",
-    "example_ruby": "<ruby>教室<rt>きょうしつ</rt></ruby>に<ruby>誰<rt>だれ</rt></ruby>もいません。"
+    "meaning": "到～（表範圍、期間、動作持續、或誇張舉例）",
+    "explanation": "副助詞「まで」除了表示到達某地點或時間點的範圍外，也可接動詞連體形表示某動作持續到某狀態出現為止；用於名詞時還可表示「連～都」的誇張舉例語氣。",
+    "example": "帰ってくるまで待っています。",
+    "example_meaning": "我會一直等到你回來。",
+    "example_ruby": "<ruby>帰<rt>かえ</rt></ruby>ってくるまで<ruby>待<rt>ま</rt></ruby>っています。"
   },
   {
     "id": "g053",
-    "pattern": "から（起點）",
-    "level": "N5",
+    "pattern": "疑問詞＋も／数量詞＋も",
+    "level": "N4",
     "unit": "助詞",
-    "meaning": "從〜（表示空間或時間的起點）",
-    "explanation": "格助詞「から」接場所或時間名詞，表示移動或事件發生的起始點，常與「まで（到）」搭配。",
-    "example": "学校は九時から始まります。",
-    "example_meaning": "學校九點開始上課。",
-    "example_ruby": "<ruby>学校<rt>がっこう</rt></ruby>は<ruby>九時<rt>くじ</rt></ruby>から<ruby>始<rt>はじ</rt></ruby>まります。"
+    "meaning": "無論～都～／一～也（不）～／連～都～（依用法而異）",
+    "explanation": "副助詞「も」除了單純的並列「也」之外，接在疑問詞或數量詞後可衍生出多種語感：全面肯定、最低限度否定、強調數量多寡、誇張的意外語氣、以及類推舉例，須依前後文與數量詞判斷語感。",
+    "example": "太郎はいつも本を読んでいます。",
+    "example_meaning": "太郎無論何時都在看書。",
+    "example_ruby": "<ruby>太郎<rt>たろう</rt></ruby>はいつも<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>んでいます。",
+    "examples": [
+      {
+        "label": "疑問詞＋も（全面肯定）",
+        "sentence": "太郎はいつも本を読んでいます。",
+        "meaning": "太郎無論何時都在看書。",
+        "ruby": "<ruby>太郎<rt>たろう</rt></ruby>はいつも<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>んでいます。"
+      },
+      {
+        "label": "数量詞1＋も（最低限度否定）",
+        "sentence": "私は一度も韓国に行ったことがありません。",
+        "meaning": "我一次也沒去過韓國。",
+        "ruby": "<ruby>私<rt>わたし</rt></ruby>は<ruby>一度<rt>いちど</rt></ruby>も<ruby>韓国<rt>かんこく</rt></ruby>に<ruby>行<rt>い</rt></ruby>ったことがありません。"
+      },
+      {
+        "label": "疑問數量詞＋も（強調數量多）",
+        "sentence": "何度も行ったことがあります。",
+        "meaning": "去過很多次。",
+        "ruby": "<ruby>何度<rt>なんど</rt></ruby>も<ruby>行<rt>い</rt></ruby>ったことがあります。"
+      },
+      {
+        "label": "実際數量詞＋も（誇張、意外）",
+        "sentence": "100曲も作りました。",
+        "meaning": "竟然做了100首曲子！",
+        "ruby": "100<ruby>曲<rt>きょく</rt></ruby>も<ruby>作<rt>つく</rt></ruby>りました。"
+      },
+      {
+        "label": "名詞＋も（類推、舉極端例）",
+        "sentence": "簡単なひらがなも読めません。",
+        "meaning": "連簡單的平假名都看不懂。",
+        "ruby": "<ruby>簡単<rt>かんたん</rt></ruby>なひらがなも<ruby>読<rt>よ</rt></ruby>めません。"
+      }
+    ]
   },
   {
     "id": "g054",
-    "pattern": "から（原因，接續助詞）",
-    "level": "N5",
+    "pattern": "普通形＋し",
+    "level": "N4",
     "unit": "助詞",
-    "meaning": "因為〜（表示原因理由）",
-    "explanation": "普通形後接「から」表示後項的原因，語氣帶有主觀主張，不適合用於對上司長輩。",
-    "example": "暑いから窓を開けてください。",
-    "example_meaning": "因為很熱，請打開窗戶。",
-    "example_ruby": "<ruby>暑<rt>あつ</rt></ruby>いから<ruby>窓<rt>まど</rt></ruby>を<ruby>開<rt>あ</rt></ruby>けてください。"
+    "meaning": "又～、也～（並列）／因為～（原因）",
+    "explanation": "接續助詞「し」可用於並列多個事實或理由，帶有「不只如此」的語氣；表原因時比「て」更有結論性、常搭配「から」，「て」則單純敘述客觀事實。",
+    "example": "部屋が広いし安い。",
+    "example_meaning": "房間又寬敞又便宜。",
+    "example_ruby": "<ruby>部屋<rt>へや</rt></ruby>が<ruby>広<rt>ひろ</rt></ruby>いし<ruby>安<rt>やす</rt></ruby>い。"
   },
   {
     "id": "g055",
-    "pattern": "V＋てください",
-    "level": "N5",
-    "unit": "て形的用法",
-    "meaning": "請〜（請求某人做某事）",
-    "explanation": "動詞て形後接「ください」，構成禮貌的請求或命令，相當於中文的「請〜」。",
-    "example": "静かにしてください。",
-    "example_meaning": "請保持安靜。",
-    "example_ruby": "<ruby>静<rt>しず</rt></ruby>かにしてください。"
+    "pattern": "でも",
+    "level": "N4",
+    "unit": "助詞",
+    "meaning": "連～都～／～之類的／無論～都～",
+    "explanation": "副助詞「でも」接名詞表類推、舉極端例子（連～也～）；接一般名詞也可表委婉的舉例（～之類的）；接疑問詞則表全面涵蓋（無論～都～）。",
+    "example": "誰でも知っている。",
+    "example_meaning": "誰都知道。",
+    "example_ruby": "<ruby>誰<rt>だれ</rt></ruby>でも<ruby>知<rt>し</rt></ruby>っている。"
   },
   {
     "id": "g056",
-    "pattern": "V＋ないでください",
-    "level": "N5",
-    "unit": "て形的用法",
-    "meaning": "請不要〜（請求某人不做某事）",
-    "explanation": "動詞否定形（ない形）加「でください」，請求對方不要做某件事。",
-    "example": "ここでタバコを吸わないでください。",
-    "example_meaning": "請勿在此抽菸。",
-    "example_ruby": "ここでタバコを<ruby>吸<rt>す</rt></ruby>わないでください。"
+    "pattern": "かい／だい／の／な（終助詞）",
+    "level": "N4",
+    "unit": "助詞",
+    "meaning": "表疑問、命令、禁止等語氣的終助詞",
+    "explanation": "「かい」是較親切的疑問語氣，「だい」常搭配疑問詞加強疑問語氣，兩者多為男性使用；「の」語調上揚表疑問、語調下降表加強語氣或命令，男女皆可但女性兒童較常用；「な」接動詞辭書形表強烈禁止，多為男性使用。",
+    "example": "君もここの学生かい。",
+    "example_meaning": "你也是這裡的學生嗎？",
+    "example_ruby": "<ruby>君<rt>きみ</rt></ruby>もここの<ruby>学生<rt>がくせい</rt></ruby>かい。",
+    "examples": [
+      {
+        "label": "かい（親切疑問）",
+        "sentence": "君もここの学生かい。",
+        "meaning": "你也是這裡的學生嗎？",
+        "ruby": "<ruby>君<rt>きみ</rt></ruby>もここの<ruby>学生<rt>がくせい</rt></ruby>かい。"
+      },
+      {
+        "label": "だい（加強疑問）",
+        "sentence": "どういうことなんだい。",
+        "meaning": "到底是怎麼一回事？",
+        "ruby": "どういうことなんだい。"
+      },
+      {
+        "label": "の（疑問，語調上揚）",
+        "sentence": "今日は田中さんも来るの？",
+        "meaning": "今天田中也要來嗎？",
+        "ruby": "<ruby>今日<rt>きょう</rt></ruby>は<ruby>田中<rt>たなか</rt></ruby>さんも<ruby>来<rt>く</rt></ruby>るの？"
+      },
+      {
+        "label": "な（強烈禁止）",
+        "sentence": "タバコを吸うな。",
+        "meaning": "不要抽菸！",
+        "ruby": "タバコを<ruby>吸<rt>す</rt></ruby>うな。"
+      }
+    ]
   },
   {
     "id": "g057",
-    "pattern": "V＋ても＋いい",
-    "level": "N5",
-    "unit": "て形的用法",
-    "meaning": "可以〜（表示允許）",
-    "explanation": "動詞て形後接「もいい」表示允許，「〜てもいいですか」是詢問許可，「〜てもいいです」是給予許可。",
-    "example": "ここで写真を撮ってもいいですか。",
-    "example_meaning": "可以在這裡拍照嗎？",
-    "example_ruby": "ここで<ruby>写真<rt>しゃしん</rt></ruby>を<ruby>撮<rt>と</rt></ruby>ってもいいですか。"
-  },
-  {
-    "id": "g058",
-    "pattern": "N・Na＋でも／A・V＋ても",
-    "level": "N5",
-    "unit": "て形的用法",
-    "meaning": "即使〜也〜（讓步表現）",
-    "explanation": "表示不管前項條件如何，後項都成立，相當於中文的「即使…也…」或「就算…也…」。",
-    "example": "雨でも試合は中止になりません。",
-    "example_meaning": "即使下雨，比賽也不會中止。",
-    "example_ruby": "<ruby>雨<rt>あめ</rt></ruby>でも<ruby>試合<rt>しあい</rt></ruby>は<ruby>中止<rt>ちゅうし</rt></ruby>になりません。",
-    "examples": [
-      {"label": "N・Naでも", "sentence": "雨でも試合は中止になりません。", "meaning": "即使下雨，比賽也不會中止。", "ruby": "<ruby>雨<rt>あめ</rt></ruby>でも<ruby>試合<rt>しあい</rt></ruby>は<ruby>中止<rt>ちゅうし</rt></ruby>になりません。"},
-      {"label": "A・Vても", "sentence": "高くても買いたいです。", "meaning": "即使很貴也想買。", "ruby": "<ruby>高<rt>たか</rt></ruby>くても<ruby>買<rt>か</rt></ruby>いたいです。"}
-    ]
-  },
-  {
-    "id": "g059",
-    "pattern": "V（継続動詞）＋ている",
-    "level": "N5",
-    "unit": "て形的用法",
-    "meaning": "正在〜（表示動作進行中）",
-    "explanation": "繼續動詞的て形後接「いる」，表示動作正在持續進行，相當於英文的現在進行式。",
-    "example": "今小説を読んでいます。",
-    "example_meaning": "現在正在看小說。",
-    "example_ruby": "<ruby>今<rt>いま</rt></ruby><ruby>小説<rt>しょうせつ</rt></ruby>を<ruby>読<rt>よ</rt></ruby>んでいます。"
-  },
-  {
-    "id": "g060",
-    "pattern": "V（瞬間動詞）＋ている",
-    "level": "N5",
-    "unit": "て形的用法",
-    "meaning": "〜了（表示動作完成後的狀態持續）",
-    "explanation": "瞬間動詞的て形後接「いる」，表示動作完成後留下的結果狀態持續中，而非動作進行中。",
-    "example": "台風で木が倒れています。",
-    "example_meaning": "因颱風樹倒著。",
-    "example_ruby": "<ruby>台風<rt>たいふう</rt></ruby>で<ruby>木<rt>き</rt></ruby>が<ruby>倒<rt>たお</rt></ruby>れています。"
-  },
-  {
-    "id": "g061",
-    "pattern": "他動詞＋てある",
-    "level": "N5",
-    "unit": "て形的用法",
-    "meaning": "已經〜好了（表示人為留下的狀態）",
-    "explanation": "他動詞て形後接「ある」，表示人為動作完成後留下的結果狀態，強調是有意識的行為。",
-    "example": "黒板に答えが書いてあります。",
-    "example_meaning": "黑板上已經寫了答案。",
-    "example_ruby": "<ruby>黒板<rt>こくばん</rt></ruby>に<ruby>答<rt>こた</rt></ruby>えが<ruby>書<rt>か</rt></ruby>いてあります。"
-  },
-  {
-    "id": "g062",
-    "pattern": "V＋てから",
-    "level": "N5",
-    "unit": "時間・順序",
-    "meaning": "〜之後（緊接著做另一件事）",
-    "explanation": "「てから」表示完成前一個動作後緊接著做下一個動作，強調動作的先後順序。",
-    "example": "お風呂に入ってから寝ます。",
-    "example_meaning": "洗完澡之後睡覺。",
-    "example_ruby": "お<ruby>風呂<rt>ふろ</rt></ruby>に<ruby>入<rt>はい</rt></ruby>ってから<ruby>寝<rt>ね</rt></ruby>ます。"
-  },
-  {
-    "id": "g063",
-    "pattern": "Vた＋後で",
-    "level": "N5",
-    "unit": "時間・順序",
-    "meaning": "〜之後（有時間間隔）",
-    "explanation": "「た後で」也表示先後順序，但前後動作之間可能有時間間隔，比「てから」鬆散。",
-    "example": "ご飯を食べた後で勉強します。",
-    "example_meaning": "吃完飯後讀書。",
-    "example_ruby": "ご<ruby>飯<rt>はん</rt></ruby>を<ruby>食<rt>た</rt></ruby>べた<ruby>後<rt>あと</rt></ruby>で<ruby>勉強<rt>べんきょう</rt></ruby>します。"
-  },
-  {
-    "id": "g064",
-    "pattern": "V（連用形）＋ながら",
-    "level": "N5",
-    "unit": "時間・順序",
-    "meaning": "一邊〜一邊〜（同時進行兩個動作）",
-    "explanation": "「ながら」表示同一主語同時進行兩個動作，前句為附帶的次要動作，重點在後句。",
-    "example": "歌を歌いながら踊っています。",
-    "example_meaning": "一邊唱歌一邊跳舞。",
-    "example_ruby": "<ruby>歌<rt>うた</rt></ruby>を<ruby>歌<rt>うた</rt></ruby>いながら<ruby>踊<rt>おど</rt></ruby>っています。"
-  },
-  {
-    "id": "g065",
-    "pattern": "V＋前に",
-    "level": "N5",
-    "unit": "時間・順序",
-    "meaning": "〜之前（做某事之前先做另一事）",
-    "explanation": "「動詞辭書形＋前に」或「N＋の＋前に」表示在做Y之前先做X，重點在後句的Y動作。",
-    "example": "ご飯を食べる前に手を洗います。",
-    "example_meaning": "吃飯前洗手。",
-    "example_ruby": "ご<ruby>飯<rt>はん</rt></ruby>を<ruby>食<rt>た</rt></ruby>べる<ruby>前<rt>まえ</rt></ruby>に<ruby>手<rt>て</rt></ruby>を<ruby>洗<rt>あら</rt></ruby>います。"
-  },
-  {
-    "id": "g066",
-    "pattern": "〜とき",
-    "level": "N5",
-    "unit": "時間・順序",
-    "meaning": "〜的時候",
-    "explanation": "「V/A/N/Na＋とき」表示做某動作或處於某狀態的時候，可用各類詞的連體形接續。",
-    "example": "子供のとき、よくこの公園で遊んだ。",
-    "example_meaning": "小時候，常常在這個公園玩。",
-    "example_ruby": "<ruby>子供<rt>こども</rt></ruby>のとき、よくこの<ruby>公園<rt>こうえん</rt></ruby>で<ruby>遊<rt>あそ</rt></ruby>んだ。"
-  },
-  {
-    "id": "g067",
-    "pattern": "Vた＋り＋Vた＋り＋する",
-    "level": "N5",
-    "unit": "時間・順序",
-    "meaning": "有時〜有時〜（列舉動作）",
-    "explanation": "「〜たり〜たりする」用於列舉幾個代表性的動作，暗示還有其他動作未提及。",
-    "example": "休みの日に本を読んだり、音楽を聞いたりします。",
-    "example_meaning": "假日有時看書，有時聽音樂。",
-    "example_ruby": "<ruby>休<rt>やす</rt></ruby>みの<ruby>日<rt>ひ</rt></ruby>に<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>んだり、<ruby>音楽<rt>おんがく</rt></ruby>を<ruby>聞<rt>き</rt></ruby>いたりします。"
-  },
-  {
-    "id": "g068",
-    "pattern": "V（連體形）＋N（動詞修飾名詞）",
-    "level": "N5",
-    "unit": "動詞活用",
-    "meaning": "〜的〜（動詞修飾名詞）",
-    "explanation": "動詞以連體形直接放在名詞前修飾，相當於中文的「做〜的〜人/東西」。",
-    "example": "昨日買った本を読んでいます。",
-    "example_meaning": "正在讀昨天買的書。",
-    "example_ruby": "<ruby>昨日<rt>きのう</rt></ruby><ruby>買<rt>か</rt></ruby>った<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>んでいます。"
-  },
-  {
-    "id": "g069",
-    "pattern": "V＋ましょう／ましょうか",
-    "level": "N5",
-    "unit": "意向・勧誘・願望",
-    "meaning": "〜吧（提議或邀約）",
-    "explanation": "「ましょう」表示提議或決定，「ましょうか」是較委婉的邀約或提議，給對方選擇的空間。",
-    "example": "一緒に映画を見に行きましょう。",
-    "example_meaning": "一起去看電影吧。",
-    "example_ruby": "<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>に<ruby>行<rt>い</rt></ruby>きましょう。",
-    "examples": [
-      {"label": "ましょう", "sentence": "一緒に映画を見に行きましょう。", "meaning": "一起去看電影吧。", "ruby": "<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>に<ruby>行<rt>い</rt></ruby>きましょう。"},
-      {"label": "ましょうか", "sentence": "窓を開けましょうか。", "meaning": "要不要開窗？", "ruby": "<ruby>窓<rt>まど</rt></ruby>を<ruby>開<rt>あ</rt></ruby>けましょうか。"}
-    ]
-  },
-  {
-    "id": "g070",
-    "pattern": "V＋ませんか",
-    "level": "N5",
-    "unit": "意向・勧誘・願望",
-    "meaning": "要不要〜？（邀約）",
-    "explanation": "否定疑問句形式的邀約，語氣較「ましょうか」更委婉，給對方更多拒絕的空間。",
-    "example": "映画を見に行きませんか。",
-    "example_meaning": "要不要去看電影？",
-    "example_ruby": "<ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>に<ruby>行<rt>い</rt></ruby>きませんか。"
-  },
-  {
-    "id": "g071",
-    "pattern": "N＋だけ",
-    "level": "N5",
-    "unit": "疑問・限定",
-    "meaning": "只有〜（限定）",
-    "explanation": "「だけ」表示限定，單純說明「只有多少」，不帶有特別不足的語感。",
-    "example": "兄だけが出席します。",
-    "example_meaning": "只有哥哥出席。",
-    "example_ruby": "<ruby>兄<rt>あに</rt></ruby>だけが<ruby>出席<rt>しゅっせき</rt></ruby>します。"
-  },
-  {
-    "id": "g072",
-    "pattern": "N＋しか〜ない",
-    "level": "N5",
-    "unit": "疑問・限定",
-    "meaning": "只有〜（帶有不足感的限定）",
-    "explanation": "「しか」後必須接否定，強調「除了…之外別無其他」，帶有數量或選擇上不足的語感。",
-    "example": "百円しか持っていません。",
-    "example_meaning": "只有一百圓。",
-    "example_ruby": "<ruby>百円<rt>ひゃくえん</rt></ruby>しか<ruby>持<rt>も</rt></ruby>っていません。"
-  },
-  {
-    "id": "g073",
-    "pattern": "疑問詞＋か",
-    "level": "N5",
-    "unit": "疑問・限定",
-    "meaning": "某人/某物/某地（不明確的人事物）",
-    "explanation": "疑問詞與副助詞「か」結合，表示不確定或不需說明的人、事、物、地點。",
-    "example": "誰か部屋に入りました。",
-    "example_meaning": "有人進了房間。",
-    "example_ruby": "<ruby>誰<rt>だれ</rt></ruby>か<ruby>部屋<rt>へや</rt></ruby>に<ruby>入<rt>はい</rt></ruby>りました。"
-  },
-  {
-    "id": "g074",
-    "pattern": "N＋か＋N",
-    "level": "N5",
-    "unit": "疑問・限定",
-    "meaning": "〜或〜（選擇其一）",
-    "explanation": "「か」用於並列兩個或多個選項，表示選擇其中一個，相當於中文的「或」。",
-    "example": "自転車かバイクで学校へ行きます。",
-    "example_meaning": "騎腳踏車或機車去學校。",
-    "example_ruby": "<ruby>自転車<rt>じてんしゃ</rt></ruby>かバイクで<ruby>学校<rt>がっこう</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます。"
-  },
-  {
-    "id": "g075",
-    "pattern": "〜かどうか",
-    "level": "N5",
-    "unit": "疑問・限定",
-    "meaning": "是否〜（表示不確定）",
-    "explanation": "「かどうか」表示對某事是否成立的不確定，涵蓋肯定與否定兩種可能性，相當於「是〜還是不是〜」。",
-    "example": "彼が来るかどうか分かりません。",
-    "example_meaning": "不知道他是否要來。",
-    "example_ruby": "<ruby>彼<rt>かれ</rt></ruby>が<ruby>来<rt>く</rt></ruby>るかどうか<ruby>分<rt>わ</rt></ruby>かりません。"
-  },
-  {
-    "id": "g076",
-    "pattern": "N＋という＋N",
-    "level": "N5",
-    "unit": "疑問・限定",
-    "meaning": "叫做〜的〜",
-    "explanation": "「という」用於介紹或引用人物、地名、物品的名稱，通常用於聽話者可能不熟悉的對象。",
-    "example": "伊藤さんという人から電話がありました。",
-    "example_meaning": "有一位叫伊藤的人打電話來。",
-    "example_ruby": "<ruby>伊藤<rt>いとう</rt></ruby>さんという<ruby>人<rt>ひと</rt></ruby>から<ruby>電話<rt>でんわ</rt></ruby>がありました。"
-  },
-  {
-    "id": "g077",
-    "pattern": "いつも／時々／よく",
-    "level": "N5",
+    "pattern": "副詞整理（そんなに・しっかり・十分・いっぱい・すっかり・やはり／やっぱり・特に・暫く・そろそろ・ずっと・とうとう・まず・もうすぐ・たまに・ちっとも・やっと）",
+    "level": "N4",
     "unit": "副詞・接続詞",
-    "meaning": "總是/有時/常常（頻率副詞）",
-    "explanation": "「いつも」表示習慣性動作，「時々」表示偶爾，「よく」表示頻繁，用於描述動作的發生頻率。",
-    "example": "私はいつも早く起きます。",
-    "example_meaning": "我總是早起。",
-    "example_ruby": "<ruby>私<rt>わたし</rt></ruby>はいつも<ruby>早<rt>はや</rt></ruby>く<ruby>起<rt>お</rt></ruby>きます。",
+    "meaning": "N4常考副詞總整理（16個）",
+    "explanation": "本課彙整N4常見副詞，依語感可分為程度／完全性副詞（そんなに、しっかり、十分、いっぱい、すっかり）、語氣副詞（やはり、特に、ちっとも）、時間相關副詞（暫く、そろそろ、ずっと、とうとう、まず、もうすぐ、たまに、やっと）等，須依上下文判斷語感差異。",
+    "example": "どうしてそんなに早く分かったの？",
+    "example_meaning": "為什麼這麼快就知道了？",
+    "example_ruby": "どうしてそんなに<ruby>早<rt>はや</rt></ruby>く<ruby>分<rt>わ</rt></ruby>かったの？",
     "examples": [
-      {"label": "いつも", "sentence": "私はいつも早く起きます。", "meaning": "我總是早起。", "ruby": "<ruby>私<rt>わたし</rt></ruby>はいつも<ruby>早<rt>はや</rt></ruby>く<ruby>起<rt>お</rt></ruby>きます。"},
-      {"label": "時々", "sentence": "時々友達と映画を見ます。", "meaning": "有時和朋友看電影。", "ruby": "<ruby>時々<rt>ときどき</rt></ruby><ruby>友達<rt>ともだち</rt></ruby>と<ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>ます。"},
-      {"label": "よく", "sentence": "よく図書館で勉強します。", "meaning": "常常在圖書館讀書。", "ruby": "よく<ruby>図書館<rt>としょかん</rt></ruby>で<ruby>勉強<rt>べんきょう</rt></ruby>します。"}
+      {
+        "label": "そんなに",
+        "sentence": "どうしてそんなに早く分かったの？",
+        "meaning": "為什麼這麼快就知道了？",
+        "ruby": "どうしてそんなに<ruby>早<rt>はや</rt></ruby>く<ruby>分<rt>わ</rt></ruby>かったの？"
+      },
+      {
+        "label": "しっかり",
+        "sentence": "自分の将来についてしっかりと考えないといけない。",
+        "meaning": "必須好好思考自己的未來。",
+        "ruby": "<ruby>自分<rt>じぶん</rt></ruby>の<ruby>将来<rt>しょうらい</rt></ruby>についてしっかりと<ruby>考<rt>かんが</rt></ruby>えないといけない。"
+      },
+      {
+        "label": "十分",
+        "sentence": "時間は十分あるから焦らなくてもいい。",
+        "meaning": "時間很充裕，不用著急。",
+        "ruby": "<ruby>時間<rt>じかん</rt></ruby>は<ruby>十分<rt>じゅうぶん</rt></ruby>あるから<ruby>焦<rt>あせ</rt></ruby>らなくてもいい。"
+      },
+      {
+        "label": "いっぱい",
+        "sentence": "元気いっぱい働く。",
+        "meaning": "充滿活力地工作。",
+        "ruby": "<ruby>元気<rt>げんき</rt></ruby>いっぱい<ruby>働<rt>はたら</rt></ruby>く。"
+      },
+      {
+        "label": "すっかり",
+        "sentence": "彼は全部すっかり忘れていたみたい。",
+        "meaning": "他好像全部都忘光了。",
+        "ruby": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>全部<rt>ぜんぶ</rt></ruby>すっかり<ruby>忘<rt>わす</rt></ruby>れていたみたい。"
+      },
+      {
+        "label": "やはり／やっぱり",
+        "sentence": "天気予報通りやっぱり雨だった。",
+        "meaning": "果然跟天氣預報一樣下雨了。",
+        "ruby": "<ruby>天気予報<rt>てんきよほう</rt></ruby><ruby>通<rt>どお</rt></ruby>りやっぱり<ruby>雨<rt>あめ</rt></ruby>だった。"
+      },
+      {
+        "label": "特に",
+        "sentence": "特に今日は土砂降りで大変だった。",
+        "meaning": "尤其是今天下大雨，真是辛苦。",
+        "ruby": "<ruby>特<rt>とく</rt></ruby>に<ruby>今日<rt>きょう</rt></ruby>は<ruby>土砂降<rt>どしゃぶ</rt></ruby>りで<ruby>大変<rt>たいへん</rt></ruby>だった。"
+      },
+      {
+        "label": "暫く",
+        "sentence": "来年からしばらく日本に住む。",
+        "meaning": "從明年開始要在日本暫住一段時間。",
+        "ruby": "<ruby>来年<rt>らいねん</rt></ruby>からしばらく<ruby>日本<rt>にほん</rt></ruby>に<ruby>住<rt>す</rt></ruby>む。"
+      },
+      {
+        "label": "そろそろ",
+        "sentence": "そろそろ帰ります。",
+        "meaning": "差不多該回去了。",
+        "ruby": "そろそろ<ruby>帰<rt>かえ</rt></ruby>ります。"
+      },
+      {
+        "label": "ずっと",
+        "sentence": "ずっと会いたかった。",
+        "meaning": "一直都很想見你。",
+        "ruby": "ずっと<ruby>会<rt>あ</rt></ruby>いたかった。"
+      },
+      {
+        "label": "とうとう",
+        "sentence": "大好きな漫画がとうとう終わった。",
+        "meaning": "最喜歡的漫畫終於完結了。",
+        "ruby": "<ruby>大好<rt>だいす</rt></ruby>きな<ruby>漫画<rt>まんが</rt></ruby>がとうとう<ruby>終<rt>お</rt></ruby>わった。"
+      },
+      {
+        "label": "まず",
+        "sentence": "まず資料をコピーしてください。",
+        "meaning": "請先影印資料。",
+        "ruby": "まず<ruby>資料<rt>しりょう</rt></ruby>をコピーしてください。"
+      },
+      {
+        "label": "もうすぐ",
+        "sentence": "バスはもうすぐ来る。",
+        "meaning": "公車馬上就要來了。",
+        "ruby": "バスはもうすぐ<ruby>来<rt>く</rt></ruby>る。"
+      },
+      {
+        "label": "たまに",
+        "sentence": "西門町ではたまに芸能人を見かける。",
+        "meaning": "在西門町偶爾會看到藝人。",
+        "ruby": "<ruby>西門町<rt>せいもんちょう</rt></ruby>ではたまに<ruby>芸能人<rt>げいのうじん</rt></ruby>を<ruby>見<rt>み</rt></ruby>かける。"
+      },
+      {
+        "label": "ちっとも",
+        "sentence": "お前はちっとも役に立たない。",
+        "meaning": "你一點用都沒有。",
+        "ruby": "お<ruby>前<rt>まえ</rt></ruby>はちっとも<ruby>役<rt>やく</rt></ruby>に<ruby>立<rt>た</rt></ruby>たない。"
+      },
+      {
+        "label": "やっと",
+        "sentence": "社長の長い話がやっと終わった。",
+        "meaning": "社長冗長的談話終於結束了。",
+        "ruby": "<ruby>社長<rt>しゃちょう</rt></ruby>の<ruby>長<rt>なが</rt></ruby>い<ruby>話<rt>はなし</rt></ruby>がやっと<ruby>終<rt>お</rt></ruby>わった。"
+      }
     ]
-  },
-  {
-    "id": "g078",
-    "pattern": "まだ／もう",
-    "level": "N5",
-    "unit": "副詞・接続詞",
-    "meaning": "還/已經（表示狀態的時間性）",
-    "explanation": "「まだ」表示狀態持續中或動作尚未完成；「もう」接肯定表示已完成，接否定表示已不再。",
-    "example": "宿題はまだです。",
-    "example_meaning": "功課還沒做。",
-    "example_ruby": "<ruby>宿題<rt>しゅくだい</rt></ruby>はまだです。",
-    "examples": [
-      {"label": "まだ", "sentence": "宿題はまだです。", "meaning": "功課還沒做。", "ruby": "<ruby>宿題<rt>しゅくだい</rt></ruby>はまだです。"},
-      {"label": "もう", "sentence": "もう宿題が終わりました。", "meaning": "功課已經做完了。", "ruby": "もう<ruby>宿題<rt>しゅくだい</rt></ruby>が<ruby>終<rt>お</rt></ruby>わりました。"}
-    ]
-  },
-  {
-    "id": "g079",
-    "pattern": "とても／たいへん／あまり〜ない",
-    "level": "N5",
-    "unit": "副詞・接続詞",
-    "meaning": "非常/很/不太（程度副詞）",
-    "explanation": "程度副詞修飾形容詞或動詞，「とても」「たいへん」表示高程度，「あまり」後接否定表示程度低。",
-    "example": "この映画はとても面白いです。",
-    "example_meaning": "這部電影非常有趣。",
-    "example_ruby": "この<ruby>映画<rt>えいが</rt></ruby>はとても<ruby>面白<rt>おもしろ</rt></ruby>いです。",
-    "examples": [
-      {"label": "とても", "sentence": "この映画はとても面白いです。", "meaning": "這部電影非常有趣。", "ruby": "この<ruby>映画<rt>えいが</rt></ruby>はとても<ruby>面白<rt>おもしろ</rt></ruby>いです。"},
-      {"label": "たいへん", "sentence": "今日の試験はたいへん難しかったです。", "meaning": "今天的考試非常難。", "ruby": "<ruby>今日<rt>きょう</rt></ruby>の<ruby>試験<rt>しけん</rt></ruby>はたいへん<ruby>難<rt>むずか</rt></ruby>しかったです。"},
-      {"label": "あまり〜ない", "sentence": "このスープはあまり辛くないです。", "meaning": "這個湯不太辣。", "ruby": "このスープはあまり<ruby>辛<rt>から</rt></ruby>くないです。"}
-    ]
-  },
-  {
-    "id": "g080",
-    "pattern": "たぶん〜でしょう",
-    "level": "N5",
-    "unit": "副詞・接続詞",
-    "meaning": "大概〜吧（推測）",
-    "explanation": "「たぶん」是推測副詞，與「でしょう/だろう」搭配表達不確定的推斷，相當於「也許」「大概」。",
-    "example": "明日はたぶん雨が降るでしょう。",
-    "example_meaning": "明天大概會下雨吧。",
-    "example_ruby": "<ruby>明日<rt>あした</rt></ruby>はたぶん<ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>るでしょう。"
-  },
-  {
-    "id": "g081",
-    "pattern": "まるで〜ようだ",
-    "level": "N5",
-    "unit": "副詞・接続詞",
-    "meaning": "簡直像〜一樣（比喻）",
-    "explanation": "「まるで」是比喻副詞，與「ようだ/みたいだ」搭配表達強烈的比喻，相當於「宛如」「簡直」。",
-    "example": "彼はまるで先生みたいです。",
-    "example_meaning": "他簡直就像老師一樣。",
-    "example_ruby": "<ruby>彼<rt>かれ</rt></ruby>はまるで<ruby>先生<rt>せんせい</rt></ruby>みたいです。"
-  },
-  {
-    "id": "g082",
-    "pattern": "それでは／では／じゃ",
-    "level": "N5",
-    "unit": "副詞・接続詞",
-    "meaning": "那麼（轉換話題或道別）",
-    "explanation": "接續詞用於轉換話題、表示結束或道別，「それでは」最正式，「じゃ」最口語。",
-    "example": "では、また明日。",
-    "example_meaning": "那麼，明天見。",
-    "example_ruby": "では、また<ruby>明日<rt>あした</rt></ruby>。"
-  },
-  {
-    "id": "g083",
-    "pattern": "そして／それから",
-    "level": "N5",
-    "unit": "副詞・接続詞",
-    "meaning": "然後/接著（表示順序的接續）",
-    "explanation": "「そして」用於並列或依次敘述事項；「それから」強調時間上的先後順序，也可用於補充說明。",
-    "example": "空が暗くなった。そして雨が降り始めた。",
-    "example_meaning": "天色暗下來了，然後開始下雨。",
-    "example_ruby": "<ruby>空<rt>そら</rt></ruby>が<ruby>暗<rt>くら</rt></ruby>くなった。そして<ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>り<ruby>始<rt>はじ</rt></ruby>めた。",
-    "examples": [
-      {"label": "そして", "sentence": "空が暗くなった。そして雨が降り始めた。", "meaning": "天色暗下來了，然後開始下雨。", "ruby": "<ruby>空<rt>そら</rt></ruby>が<ruby>暗<rt>くら</rt></ruby>くなった。そして<ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>り<ruby>始<rt>はじ</rt></ruby>めた。"},
-      {"label": "それから", "sentence": "朝ご飯を食べました。それから学校へ行きました。", "meaning": "吃了早餐，接著去了學校。", "ruby": "<ruby>朝<rt>あさ</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を<ruby>食<rt>た</rt></ruby>べました。それから<ruby>学校<rt>がっこう</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きました。"}
-    ]
-  },
-  {
-    "id": "g084",
-    "pattern": "でも／しかし",
-    "level": "N5",
-    "unit": "副詞・接続詞",
-    "meaning": "但是（表示轉折）",
-    "explanation": "「でも」和「しかし」都表示逆接轉折，「しかし」更正式，常用於書面語或較嚴肅場合。",
-    "example": "勉強しました。でも試験が難しかったです。",
-    "example_meaning": "讀書了，但考試很難。",
-    "example_ruby": "<ruby>勉強<rt>べんきょう</rt></ruby>しました。でも<ruby>試験<rt>しけん</rt></ruby>が<ruby>難<rt>むずか</rt></ruby>しかったです。"
-  },
-  {
-    "id": "g085",
-    "pattern": "だ（斷定助動詞，普通體）",
-    "level": "N5",
-    "unit": "普通體・語氣",
-    "meaning": "是〜（普通體斷定）",
-    "explanation": "「だ」是普通體的斷定助動詞，接在名詞或な形容詞後，用於非正式場合的句子結尾。",
-    "example": "彼は学生だ。",
-    "example_meaning": "他是學生。",
-    "example_ruby": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>学生<rt>がくせい</rt></ruby>だ。"
-  },
-  {
-    "id": "g086",
-    "pattern": "ない（否定助動詞）",
-    "level": "N5",
-    "unit": "普通體・語氣",
-    "meaning": "不〜（動詞否定）",
-    "explanation": "動詞未然形後接「ない」構成否定形，「ない」本身有五種活用，可以進一步變化。",
-    "example": "今日は学校に行かない。",
-    "example_meaning": "今天不去學校。",
-    "example_ruby": "<ruby>今日<rt>きょう</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>に<ruby>行<rt>い</rt></ruby>かない。"
-  },
-  {
-    "id": "g087",
-    "pattern": "たい（希望助動詞）",
-    "level": "N5",
-    "unit": "意向・勧誘・願望",
-    "meaning": "想要〜（表達願望）",
-    "explanation": "動詞連用形後接「たい」，表達說話者自己想要做某事的願望，可進行形容詞活用。",
-    "example": "日本へ行きたいです。",
-    "example_meaning": "想去日本。",
-    "example_ruby": "<ruby>日本<rt>にほん</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きたいです。"
-  },
-  {
-    "id": "g088",
-    "pattern": "どれ／どちら（疑問詞）",
-    "level": "N5",
-    "unit": "疑問・限定",
-    "meaning": "哪個（詢問選擇）",
-    "explanation": "「どれ」用於三個以上選項，「どちら」用於兩個選項之間，「どちら」也可禮貌地詢問方向或地點。",
-    "example": "どれがあなたの傘ですか。",
-    "example_meaning": "哪把是你的傘？",
-    "example_ruby": "どれがあなたの<ruby>傘<rt>かさ</rt></ruby>ですか。",
-    "examples": [
-      {"label": "どれ", "sentence": "どれがあなたの傘ですか。", "meaning": "哪把是你的傘？（三個以上）", "ruby": "どれがあなたの<ruby>傘<rt>かさ</rt></ruby>ですか。"},
-      {"label": "どちら", "sentence": "コーヒーとお茶、どちらがいいですか。", "meaning": "咖啡和茶，哪個好？（兩者）", "ruby": "コーヒーとお<ruby>茶<rt>ちゃ</rt></ruby>、どちらがいいですか。"}
-    ]
-  },
-  {
-    "id": "g089",
-    "pattern": "いくら／いくつ（疑問詞）",
-    "level": "N5",
-    "unit": "疑問・限定",
-    "meaning": "多少錢/幾個（詢問金額或數量）",
-    "explanation": "「いくら」用於詢問價格，「いくつ」用於詢問物品數量，「おいくつ」是禮貌地詢問年齡。",
-    "example": "これはいくらですか。",
-    "example_meaning": "這個多少錢？",
-    "example_ruby": "これはいくらですか。",
-    "examples": [
-      {"label": "いくら", "sentence": "これはいくらですか。", "meaning": "這個多少錢？", "ruby": "これはいくらですか。"},
-      {"label": "いくつ", "sentence": "りんごをいくつ買いましたか。", "meaning": "買了幾個蘋果？", "ruby": "りんごをいくつ<ruby>買<rt>か</rt></ruby>いましたか。"}
-    ]
-  },
-  {
-    "id": "g090",
-    "pattern": "どんな＋N（疑問詞）",
-    "level": "N5",
-    "unit": "疑問・限定",
-    "meaning": "什麼樣的〜（詢問性質）",
-    "explanation": "「どんな」後接名詞，用於詢問事物的性質、種類或樣貌，相當於「怎樣的」。",
-    "example": "どんな映画が好きですか。",
-    "example_meaning": "喜歡什麼樣的電影？",
-    "example_ruby": "どんな<ruby>映画<rt>えいが</rt></ruby>が<ruby>好<rt>す</rt></ruby>きですか。"
-  },
-  {
-    "id": "g091",
-    "pattern": "ね／よ（終助詞）",
-    "level": "N5",
-    "unit": "普通體・語氣",
-    "meaning": "呢/喔（語氣助詞）",
-    "explanation": "「ね」用於確認或尋求同感，相當於中文的「呢」「對吧」；「よ」用於告知或強調，相當於「喔」「啊」。",
-    "example": "今日は暑いですね。",
-    "example_meaning": "今天很熱呢。",
-    "example_ruby": "<ruby>今日<rt>きょう</rt></ruby>は<ruby>暑<rt>あつ</rt></ruby>いですね。",
-    "examples": [
-      {"label": "ね", "sentence": "今日は暑いですね。", "meaning": "今天很熱呢。（尋求共鳴）", "ruby": "<ruby>今日<rt>きょう</rt></ruby>は<ruby>暑<rt>あつ</rt></ruby>いですね。"},
-      {"label": "よ", "sentence": "あそこに郵便局がありますよ。", "meaning": "那裡有郵局喔。（告知新資訊）", "ruby": "あそこに<ruby>郵便局<rt>ゆうびんきょく</rt></ruby>がありますよ。"}
-    ]
-  },
-  {
-    "id": "g092",
-    "pattern": "V＋に（目的）＋行く／来る",
-    "level": "N5",
-    "unit": "比較・能力",
-    "meaning": "去/來（做某事）",
-    "explanation": "「動詞連用形＋に＋行く/来る」表示移動的目的，說明是為了做什麼事而移動。",
-    "example": "買い物に行きます。",
-    "example_meaning": "去購物。",
-    "example_ruby": "<ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます。",
-    "examples": [
-      {"label": "行く", "sentence": "買い物に行きます。", "meaning": "去購物。（往外移動）", "ruby": "<ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます。"},
-      {"label": "来る", "sentence": "友達が遊びに来ました。", "meaning": "朋友來玩了。（往說話者處移動）", "ruby": "<ruby>友達<rt>ともだち</rt></ruby>が<ruby>遊<rt>あそ</rt></ruby>びに<ruby>来<rt>き</rt></ruby>ました。"}
-    ]
-  },
-  {
-    "id": "g093",
-    "pattern": "A＋より＋B＋の方が〜",
-    "level": "N5",
-    "unit": "比較・能力",
-    "meaning": "B比A更〜（比較句型）",
-    "explanation": "「より」表示比較的基準，「の方が」強調相對較高的一方，用於比較兩者的程度高低。",
-    "example": "東京は大阪より大きいです。",
-    "example_meaning": "東京比大阪大。",
-    "example_ruby": "<ruby>東京<rt>とうきょう</rt></ruby>は<ruby>大阪<rt>おおさか</rt></ruby>より<ruby>大<rt>おお</rt></ruby>きいです。"
-  },
-  {
-    "id": "g094",
-    "pattern": "〜の中で〜が一番〜",
-    "level": "N5",
-    "unit": "比較・能力",
-    "meaning": "在〜之中，〜最〜（最高級）",
-    "explanation": "「〜の中で」表示在某範圍之內，「一番」表示最高程度，用於表達最高級的比較。",
-    "example": "クラスの中で田中さんが一番背が高いです。",
-    "example_meaning": "在班上田中同學最高。",
-    "example_ruby": "クラスの<ruby>中<rt>なか</rt></ruby>で<ruby>田中<rt>たなか</rt></ruby>さんが<ruby>一番<rt>いちばん</rt></ruby><ruby>背<rt>せ</rt></ruby>が<ruby>高<rt>たか</rt></ruby>いです。"
-  },
-  {
-    "id": "g095",
-    "pattern": "N＋がある／いる",
-    "level": "N5",
-    "unit": "比較・能力",
-    "meaning": "有〜（存在表現）",
-    "explanation": "「ある」用於無生命事物，「いる」用於有生命的人或動物，表示某人或某物的存在。",
-    "example": "机の上に本があります。",
-    "example_meaning": "桌上有書。",
-    "example_ruby": "<ruby>机<rt>つくえ</rt></ruby>の<ruby>上<rt>うえ</rt></ruby>に<ruby>本<rt>ほん</rt></ruby>があります。",
-    "examples": [
-      {"label": "ある", "sentence": "机の上に本があります。", "meaning": "桌上有書。（無生命物）", "ruby": "<ruby>机<rt>つくえ</rt></ruby>の<ruby>上<rt>うえ</rt></ruby>に<ruby>本<rt>ほん</rt></ruby>があります。"},
-      {"label": "いる", "sentence": "公園に子供がいます。", "meaning": "公園裡有小孩。（有生命者）", "ruby": "<ruby>公園<rt>こうえん</rt></ruby>に<ruby>子供<rt>こども</rt></ruby>がいます。"}
-    ]
-  },
-  {
-    "id": "g096",
-    "pattern": "〜が好きだ／嫌いだ",
-    "level": "N5",
-    "unit": "比較・能力",
-    "meaning": "喜歡/討厭〜",
-    "explanation": "「好きだ」和「嫌いだ」是な形容詞，用「が」標示喜好的對象，表達情感態度。",
-    "example": "私は音楽が好きです。",
-    "example_meaning": "我喜歡音樂。",
-    "example_ruby": "<ruby>私<rt>わたし</rt></ruby>は<ruby>音楽<rt>おんがく</rt></ruby>が<ruby>好<rt>す</rt></ruby>きです。",
-    "examples": [
-      {"label": "好きだ", "sentence": "私は音楽が好きです。", "meaning": "我喜歡音樂。", "ruby": "<ruby>私<rt>わたし</rt></ruby>は<ruby>音楽<rt>おんがく</rt></ruby>が<ruby>好<rt>す</rt></ruby>きです。"},
-      {"label": "嫌いだ", "sentence": "私はピーマンが嫌いです。", "meaning": "我討厭青椒。", "ruby": "<ruby>私<rt>わたし</rt></ruby>はピーマンが<ruby>嫌<rt>きら</rt></ruby>いです。"}
-    ]
-  },
-  {
-    "id": "g097",
-    "pattern": "〜が上手だ／下手だ",
-    "level": "N5",
-    "unit": "比較・能力",
-    "meaning": "擅長/不擅長〜",
-    "explanation": "「上手だ」和「下手だ」是な形容詞，用「が」標示擅長或不擅長的事物。",
-    "example": "彼女は料理が上手です。",
-    "example_meaning": "她很會做菜。",
-    "example_ruby": "<ruby>彼女<rt>かのじょ</rt></ruby>は<ruby>料理<rt>りょうり</rt></ruby>が<ruby>上手<rt>じょうず</rt></ruby>です。",
-    "examples": [
-      {"label": "上手だ", "sentence": "彼女は料理が上手です。", "meaning": "她很會做菜。", "ruby": "<ruby>彼女<rt>かのじょ</rt></ruby>は<ruby>料理<rt>りょうり</rt></ruby>が<ruby>上手<rt>じょうず</rt></ruby>です。"},
-      {"label": "下手だ", "sentence": "私は歌が下手です。", "meaning": "我不擅長唱歌。", "ruby": "<ruby>私<rt>わたし</rt></ruby>は<ruby>歌<rt>うた</rt></ruby>が<ruby>下手<rt>へた</rt></ruby>です。"}
-    ]
-  },
-  {
-    "id": "g098",
-    "pattern": "〜が分かる／できる",
-    "level": "N5",
-    "unit": "比較・能力",
-    "meaning": "懂〜/會〜",
-    "explanation": "「分かる」表示理解或知道，「できる」表示能力或可能，兩者皆以「が」標示對象。",
-    "example": "日本語が分かりますか。",
-    "example_meaning": "懂日語嗎？",
-    "example_ruby": "<ruby>日本語<rt>にほんご</rt></ruby>が<ruby>分<rt>わ</rt></ruby>かりますか。",
-    "examples": [
-      {"label": "分かる", "sentence": "日本語が分かりますか。", "meaning": "懂日語嗎？", "ruby": "<ruby>日本語<rt>にほんご</rt></ruby>が<ruby>分<rt>わ</rt></ruby>かりますか。"},
-      {"label": "できる", "sentence": "私は泳ぐことができます。", "meaning": "我會游泳。", "ruby": "<ruby>私<rt>わたし</rt></ruby>は<ruby>泳<rt>およ</rt></ruby>ぐことができます。"}
-    ]
-  },
-  {
-    "id": "g099",
-    "pattern": "N＋に＋N（回數）＋V",
-    "level": "N5",
-    "unit": "比較・能力",
-    "meaning": "每〜次/頻率表現",
-    "explanation": "「時間段＋に＋次数＋動詞」表示在某段時間內動作重複的頻率，如「週に三回」表示每週三次。",
-    "example": "週に三回テニスをします。",
-    "example_meaning": "每週打三次網球。",
-    "example_ruby": "<ruby>週<rt>しゅう</rt></ruby>に<ruby>三回<rt>さんかい</rt></ruby>テニスをします。"
-  },
-  {
-    "id": "g100",
-    "pattern": "〜ている（習慣・職業）",
-    "level": "N5",
-    "unit": "比較・能力",
-    "meaning": "在〜（表示習慣性動作或職業狀態）",
-    "explanation": "「〜ている」除了表示進行中，也可以表示習慣性反覆的動作或持續的職業、居住狀態。",
-    "example": "東京に住んでいます。",
-    "example_meaning": "住在東京。",
-    "example_ruby": "<ruby>東京<rt>とうきょう</rt></ruby>に<ruby>住<rt>す</rt></ruby>んでいます。"
   }
 ]

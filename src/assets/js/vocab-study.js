@@ -42,7 +42,7 @@
 
   async function init() {
     setupTheme();
-    setupLevelSelect();
+    setupLevelBadge();
 
     try {
       allCards = await fetchJSON(`data/${getLevelDataDir()}/vocab.json`);

@@ -32,7 +32,7 @@ function getLevelDataDir() {
 }
 
 /**
- * 初始化 header 上的等級下拉選單：反映目前等級，並於切換時記錄並重新整理頁面
+ * 初始化首頁 header 的等級下拉選單：反映目前等級，並於切換時記錄並重新整理頁面
  */
 function setupLevelSelect() {
   const select = document.getElementById('level-select');
@@ -42,6 +42,15 @@ function setupLevelSelect() {
     localStorage.setItem(NIHONGO_LEVEL_KEY, select.value);
     location.reload();
   });
+}
+
+/**
+ * 初始化非首頁 header 的等級膠囊：僅顯示目前等級文字，不可互動
+ */
+function setupLevelBadge() {
+  const badge = document.getElementById('level-badge');
+  if (!badge) return;
+  badge.textContent = getCurrentLevel();
 }
 
 /**
