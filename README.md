@@ -84,10 +84,10 @@ src/
     │   ├── grammar.json    文法資料（100 句型）
     │   ├── quiz1.json ~ quiz6.json  模擬考題目
     │   └── manifest.json   可用模擬考清單
-    └── n4/              JLPT N4（籌備中，vocab/grammar 暫為 N5 佔位內容，尚無模擬考）
-        ├── vocab.json
-        ├── grammar.json
-        └── manifest.json
+    └── n4/              JLPT N4（籌備中）
+        ├── vocab.json      單字資料（559 字，已完成）
+        ├── grammar.json    文法資料（暫為 N5 佔位內容，待製作）
+        └── manifest.json   尚無模擬考
 ```
 
 網站 header 提供 N5 / N4 等級切換下拉選單，選擇會記錄在瀏覽器 localStorage，並套用至所有頁面的資料載入路徑。
