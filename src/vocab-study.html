@@ -59,9 +59,17 @@
       <div class="card-body items-center text-center py-10">
         <div class="text-xs badge badge-outline mb-2" id="card-pos"></div>
         <div class="text-4xl font-bold mb-1" id="card-word"></div>
-        <div class="text-xl mb-1" id="card-reading"></div>
+        <div class="flex items-center justify-center gap-2 mb-1">
+          <div class="text-xl" id="card-reading"></div>
+          <button class="speak-btn btn btn-circle btn-sm btn-ghost border border-primary-content/30" id="speak-btn" title="發音">▶</button>
+        </div>
         <div class="text-base opacity-80 mb-3" id="card-meaning"></div>
-        <button class="speak-btn btn btn-circle btn-sm btn-ghost border border-primary-content/30" id="speak-btn" title="發音">▶</button>
+        <div class="divider my-0 opacity-30"></div>
+        <div class="flex items-center gap-2 mt-1 w-full">
+          <span class="text-sm italic flex-1" id="card-example"></span>
+          <button class="speak-btn btn btn-circle btn-sm btn-ghost border border-primary-content/30" id="example-speak-btn" title="發音">▶</button>
+        </div>
+        <div class="text-xs opacity-70" id="card-example-meaning"></div>
       </div>
     </div>
 

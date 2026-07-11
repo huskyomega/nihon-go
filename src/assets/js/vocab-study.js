@@ -34,6 +34,9 @@
   const cardReading  = document.getElementById('card-reading');
   const cardMeaning  = document.getElementById('card-meaning');
   const speakBtn     = document.getElementById('speak-btn');
+  const cardExample        = document.getElementById('card-example');
+  const cardExampleMeaning = document.getElementById('card-example-meaning');
+  const exampleSpeakBtn    = document.getElementById('example-speak-btn');
   const progressBar  = document.getElementById('progress-bar');
   const progressLabel = document.getElementById('progress-label');
   const btnPrev      = document.getElementById('btn-prev');
@@ -101,6 +104,8 @@
     cardWord.innerHTML = toRuby(card.word, card.reading.split('・')[0]);
     cardReading.textContent = card.reading;
     cardMeaning.textContent = card.meaning;
+    cardExample.textContent = card.example;
+    cardExampleMeaning.textContent = card.example_meaning;
 
     btnPrev.disabled = currentIndex === 0;
     btnNext.disabled = currentIndex === deck.length - 1;
@@ -139,7 +144,12 @@
   function bindEvents() {
     speakBtn.addEventListener('click', function () {
       const card = deck[currentIndex];
-      if (card) speak(card.word);
+      if (card) speak(card.reading.split('・')[0]);
+    });
+
+    exampleSpeakBtn.addEventListener('click', function () {
+      const card = deck[currentIndex];
+      if (card) speak(card.example);
     });
 
     btnPrev.addEventListener('click', function () {
@@ -175,7 +185,7 @@
           if (currentIndex < deck.length - 1) { currentIndex++; renderCard(); updateProgress(); }
           break;
         case 'p':
-          speak(deck[currentIndex].word);
+          speak(deck[currentIndex].reading.split('・')[0]);
           break;
       }
     });

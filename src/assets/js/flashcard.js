@@ -257,7 +257,7 @@ python3 -m http.server 8080</code></pre>
     speakBtn.addEventListener('click', function (e) {
       e.stopPropagation();
       const card = deck[currentIndex];
-      if (card) speak(card.word);
+      if (card) speak(card.reading.split('・')[0]);
     });
 
     // 知道了 / 不熟
@@ -287,7 +287,7 @@ python3 -m http.server 8080</code></pre>
         case 'p':
           if (isFlipped) {
             const card = deck[currentIndex];
-            if (card) speak(card.word);
+            if (card) speak(card.reading.split('・')[0]);
           }
           break;
       }
