@@ -10,12 +10,13 @@
   <link rel="stylesheet" href="assets/css/main.css">
   <style>
     .flashcard-scene {
+      display: grid;
       perspective: 1000px;
     }
     .flashcard-inner {
       position: relative;
+      display: grid;
       width: 100%;
-      height: 100%;
       transition: transform 0.5s;
       transform-style: preserve-3d;
     }
@@ -23,9 +24,9 @@
       transform: rotateY(180deg);
     }
     .flashcard-face {
-      position: absolute;
+      grid-row: 1;
+      grid-column: 1;
       width: 100%;
-      height: 100%;
       backface-visibility: hidden;
       -webkit-backface-visibility: hidden;
     }
@@ -84,7 +85,7 @@
     </div>
 
     <!-- 閃卡區 -->
-    <div class="flashcard-scene w-full mb-6" style="height: 420px;" id="card-scene">
+    <div class="flashcard-scene w-full mb-6" style="min-height: 400px;" id="card-scene">
       <div class="flashcard-inner" id="card-inner">
 
         <!-- 正面 -->
